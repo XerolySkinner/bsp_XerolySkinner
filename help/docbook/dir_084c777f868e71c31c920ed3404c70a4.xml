@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_084c777f868e71c31c920ed3404c70a4" xml:lang="zh">
+<title>D:/工作库/GitHub/bsp_XerolySkinner/bsp_device 目录参考</title>
+<indexterm><primary>D:/工作库/GitHub/bsp_XerolySkinner/bsp_device 目录参考</primary></indexterm>
+bsp_device 的目录依赖关系图<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_084c777f868e71c31c920ed3404c70a4_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>文件    </title>
+        <itemizedlist>
+            <listitem><para>文件 <link linkend="_bsp___i_i_c_8c">bsp_IIC.c</link></para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___i_i_c_8h">bsp_IIC.h</link></para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___s_p_i_8c">bsp_SPI.c</link></para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___s_p_i_8h">bsp_SPI.h</link></para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___u_a_r_t_8c">bsp_UART.c</link></para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___u_a_r_t_8h">bsp_UART.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

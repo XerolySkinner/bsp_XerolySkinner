@@ -1,0 +1,103 @@
+.TH "D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" 3 "2023年 三月 9日 星期四" "Version 1.0.0" "bsp_XerolySkinner" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c \- SPI的库  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'bsp_SPI\&.h'\fP
+.br
+
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBSPI_Byte\fP (unsigned char temp)"
+.br
+.RI "使用总线发送一个字节数据 "
+.ti -1c
+.RI "void \fBSPI_WriteOneByte\fP (unsigned char address, unsigned char dat)"
+.br
+.RI "使用总线发送一个字节数据 "
+.ti -1c
+.RI "unsigned char \fBSPI_ReadOneByte\fP (unsigned char address)"
+.br
+.RI "使用总线获取一个字节数据 "
+.in -1c
+.SH "详细描述"
+.PP 
+SPI的库 
+
+
+.PP
+在文件 \fBbsp_SPI\&.c\fP 中定义\&.
+.SH "函数说明"
+.PP 
+.SS "void SPI_Byte (unsigned char temp)"
+
+.PP
+使用总线发送一个字节数据 
+.PP
+\fB参数\fP
+.RS 4
+\fItemp\fP 发送的数据 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+无返回值 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+本函数为其他函数的子函数,不要直接使用本函数 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.c\fP 第 \fB43\fP 行定义\&.
+.SS "unsigned char SPI_ReadOneByte (unsigned char address)"
+
+.PP
+使用总线获取一个字节数据 
+.PP
+\fB参数\fP
+.RS 4
+\fIaddr\fP 需要接收的寄存器地址 
+.br
+\fIdat\fP 接受的数据 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+无返回值 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.c\fP 第 \fB71\fP 行定义\&.
+.SS "void SPI_WriteOneByte (unsigned char address, unsigned char dat)"
+
+.PP
+使用总线发送一个字节数据 
+.PP
+\fB参数\fP
+.RS 4
+\fIaddr\fP 需要改写的寄存器地址 
+.br
+\fIdat\fP 改写的数据 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+无返回值 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.c\fP 第 \fB57\fP 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 bsp_XerolySkinner 的 源代码自动生成\&.

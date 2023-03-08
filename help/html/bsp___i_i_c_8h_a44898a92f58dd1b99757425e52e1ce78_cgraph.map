@@ -1,0 +1,10 @@
+<map id="IIC_Write" name="IIC_Write">
+<area shape="rect" id="node1" title="使用总线发送定长数据" alt="" coords="5,80,80,105"/>
+<area shape="rect" id="node2" href="$bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="128,104,229,129"/>
+<area shape="rect" id="node6" href="$bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="143,153,215,179"/>
+<area shape="rect" id="node7" href="$bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="143,5,214,31"/>
+<area shape="rect" id="node8" href="$bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="131,55,226,80"/>
+<area shape="rect" id="node3" href="$bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="277,31,355,56"/>
+<area shape="rect" id="node4" href="$bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="281,80,351,105"/>
+<area shape="rect" id="node5" href="$bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="281,129,351,155"/>
+</map>

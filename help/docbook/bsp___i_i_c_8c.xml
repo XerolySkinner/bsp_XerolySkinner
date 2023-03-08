@@ -1,0 +1,659 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp___i_i_c_8c" xml:lang="zh">
+<title>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_IIC.c 文件参考</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_IIC.c</primary></indexterm>
+<para>
+
+<para>本类实现软件IIC功能 依此类派生出其他软件IIC功能 </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;bsp_IIC.h&quot;<?linebreak?></programlisting>bsp_IIC.c 的引用(Include)关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>函数    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link> (void)</para>
+
+<para>发送IIC开始信号 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72">IIC_Stop</link> (void)</para>
+
+<para>发送IIC停止信号 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link> (unsigned char ackbit)</para>
+
+<para>发送IIC应答信号 </para>
+</listitem>
+            <listitem><para>unsigned char <link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link> (void)</para>
+
+<para>等待应答信号 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link> (unsigned char byt)</para>
+
+<para>发送IIC一个字节信号 </para>
+</listitem>
+            <listitem><para>unsigned char <link linkend="_bsp___i_i_c_8c_1a1bdad8ef1b06a40b5912d93c12e07c9a">IIC_RecByte</link> (void)</para>
+
+<para>接收IIC一个字节信号 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1a92f9de6f27a4539bc0a91d349ffbc006">IIC_WriteOneByte</link> (unsigned char id, unsigned char addr, unsigned char dat)</para>
+
+<para>使用总线发送一个字节数据 </para>
+</listitem>
+            <listitem><para>unsigned char <link linkend="_bsp___i_i_c_8c_1a0bd93b2a87bada6c99784dacbfc2ff98">IIC_ReadOneByte</link> (unsigned char id, unsigned char addr)</para>
+
+<para>使用总线接收一个字节数据 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1a44898a92f58dd1b99757425e52e1ce78">IIC_Write</link> (unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len)</para>
+
+<para>使用总线发送定长数据 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1a3f7052e21bba515ca87c85c50efeec4f">IIC_Read</link> (unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len)</para>
+
+<para>使用总线接收定长数据 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link> (void)</para>
+
+<para>时序中的延时 在此处短暂延时 </para>
+</listitem>
+            <listitem><para>unsigned char <link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link> (unsigned char var)</para>
+
+<para>控制SCK管脚口 </para>
+</listitem>
+            <listitem><para>unsigned char <link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link> (unsigned char var)</para>
+
+<para>控制SDA管脚口 </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>详细描述</title>
+
+<para>本类实现软件IIC功能 依此类派生出其他软件IIC功能 </para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 中定义.</para>
+</section>
+<section>
+<title>函数说明</title>
+<anchor xml:id="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35"/><section>
+    <title>IIC_Delay()</title>
+<indexterm><primary>IIC_Delay</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_Delay</secondary></indexterm>
+<para><computeroutput>void IIC_Delay (void )</computeroutput></para><para>
+
+<para>时序中的延时 在此处短暂延时 </para>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00224">224</link> 行定义.</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a5110c30e693502c5356a1c09014dcb35_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a3f7052e21bba515ca87c85c50efeec4f"/><section>
+    <title>IIC_Read()</title>
+<indexterm><primary>IIC_Read</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_Read</secondary></indexterm>
+<para><computeroutput>void IIC_Read (unsigned char id, unsigned char addr, unsigned char * dat, unsigned int len)</computeroutput></para><para>
+
+<para>使用总线接收定长数据 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>接收的器件地址,如0x68(MPU6050) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>addr</entry><entry>
+<para>需要接收的寄存器地址起始 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>dat</entry><entry>
+<para>改写的数据指针 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>数据数目 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>无返回值 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00199">199</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a3f7052e21bba515ca87c85c50efeec4f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a0bd93b2a87bada6c99784dacbfc2ff98"/><section>
+    <title>IIC_ReadOneByte()</title>
+<indexterm><primary>IIC_ReadOneByte</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_ReadOneByte</secondary></indexterm>
+<para><computeroutput>unsigned char IIC_ReadOneByte (unsigned char id, unsigned char addr)</computeroutput></para><para>
+
+<para>使用总线接收一个字节数据 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>接收的器件地址,如0x68(MPU6050) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>addr</entry><entry>
+<para>需要获取数据的寄存器地址 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>返回该寄存器内的数据 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00153">153</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a0bd93b2a87bada6c99784dacbfc2ff98_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a1bdad8ef1b06a40b5912d93c12e07c9a"/><section>
+    <title>IIC_RecByte()</title>
+<indexterm><primary>IIC_RecByte</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_RecByte</secondary></indexterm>
+<para><computeroutput>unsigned char IIC_RecByte (void )</computeroutput></para><para>
+
+<para>接收IIC一个字节信号 </para>
+</para>
+
+<para><formalpara><title>返回</title>
+
+<para>接收到的一个字节信号 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00114">114</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a1bdad8ef1b06a40b5912d93c12e07c9a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a1bdad8ef1b06a40b5912d93c12e07c9a_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8"/><section>
+    <title>IIC_SCK()</title>
+<indexterm><primary>IIC_SCK</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_SCK</secondary></indexterm>
+<para><computeroutput>unsigned char IIC_SCK (unsigned char var)</computeroutput></para><para>
+
+<para>控制SCK管脚口 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>var</entry><entry>
+<para>此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>当var为IIC_READ时返回管脚状态 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00234">234</link> 行定义.</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a85e1e4cf02f2952c7a261a5db29838d8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa"/><section>
+    <title>IIC_SDA()</title>
+<indexterm><primary>IIC_SDA</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_SDA</secondary></indexterm>
+<para><computeroutput>unsigned char IIC_SDA (unsigned char var)</computeroutput></para><para>
+
+<para>控制SDA管脚口 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>var</entry><entry>
+<para>此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>当var为IIC_READ时返回管脚状态 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00250">250</link> 行定义.</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a00c0046e123145451619c3f57ba4fffa_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0"/><section>
+    <title>IIC_SendAck()</title>
+<indexterm><primary>IIC_SendAck</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_SendAck</secondary></indexterm>
+<para><computeroutput>void IIC_SendAck (unsigned char ackbit)</computeroutput></para><para>
+
+<para>发送IIC应答信号 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>ackbit</entry><entry>
+<para>0为应答,1位非应答 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00071">71</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a0bfa6b98198b92dc18853f7e157ecfb0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a0bfa6b98198b92dc18853f7e157ecfb0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af"/><section>
+    <title>IIC_SendByte()</title>
+<indexterm><primary>IIC_SendByte</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_SendByte</secondary></indexterm>
+<para><computeroutput>void IIC_SendByte (unsigned char byt)</computeroutput></para><para>
+
+<para>发送IIC一个字节信号 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>byt</entry><entry>
+<para>发送的字节 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00098">98</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a53b89d8e9d661d28c1af1a6b3c5373af_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a53b89d8e9d661d28c1af1a6b3c5373af_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f"/><section>
+    <title>IIC_Start()</title>
+<indexterm><primary>IIC_Start</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_Start</secondary></indexterm>
+<para><computeroutput>void IIC_Start (void )</computeroutput></para><para>
+
+<para>发送IIC开始信号 </para>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00047">47</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_ac7de8cb7cad6d402709b385e39aa764f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_ac7de8cb7cad6d402709b385e39aa764f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72"/><section>
+    <title>IIC_Stop()</title>
+<indexterm><primary>IIC_Stop</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_Stop</secondary></indexterm>
+<para><computeroutput>void IIC_Stop (void )</computeroutput></para><para>
+
+<para>发送IIC停止信号 </para>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00059">59</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a785ea8492cab4612ee5d3752a34f8a72_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a785ea8492cab4612ee5d3752a34f8a72_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd"/><section>
+    <title>IIC_WaitAck()</title>
+<indexterm><primary>IIC_WaitAck</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_WaitAck</secondary></indexterm>
+<para><computeroutput>unsigned char IIC_WaitAck (void )</computeroutput></para><para>
+
+<para>等待应答信号 </para>
+</para>
+
+<para><formalpara><title>返回</title>
+
+<para>返回是否有回应 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00085">85</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a0a0cf8c63abeefa1da7bf4fff457d0cd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a0a0cf8c63abeefa1da7bf4fff457d0cd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a44898a92f58dd1b99757425e52e1ce78"/><section>
+    <title>IIC_Write()</title>
+<indexterm><primary>IIC_Write</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_Write</secondary></indexterm>
+<para><computeroutput>void IIC_Write (unsigned char id, unsigned char addr, unsigned char * dat, unsigned int len)</computeroutput></para><para>
+
+<para>使用总线发送定长数据 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>发送的器件地址,如0x68(MPU6050) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>addr</entry><entry>
+<para>需要改写的寄存器地址起始 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>dat</entry><entry>
+<para>改写的数据指针 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>len</entry><entry>
+<para>数据数目 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>无返回值 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00177">177</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a44898a92f58dd1b99757425e52e1ce78_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___i_i_c_8c_1a92f9de6f27a4539bc0a91d349ffbc006"/><section>
+    <title>IIC_WriteOneByte()</title>
+<indexterm><primary>IIC_WriteOneByte</primary><secondary>bsp_IIC.c</secondary></indexterm>
+<indexterm><primary>bsp_IIC.c</primary><secondary>IIC_WriteOneByte</secondary></indexterm>
+<para><computeroutput>void IIC_WriteOneByte (unsigned char id, unsigned char addr, unsigned char dat)</computeroutput></para><para>
+
+<para>使用总线发送一个字节数据 </para>
+</para>
+
+<para>IIC的基础实现方法</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>id</entry><entry>
+<para>发送的器件地址,如0x68(MPU6050) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>addr</entry><entry>
+<para>需要改写的寄存器地址 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>dat</entry><entry>
+<para>改写的数据 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>无返回值 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___i_i_c_8c_source">bsp_IIC.c</link> 第 <link linkend="_bsp___i_i_c_8c_source_1l00136">136</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___i_i_c_8c_a92f9de6f27a4539bc0a91d349ffbc006_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

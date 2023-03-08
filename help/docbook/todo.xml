@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_todo" xml:lang="zh">
+
+<para><variablelist>
+<varlistentry><term>成员 <link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link>  </term>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000001"/>定义SCK的管脚  </para>
+</listitem></varlistentry>
+<varlistentry><term>成员 <link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link>  </term>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000002"/>定义SDA的管脚  </para>
+</listitem></varlistentry>
+<varlistentry><term>成员 <link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>  </term>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000005"/>定义RST的管脚  </para>
+</listitem></varlistentry>
+<varlistentry><term>成员 <link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>  </term>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000003"/>定义SCK的管脚  </para>
+</listitem></varlistentry>
+<varlistentry><term>成员 <link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">SPI_SDA_PIN</link>  </term>
+<listitem>
+<para><anchor xml:id="_todo_1_todo000004"/>定义SDA的管脚 </para>
+</listitem></varlistentry>
+</variablelist>
+</para>
+</section>

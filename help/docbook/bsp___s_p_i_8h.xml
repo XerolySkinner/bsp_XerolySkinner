@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp___s_p_i_8h" xml:lang="zh">
+<title>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h 文件参考</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h</primary></indexterm>
+<para>
+
+<para>SPI的库 </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;reg52.h&gt;<?linebreak?>#include &lt;intrins.h&gt;<?linebreak?></programlisting>bsp_SPI.h 的引用(Include)关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+此图展示该文件直接或间接的被哪些文件引用了:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>函数    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_bsp___s_p_i_8h_1a5edf23a0da935aa5a61c29efbbf7fb7b">SPI_WriteOneByte</link> (unsigned char address, unsigned char dat)</para>
+
+<para>使用总线发送一个字节数据 </para>
+</listitem>
+            <listitem><para>unsigned char <link linkend="_bsp___s_p_i_8h_1a49b2197235df99399937e589ff42bc8f">SPI_ReadOneByte</link> (unsigned char address)</para>
+
+<para>使用总线获取一个字节数据 </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>变量    </title>
+        <itemizedlist>
+            <listitem><para>sbit <link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link> = P3^6</para>
+
+<para>定义SCK的管脚 </para>
+</listitem>
+            <listitem><para>sbit <link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">SPI_SDA_PIN</link> = P3^4</para>
+
+<para>定义SDA的管脚 </para>
+</listitem>
+            <listitem><para>sbit <link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link> = P3^5</para>
+
+<para>定义RST的管脚 </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>详细描述</title>
+
+<para>SPI的库 </para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8h_source">bsp_SPI.h</link> 中定义.</para>
+</section>
+<section>
+<title>函数说明</title>
+<anchor xml:id="_bsp___s_p_i_8h_1a49b2197235df99399937e589ff42bc8f"/><section>
+    <title>SPI_ReadOneByte()</title>
+<indexterm><primary>SPI_ReadOneByte</primary><secondary>bsp_SPI.h</secondary></indexterm>
+<indexterm><primary>bsp_SPI.h</primary><secondary>SPI_ReadOneByte</secondary></indexterm>
+<para><computeroutput>unsigned char SPI_ReadOneByte (unsigned char address)</computeroutput></para><para>
+
+<para>使用总线获取一个字节数据 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>addr</entry><entry>
+<para>需要接收的寄存器地址 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>dat</entry><entry>
+<para>接受的数据 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>无返回值 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00071">71</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8h_a49b2197235df99399937e589ff42bc8f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___s_p_i_8h_1a5edf23a0da935aa5a61c29efbbf7fb7b"/><section>
+    <title>SPI_WriteOneByte()</title>
+<indexterm><primary>SPI_WriteOneByte</primary><secondary>bsp_SPI.h</secondary></indexterm>
+<indexterm><primary>bsp_SPI.h</primary><secondary>SPI_WriteOneByte</secondary></indexterm>
+<para><computeroutput>void SPI_WriteOneByte (unsigned char address, unsigned char dat)</computeroutput></para><para>
+
+<para>使用总线发送一个字节数据 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>addr</entry><entry>
+<para>需要改写的寄存器地址 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>dat</entry><entry>
+<para>改写的数据 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>无返回值 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00057">57</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8h_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>变量说明</title>
+<anchor xml:id="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8"/><section>
+    <title>SPI_RST_PIN</title>
+<indexterm><primary>SPI_RST_PIN</primary><secondary>bsp_SPI.h</secondary></indexterm>
+<indexterm><primary>bsp_SPI.h</primary><secondary>SPI_RST_PIN</secondary></indexterm>
+<para><computeroutput>sbit SPI_RST_PIN = P3^5</computeroutput></para><para>
+
+<para>定义RST的管脚 </para>
+</para>
+
+<para><para><link linkend="_todo_1_todo000005">待办事项</link> 
+<para>定义RST的管脚 </para>
+</para></para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8h_source">bsp_SPI.h</link> 第 <link linkend="_bsp___s_p_i_8h_source_1l00054">54</link> 行定义.</para>
+</section>
+<anchor xml:id="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc"/><section>
+    <title>SPI_SCK_PIN</title>
+<indexterm><primary>SPI_SCK_PIN</primary><secondary>bsp_SPI.h</secondary></indexterm>
+<indexterm><primary>bsp_SPI.h</primary><secondary>SPI_SCK_PIN</secondary></indexterm>
+<para><computeroutput>sbit SPI_SCK_PIN = P3^6</computeroutput></para><para>
+
+<para>定义SCK的管脚 </para>
+</para>
+
+<para><para><link linkend="_todo_1_todo000003">待办事项</link> 
+<para>定义SCK的管脚 </para>
+</para></para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8h_source">bsp_SPI.h</link> 第 <link linkend="_bsp___s_p_i_8h_source_1l00046">46</link> 行定义.</para>
+</section>
+<anchor xml:id="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01"/><section>
+    <title>SPI_SDA_PIN</title>
+<indexterm><primary>SPI_SDA_PIN</primary><secondary>bsp_SPI.h</secondary></indexterm>
+<indexterm><primary>bsp_SPI.h</primary><secondary>SPI_SDA_PIN</secondary></indexterm>
+<para><computeroutput>sbit SPI_SDA_PIN = P3^4</computeroutput></para><para>
+
+<para>定义SDA的管脚 </para>
+</para>
+
+<para><para><link linkend="_todo_1_todo000004">待办事项</link> 
+<para>定义SDA的管脚 </para>
+</para></para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8h_source">bsp_SPI.h</link> 第 <link linkend="_bsp___s_p_i_8h_source_1l00050">50</link> 行定义.</para>
+</section>
+</section>
+</section>

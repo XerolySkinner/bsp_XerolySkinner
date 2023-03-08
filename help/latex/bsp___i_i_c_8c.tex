@@ -1,0 +1,456 @@
+\hypertarget{bsp___i_i_c_8c}{}\doxysection{D\+:/gitt/bsp\+\_\+\+Xeroly\+Skinner/bsp\+\_\+device/bsp\+\_\+\+IIC.c 文件参考}
+\label{bsp___i_i_c_8c}\index{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_IIC.c@{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_IIC.c}}
+
+
+本类实现软件\+IIC功能 依此类派生出其他软件\+IIC功能  
+
+
+{\ttfamily \#include \char`\"{}bsp\+\_\+\+IIC.\+h\char`\"{}}\newline
+bsp\+\_\+\+IIC.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{bsp___i_i_c_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_ac7de8cb7cad6d402709b385e39aa764f}{IIC\+\_\+\+Start}} (void)
+\begin{DoxyCompactList}\small\item\em 发送\+IIC开始信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_a785ea8492cab4612ee5d3752a34f8a72}{IIC\+\_\+\+Stop}} (void)
+\begin{DoxyCompactList}\small\item\em 发送\+IIC停止信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_a0bfa6b98198b92dc18853f7e157ecfb0}{IIC\+\_\+\+Send\+Ack}} (unsigned char ackbit)
+\begin{DoxyCompactList}\small\item\em 发送\+IIC应答信号 \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{bsp___i_i_c_8c_a0a0cf8c63abeefa1da7bf4fff457d0cd}{IIC\+\_\+\+Wait\+Ack}} (void)
+\begin{DoxyCompactList}\small\item\em 等待应答信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_a53b89d8e9d661d28c1af1a6b3c5373af}{IIC\+\_\+\+Send\+Byte}} (unsigned char byt)
+\begin{DoxyCompactList}\small\item\em 发送\+IIC一个字节信号 \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{bsp___i_i_c_8c_a1bdad8ef1b06a40b5912d93c12e07c9a}{IIC\+\_\+\+Rec\+Byte}} (void)
+\begin{DoxyCompactList}\small\item\em 接收\+IIC一个字节信号 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_a92f9de6f27a4539bc0a91d349ffbc006}{IIC\+\_\+\+Write\+One\+Byte}} (unsigned char id, unsigned char addr, unsigned char dat)
+\begin{DoxyCompactList}\small\item\em 使用总线发送一个字节数据 \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{bsp___i_i_c_8c_a0bd93b2a87bada6c99784dacbfc2ff98}{IIC\+\_\+\+Read\+One\+Byte}} (unsigned char id, unsigned char addr)
+\begin{DoxyCompactList}\small\item\em 使用总线接收一个字节数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_a44898a92f58dd1b99757425e52e1ce78}{IIC\+\_\+\+Write}} (unsigned char id, unsigned char addr, unsigned char $\ast$dat, unsigned int len)
+\begin{DoxyCompactList}\small\item\em 使用总线发送定长数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_a3f7052e21bba515ca87c85c50efeec4f}{IIC\+\_\+\+Read}} (unsigned char id, unsigned char addr, unsigned char $\ast$dat, unsigned int len)
+\begin{DoxyCompactList}\small\item\em 使用总线接收定长数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___i_i_c_8c_a5110c30e693502c5356a1c09014dcb35}{IIC\+\_\+\+Delay}} (void)
+\begin{DoxyCompactList}\small\item\em 时序中的延时 在此处短暂延时 \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{bsp___i_i_c_8c_a85e1e4cf02f2952c7a261a5db29838d8}{IIC\+\_\+\+SCK}} (unsigned char var)
+\begin{DoxyCompactList}\small\item\em 控制\+SCK管脚口 \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{bsp___i_i_c_8c_a00c0046e123145451619c3f57ba4fffa}{IIC\+\_\+\+SDA}} (unsigned char var)
+\begin{DoxyCompactList}\small\item\em 控制\+SDA管脚口 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+本类实现软件\+IIC功能 依此类派生出其他软件\+IIC功能 
+
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 中定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a5110c30e693502c5356a1c09014dcb35}\label{bsp___i_i_c_8c_a5110c30e693502c5356a1c09014dcb35}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_Delay@{IIC\_Delay}}
+\index{IIC\_Delay@{IIC\_Delay}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_Delay()}{IIC\_Delay()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Delay (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+时序中的延时 在此处短暂延时 
+
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00224}{224}} 行定义.
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp___i_i_c_8c_a5110c30e693502c5356a1c09014dcb35_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a3f7052e21bba515ca87c85c50efeec4f}\label{bsp___i_i_c_8c_a3f7052e21bba515ca87c85c50efeec4f}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_Read@{IIC\_Read}}
+\index{IIC\_Read@{IIC\_Read}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_Read()}{IIC\_Read()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Read (\begin{DoxyParamCaption}\item[{unsigned char}]{id,  }\item[{unsigned char}]{addr,  }\item[{unsigned char $\ast$}]{dat,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+使用总线接收定长数据 
+
+
+\begin{DoxyParams}{参数}
+{\em id} & 接收的器件地址,如0x68(\+MPU6050) \\
+\hline
+{\em addr} & 需要接收的寄存器地址起始 \\
+\hline
+{\em dat} & 改写的数据指针 \\
+\hline
+{\em len} & 数据数目 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00199}{199}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{bsp___i_i_c_8c_a3f7052e21bba515ca87c85c50efeec4f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a0bd93b2a87bada6c99784dacbfc2ff98}\label{bsp___i_i_c_8c_a0bd93b2a87bada6c99784dacbfc2ff98}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_ReadOneByte@{IIC\_ReadOneByte}}
+\index{IIC\_ReadOneByte@{IIC\_ReadOneByte}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_ReadOneByte()}{IIC\_ReadOneByte()}}
+{\footnotesize\ttfamily unsigned char IIC\+\_\+\+Read\+One\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{id,  }\item[{unsigned char}]{addr }\end{DoxyParamCaption})}
+
+
+
+使用总线接收一个字节数据 
+
+
+\begin{DoxyParams}{参数}
+{\em id} & 接收的器件地址,如0x68(\+MPU6050) \\
+\hline
+{\em addr} & 需要获取数据的寄存器地址 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+返回该寄存器内的数据 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00153}{153}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp___i_i_c_8c_a0bd93b2a87bada6c99784dacbfc2ff98_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a1bdad8ef1b06a40b5912d93c12e07c9a}\label{bsp___i_i_c_8c_a1bdad8ef1b06a40b5912d93c12e07c9a}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_RecByte@{IIC\_RecByte}}
+\index{IIC\_RecByte@{IIC\_RecByte}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_RecByte()}{IIC\_RecByte()}}
+{\footnotesize\ttfamily unsigned char IIC\+\_\+\+Rec\+Byte (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+接收\+IIC一个字节信号 
+
+\begin{DoxyReturn}{返回}
+接收到的一个字节信号 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00114}{114}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{bsp___i_i_c_8c_a1bdad8ef1b06a40b5912d93c12e07c9a_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{bsp___i_i_c_8c_a1bdad8ef1b06a40b5912d93c12e07c9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a85e1e4cf02f2952c7a261a5db29838d8}\label{bsp___i_i_c_8c_a85e1e4cf02f2952c7a261a5db29838d8}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_SCK@{IIC\_SCK}}
+\index{IIC\_SCK@{IIC\_SCK}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_SCK()}{IIC\_SCK()}}
+{\footnotesize\ttfamily unsigned char IIC\+\_\+\+SCK (\begin{DoxyParamCaption}\item[{unsigned char}]{var }\end{DoxyParamCaption})}
+
+
+
+控制\+SCK管脚口 
+
+
+\begin{DoxyParams}{参数}
+{\em var} & 此处有三个状态,IIC\+\_\+\+SET置位管脚,IIC\+\_\+\+RESET复位管脚 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+当var为\+IIC\+\_\+\+READ时返回管脚状态 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00234}{234}} 行定义.
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp___i_i_c_8c_a85e1e4cf02f2952c7a261a5db29838d8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a00c0046e123145451619c3f57ba4fffa}\label{bsp___i_i_c_8c_a00c0046e123145451619c3f57ba4fffa}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_SDA@{IIC\_SDA}}
+\index{IIC\_SDA@{IIC\_SDA}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_SDA()}{IIC\_SDA()}}
+{\footnotesize\ttfamily unsigned char IIC\+\_\+\+SDA (\begin{DoxyParamCaption}\item[{unsigned char}]{var }\end{DoxyParamCaption})}
+
+
+
+控制\+SDA管脚口 
+
+
+\begin{DoxyParams}{参数}
+{\em var} & 此处有三个状态,IIC\+\_\+\+SET置位管脚,IIC\+\_\+\+RESET复位管脚 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+当var为\+IIC\+\_\+\+READ时返回管脚状态 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00250}{250}} 行定义.
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp___i_i_c_8c_a00c0046e123145451619c3f57ba4fffa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a0bfa6b98198b92dc18853f7e157ecfb0}\label{bsp___i_i_c_8c_a0bfa6b98198b92dc18853f7e157ecfb0}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_SendAck@{IIC\_SendAck}}
+\index{IIC\_SendAck@{IIC\_SendAck}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_SendAck()}{IIC\_SendAck()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Send\+Ack (\begin{DoxyParamCaption}\item[{unsigned char}]{ackbit }\end{DoxyParamCaption})}
+
+
+
+发送\+IIC应答信号 
+
+
+\begin{DoxyParams}{参数}
+{\em ackbit} & 0为应答,1位非应答 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00071}{71}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{bsp___i_i_c_8c_a0bfa6b98198b92dc18853f7e157ecfb0_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{bsp___i_i_c_8c_a0bfa6b98198b92dc18853f7e157ecfb0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a53b89d8e9d661d28c1af1a6b3c5373af}\label{bsp___i_i_c_8c_a53b89d8e9d661d28c1af1a6b3c5373af}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_SendByte@{IIC\_SendByte}}
+\index{IIC\_SendByte@{IIC\_SendByte}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_SendByte()}{IIC\_SendByte()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Send\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{byt }\end{DoxyParamCaption})}
+
+
+
+发送\+IIC一个字节信号 
+
+
+\begin{DoxyParams}{参数}
+{\em byt} & 发送的字节 \\
+\hline
+\end{DoxyParams}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00098}{98}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{bsp___i_i_c_8c_a53b89d8e9d661d28c1af1a6b3c5373af_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=287pt]{bsp___i_i_c_8c_a53b89d8e9d661d28c1af1a6b3c5373af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_ac7de8cb7cad6d402709b385e39aa764f}\label{bsp___i_i_c_8c_ac7de8cb7cad6d402709b385e39aa764f}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_Start@{IIC\_Start}}
+\index{IIC\_Start@{IIC\_Start}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_Start()}{IIC\_Start()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Start (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+发送\+IIC开始信号 
+
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00047}{47}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{bsp___i_i_c_8c_ac7de8cb7cad6d402709b385e39aa764f_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{bsp___i_i_c_8c_ac7de8cb7cad6d402709b385e39aa764f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a785ea8492cab4612ee5d3752a34f8a72}\label{bsp___i_i_c_8c_a785ea8492cab4612ee5d3752a34f8a72}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_Stop@{IIC\_Stop}}
+\index{IIC\_Stop@{IIC\_Stop}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_Stop()}{IIC\_Stop()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Stop (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+发送\+IIC停止信号 
+
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00059}{59}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=227pt]{bsp___i_i_c_8c_a785ea8492cab4612ee5d3752a34f8a72_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{bsp___i_i_c_8c_a785ea8492cab4612ee5d3752a34f8a72_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a0a0cf8c63abeefa1da7bf4fff457d0cd}\label{bsp___i_i_c_8c_a0a0cf8c63abeefa1da7bf4fff457d0cd}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_WaitAck@{IIC\_WaitAck}}
+\index{IIC\_WaitAck@{IIC\_WaitAck}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_WaitAck()}{IIC\_WaitAck()}}
+{\footnotesize\ttfamily unsigned char IIC\+\_\+\+Wait\+Ack (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+等待应答信号 
+
+\begin{DoxyReturn}{返回}
+返回是否有回应 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00085}{85}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{bsp___i_i_c_8c_a0a0cf8c63abeefa1da7bf4fff457d0cd_cgraph}
+\end{center}
+\end{figure}
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{bsp___i_i_c_8c_a0a0cf8c63abeefa1da7bf4fff457d0cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a44898a92f58dd1b99757425e52e1ce78}\label{bsp___i_i_c_8c_a44898a92f58dd1b99757425e52e1ce78}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_Write@{IIC\_Write}}
+\index{IIC\_Write@{IIC\_Write}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_Write()}{IIC\_Write()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Write (\begin{DoxyParamCaption}\item[{unsigned char}]{id,  }\item[{unsigned char}]{addr,  }\item[{unsigned char $\ast$}]{dat,  }\item[{unsigned int}]{len }\end{DoxyParamCaption})}
+
+
+
+使用总线发送定长数据 
+
+
+\begin{DoxyParams}{参数}
+{\em id} & 发送的器件地址,如0x68(\+MPU6050) \\
+\hline
+{\em addr} & 需要改写的寄存器地址起始 \\
+\hline
+{\em dat} & 改写的数据指针 \\
+\hline
+{\em len} & 数据数目 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00177}{177}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{bsp___i_i_c_8c_a44898a92f58dd1b99757425e52e1ce78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___i_i_c_8c_a92f9de6f27a4539bc0a91d349ffbc006}\label{bsp___i_i_c_8c_a92f9de6f27a4539bc0a91d349ffbc006}} 
+\index{bsp\_IIC.c@{bsp\_IIC.c}!IIC\_WriteOneByte@{IIC\_WriteOneByte}}
+\index{IIC\_WriteOneByte@{IIC\_WriteOneByte}!bsp\_IIC.c@{bsp\_IIC.c}}
+\doxysubsubsection{\texorpdfstring{IIC\_WriteOneByte()}{IIC\_WriteOneByte()}}
+{\footnotesize\ttfamily void IIC\+\_\+\+Write\+One\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{id,  }\item[{unsigned char}]{addr,  }\item[{unsigned char}]{dat }\end{DoxyParamCaption})}
+
+
+
+使用总线发送一个字节数据 
+
+IIC的基础实现方法
+
+
+\begin{DoxyParams}{参数}
+{\em id} & 发送的器件地址,如0x68(\+MPU6050) \\
+\hline
+{\em addr} & 需要改写的寄存器地址 \\
+\hline
+{\em dat} & 改写的数据 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___i_i_c_8c_source}{bsp\+\_\+\+IIC.\+c}} 第 \mbox{\hyperlink{bsp___i_i_c_8c_source_l00136}{136}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bsp___i_i_c_8c_a92f9de6f27a4539bc0a91d349ffbc006_cgraph}
+\end{center}
+\end{figure}

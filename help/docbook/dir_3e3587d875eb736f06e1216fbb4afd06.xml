@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_3e3587d875eb736f06e1216fbb4afd06" xml:lang="zh">
+<title>D:/工作库/GitHub/bsp_XerolySkinner 目录参考</title>
+<indexterm><primary>D:/工作库/GitHub/bsp_XerolySkinner 目录参考</primary></indexterm>
+bsp_XerolySkinner 的目录依赖关系图<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_3e3587d875eb736f06e1216fbb4afd06_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>目录    </title>
+        <itemizedlist>
+            <listitem><para>目录 <link linkend="_dir_084c777f868e71c31c920ed3404c70a4">bsp_device</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

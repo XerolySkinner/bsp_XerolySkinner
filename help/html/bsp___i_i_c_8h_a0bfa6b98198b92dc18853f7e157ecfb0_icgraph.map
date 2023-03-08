@@ -1,0 +1,5 @@
+<map id="IIC_SendAck" name="IIC_SendAck">
+<area shape="rect" id="node1" title="发送IIC应答信号" alt="" coords="179,31,276,56"/>
+<area shape="rect" id="node2" href="$bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,105,31"/>
+<area shape="rect" id="node3" href="$bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="5,55,131,80"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="IIC_Start" name="IIC_Start">
+<area shape="rect" id="node1" title="发送IIC开始信号" alt="" coords="180,80,252,105"/>
+<area shape="rect" id="node2" href="$bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,106,31"/>
+<area shape="rect" id="node3" href="$bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,55,131,80"/>
+<area shape="rect" id="node4" href="$bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,104,106,129"/>
+<area shape="rect" id="node5" href="$bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,153,132,179"/>
+</map>

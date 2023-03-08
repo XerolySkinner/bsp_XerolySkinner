@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp___s_p_i_8c_source" xml:lang="zh">
+<title>bsp_SPI.c</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c</primary></indexterm>
+浏览该文件的文档.<programlisting linenumbering="unnumbered"><anchor xml:id="_bsp___s_p_i_8c_source_1l00001"/>00001 <emphasis role="comment">/*----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00002"/>00002 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00003"/>00003 <emphasis role="comment">&#32;#&#32;&#32;Copyright&#32;(c)&#32;2022&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00004"/>00004 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00005"/>00005 <emphasis role="comment">&#32;#&#32;&#32;本软件按原样提供,无任何明示或暗示</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00006"/>00006 <emphasis role="comment">&#32;#&#32;&#32;在任何情况下,作者都不承担任何损害赔偿责任</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00007"/>00007 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00008"/>00008 <emphasis role="comment">&#32;#&#32;&#32;使用的许可声明:</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00009"/>00009 <emphasis role="comment">&#32;#&#32;&#32;1.&#32;&#32;不得歪曲本软件的来源,你不能声称你编写了原始软件.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00010"/>00010 <emphasis role="comment">&#32;#&#32;&#32;2.&#32;&#32;免费授予以任何目的,前提是版权声明出现在所有副本中.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00011"/>00011 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;并且版权声明和许可声明同时出现.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00012"/>00012 <emphasis role="comment">&#32;#&#32;&#32;3.&#32;&#32;你有使用,复制,修改,分发,和销售本软件的许可.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00013"/>00013 <emphasis role="comment">&#32;#&#32;&#32;4.&#32;&#32;如果你在产品中使用,产品文档中的声明是赞赏的但不是必须的.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00014"/>00014 <emphasis role="comment">&#32;#&#32;&#32;5.&#32;&#32;本通知不得从任何来源删除或更改.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00015"/>00015 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00016"/>00016 <emphasis role="comment">&#32;#&#32;&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00017"/>00017 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;E-mail:zabbcccbbaz@163.com</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00018"/>00018 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;QQ:2715099320</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00019"/>00019 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;Mobile&#32;Phone:13005636215</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00020"/>00020 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00021"/>00021 <emphasis role="comment">&#32;#&#32;&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00022"/>00022 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00023"/>00023 
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00033"/>00033 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_bsp___s_p_i_8h">bsp_SPI.h</link>&quot;</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00035"/>00035 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00036"/>00036 <emphasis role="comment">//&#32;&#32;函数</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00043"/><link linkend="_bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2">00043</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2">SPI_Byte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;temp){
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;i;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(i=0;i&lt;8;i++){
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>&#32;=&#32;0;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">SPI_SDA_PIN</link>&#32;=&#32;temp&amp;0x01;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&gt;&gt;=1;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>=1;}}
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00050"/>00050 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00057"/><link linkend="_bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b">00057</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b">SPI_WriteOneByte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;address,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;dat){
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>=0;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>=0;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>=1;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2">SPI_Byte</link>(address);
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2">SPI_Byte</link>(dat);
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>=0;}
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00064"/>00064 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00071"/><link linkend="_bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f">00071</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f">SPI_ReadOneByte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;address){
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;i,temp=0x00;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>=0;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>=0;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>=1;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2">SPI_Byte</link>(address);
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00077"/>00077 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(i=0;i&lt;8;i++){
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>=0;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;temp&gt;&gt;=1;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">SPI_SDA_PIN</link>)temp|=0x80;
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>=1;}
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>=0;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>=0;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>=1;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00085"/>00085 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">SPI_SDA_PIN</link>=0;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">SPI_SDA_PIN</link>=1;&#32;&#32;_nop_();
+<anchor xml:id="_bsp___s_p_i_8c_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;temp;}
+</programlisting></section>

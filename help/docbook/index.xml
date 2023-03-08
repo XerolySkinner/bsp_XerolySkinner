@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="zh">
+    <info>
+    <title>bsp_XerolySkinner</title>
+    </info>
+<chapter>
+    <title>主要信息</title>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>待办事项列表</title>
+    <xi:include href="todo.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>文件说明</title>
+    <xi:include href="bsp___i_i_c_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___i_i_c_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___i_i_c_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___i_i_c_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___s_p_i_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___s_p_i_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___s_p_i_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___s_p_i_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___u_a_r_t_8c.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___u_a_r_t_8c_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___u_a_r_t_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="bsp___u_a_r_t_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

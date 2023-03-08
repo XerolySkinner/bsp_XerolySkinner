@@ -1,0 +1,276 @@
+.TH "D:/gitt/bsp_XerolySkinner/bsp_device/bsp_IIC.c" 3 "2023年 三月 9日 星期四" "Version 1.0.0" "bsp_XerolySkinner" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/gitt/bsp_XerolySkinner/bsp_device/bsp_IIC.c \- 本类实现软件IIC功能 依此类派生出其他软件IIC功能  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'bsp_IIC\&.h'\fP
+.br
+
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "void \fBIIC_Start\fP (void)"
+.br
+.RI "发送IIC开始信号 "
+.ti -1c
+.RI "void \fBIIC_Stop\fP (void)"
+.br
+.RI "发送IIC停止信号 "
+.ti -1c
+.RI "void \fBIIC_SendAck\fP (unsigned char ackbit)"
+.br
+.RI "发送IIC应答信号 "
+.ti -1c
+.RI "unsigned char \fBIIC_WaitAck\fP (void)"
+.br
+.RI "等待应答信号 "
+.ti -1c
+.RI "void \fBIIC_SendByte\fP (unsigned char byt)"
+.br
+.RI "发送IIC一个字节信号 "
+.ti -1c
+.RI "unsigned char \fBIIC_RecByte\fP (void)"
+.br
+.RI "接收IIC一个字节信号 "
+.ti -1c
+.RI "void \fBIIC_WriteOneByte\fP (unsigned char id, unsigned char addr, unsigned char dat)"
+.br
+.RI "使用总线发送一个字节数据 "
+.ti -1c
+.RI "unsigned char \fBIIC_ReadOneByte\fP (unsigned char id, unsigned char addr)"
+.br
+.RI "使用总线接收一个字节数据 "
+.ti -1c
+.RI "void \fBIIC_Write\fP (unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len)"
+.br
+.RI "使用总线发送定长数据 "
+.ti -1c
+.RI "void \fBIIC_Read\fP (unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len)"
+.br
+.RI "使用总线接收定长数据 "
+.ti -1c
+.RI "void \fBIIC_Delay\fP (void)"
+.br
+.RI "时序中的延时 在此处短暂延时 "
+.ti -1c
+.RI "unsigned char \fBIIC_SCK\fP (unsigned char var)"
+.br
+.RI "控制SCK管脚口 "
+.ti -1c
+.RI "unsigned char \fBIIC_SDA\fP (unsigned char var)"
+.br
+.RI "控制SDA管脚口 "
+.in -1c
+.SH "详细描述"
+.PP 
+本类实现软件IIC功能 依此类派生出其他软件IIC功能 
+
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 中定义\&.
+.SH "函数说明"
+.PP 
+.SS "void IIC_Delay (void)"
+
+.PP
+时序中的延时 在此处短暂延时 
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB224\fP 行定义\&.
+.SS "void IIC_Read (unsigned char id, unsigned char addr, unsigned char * dat, unsigned int len)"
+
+.PP
+使用总线接收定长数据 
+.PP
+\fB参数\fP
+.RS 4
+\fIid\fP 接收的器件地址,如0x68(MPU6050) 
+.br
+\fIaddr\fP 需要接收的寄存器地址起始 
+.br
+\fIdat\fP 改写的数据指针 
+.br
+\fIlen\fP 数据数目 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+无返回值 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB199\fP 行定义\&.
+.SS "unsigned char IIC_ReadOneByte (unsigned char id, unsigned char addr)"
+
+.PP
+使用总线接收一个字节数据 
+.PP
+\fB参数\fP
+.RS 4
+\fIid\fP 接收的器件地址,如0x68(MPU6050) 
+.br
+\fIaddr\fP 需要获取数据的寄存器地址 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+返回该寄存器内的数据 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB153\fP 行定义\&.
+.SS "unsigned char IIC_RecByte (void)"
+
+.PP
+接收IIC一个字节信号 
+.PP
+\fB返回\fP
+.RS 4
+接收到的一个字节信号 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB114\fP 行定义\&.
+.SS "unsigned char IIC_SCK (unsigned char var)"
+
+.PP
+控制SCK管脚口 
+.PP
+\fB参数\fP
+.RS 4
+\fIvar\fP 此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+当var为IIC_READ时返回管脚状态 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB234\fP 行定义\&.
+.SS "unsigned char IIC_SDA (unsigned char var)"
+
+.PP
+控制SDA管脚口 
+.PP
+\fB参数\fP
+.RS 4
+\fIvar\fP 此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+当var为IIC_READ时返回管脚状态 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB250\fP 行定义\&.
+.SS "void IIC_SendAck (unsigned char ackbit)"
+
+.PP
+发送IIC应答信号 
+.PP
+\fB参数\fP
+.RS 4
+\fIackbit\fP 0为应答,1位非应答 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB71\fP 行定义\&.
+.SS "void IIC_SendByte (unsigned char byt)"
+
+.PP
+发送IIC一个字节信号 
+.PP
+\fB参数\fP
+.RS 4
+\fIbyt\fP 发送的字节 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB98\fP 行定义\&.
+.SS "void IIC_Start (void)"
+
+.PP
+发送IIC开始信号 
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB47\fP 行定义\&.
+.SS "void IIC_Stop (void)"
+
+.PP
+发送IIC停止信号 
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB59\fP 行定义\&.
+.SS "unsigned char IIC_WaitAck (void)"
+
+.PP
+等待应答信号 
+.PP
+\fB返回\fP
+.RS 4
+返回是否有回应 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB85\fP 行定义\&.
+.SS "void IIC_Write (unsigned char id, unsigned char addr, unsigned char * dat, unsigned int len)"
+
+.PP
+使用总线发送定长数据 
+.PP
+\fB参数\fP
+.RS 4
+\fIid\fP 发送的器件地址,如0x68(MPU6050) 
+.br
+\fIaddr\fP 需要改写的寄存器地址起始 
+.br
+\fIdat\fP 改写的数据指针 
+.br
+\fIlen\fP 数据数目 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+无返回值 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB177\fP 行定义\&.
+.SS "void IIC_WriteOneByte (unsigned char id, unsigned char addr, unsigned char dat)"
+
+.PP
+使用总线发送一个字节数据 IIC的基础实现方法
+.PP
+\fB参数\fP
+.RS 4
+\fIid\fP 发送的器件地址,如0x68(MPU6050) 
+.br
+\fIaddr\fP 需要改写的寄存器地址 
+.br
+\fIdat\fP 改写的数据 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+无返回值 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_IIC\&.c\fP 第 \fB136\fP 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 bsp_XerolySkinner 的 源代码自动生成\&.

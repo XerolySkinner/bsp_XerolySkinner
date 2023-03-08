@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_f65eaaef425b27c75b44b4338a6ab06b" xml:lang="zh">
+<title>D:/gitt/bsp_XerolySkinner/bsp_device 目录参考</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device 目录参考</primary></indexterm>
+<simplesect>
+    <title>文件    </title>
+        <itemizedlist>
+            <listitem><para>文件 <link linkend="_bsp___i_i_c_8c">bsp_IIC.c</link></para>
+
+<para>本类实现软件IIC功能 依此类派生出其他软件IIC功能 </para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___i_i_c_8h">bsp_IIC.h</link></para>
+
+<para>本类实现软件IIC功能 依此类派生出其他软件IIC功能 </para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___s_p_i_8c">bsp_SPI.c</link></para>
+
+<para>SPI的库 </para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___s_p_i_8h">bsp_SPI.h</link></para>
+
+<para>SPI的库 </para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___u_a_r_t_8c">bsp_UART.c</link></para>
+
+<para>UART的51库 </para>
+</listitem>
+            <listitem><para>文件 <link linkend="_bsp___u_a_r_t_8h">bsp_UART.h</link></para>
+
+<para>UART的51库 </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

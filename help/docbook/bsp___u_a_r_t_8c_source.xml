@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp___u_a_r_t_8c_source" xml:lang="zh">
+<title>bsp_UART.c</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c</primary></indexterm>
+浏览该文件的文档.<programlisting linenumbering="unnumbered"><anchor xml:id="_bsp___u_a_r_t_8c_source_1l00001"/>00001 <emphasis role="comment">/*----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00002"/>00002 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00003"/>00003 <emphasis role="comment">&#32;#&#32;&#32;Copyright&#32;(c)&#32;2022&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00004"/>00004 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00005"/>00005 <emphasis role="comment">&#32;#&#32;&#32;本软件按原样提供,无任何明示或暗示</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00006"/>00006 <emphasis role="comment">&#32;#&#32;&#32;在任何情况下,作者都不承担任何损害赔偿责任</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00007"/>00007 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00008"/>00008 <emphasis role="comment">&#32;#&#32;&#32;使用的许可声明:</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00009"/>00009 <emphasis role="comment">&#32;#&#32;&#32;1.&#32;&#32;不得歪曲本软件的来源,你不能声称你编写了原始软件.</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00010"/>00010 <emphasis role="comment">&#32;#&#32;&#32;2.&#32;&#32;免费授予以任何目的,前提是版权声明出现在所有副本中.</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00011"/>00011 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;并且版权声明和许可声明同时出现.</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00012"/>00012 <emphasis role="comment">&#32;#&#32;&#32;3.&#32;&#32;你有使用,复制,修改,分发,和销售本软件的许可.</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00013"/>00013 <emphasis role="comment">&#32;#&#32;&#32;4.&#32;&#32;如果你在产品中使用,产品文档中的声明是赞赏的但不是必须的.</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00014"/>00014 <emphasis role="comment">&#32;#&#32;&#32;5.&#32;&#32;本通知不得从任何来源删除或更改.</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00015"/>00015 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00016"/>00016 <emphasis role="comment">&#32;#&#32;&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00017"/>00017 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;E-mail:zabbcccbbaz@163.com</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00018"/>00018 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;QQ:2715099320</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00019"/>00019 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;Mobile&#32;Phone:13005636215</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00020"/>00020 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00021"/>00021 <emphasis role="comment">&#32;#&#32;&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00022"/>00022 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00023"/>00023 
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00034"/>00034 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_bsp___u_a_r_t_8h">bsp_UART.h</link>&quot;</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00036"/>00036 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00037"/>00037 <emphasis role="comment">//&#32;&#32;函数</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00043"/><link linkend="_bsp___u_a_r_t_8c_1aa43139b22841bc5547b45a8f210482c0">00043</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___u_a_r_t_8c_1aa43139b22841bc5547b45a8f210482c0">putchar</link>(<emphasis role="keywordtype">char</emphasis>&#32;temp){
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00044"/>00044 &#32;&#32;&#32;&#32;SBUF&#32;=&#32;temp;
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(!TI);
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00046"/>00046 &#32;&#32;&#32;&#32;TI&#32;=&#32;0;
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;temp;}
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00049"/>00049 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00050"/>00050 <emphasis role="comment">//&#32;&#32;初始化</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00056"/><link linkend="_bsp___u_a_r_t_8c_1af88d208a46f3126dac7fb906c1469c52">00056</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___u_a_r_t_8c_1af88d208a46f3126dac7fb906c1469c52">UartInit_9600</link>(<emphasis role="keywordtype">void</emphasis>){&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//9600bps@11.0592MHz</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00057"/>00057 &#32;&#32;&#32;&#32;PCON&#32;|=&#32;0x80;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//使能波特率倍速位SMOD</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00058"/>00058 &#32;&#32;&#32;&#32;SCON&#32;=&#32;0x50;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//8位数据,可变波特率</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00059"/>00059 &#32;&#32;&#32;&#32;TMOD&#32;&amp;=&#32;0x0F;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//设置定时器模式</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;TMOD&#32;|=&#32;0x20;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//设置定时器模式</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00061"/>00061 &#32;&#32;&#32;&#32;TL1&#32;=&#32;0xFA;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//设置定时初始值</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;TH1&#32;=&#32;0xFA;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//设置定时重载值</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;ET1&#32;=&#32;0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//禁止定时器中断</emphasis>
+<anchor xml:id="_bsp___u_a_r_t_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;TR1&#32;=&#32;1;}&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//定时器1开始计时</emphasis>
+</programlisting></section>

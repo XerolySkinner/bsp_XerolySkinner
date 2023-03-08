@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="zh">
+  <compounddef id="todo" kind="page">
+    <compoundname>todo</compoundname>
+    <title>待办事项列表</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><variablelist>
+<varlistentry><term>成员 <ref refid="bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48" kindref="member">IIC_SCK_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000001"/>定义SCK的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93" kindref="member">IIC_SDA_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000002"/>定义SDA的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000005"/>定义RST的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000003"/>定义SCK的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kindref="member">SPI_SDA_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000004"/>定义SDA的管脚 </para>
+</listitem>
+</variablelist>
+</para>
+    </detaileddescription>
+    <location file="todo"/>
+  </compounddef>
+</doxygen>

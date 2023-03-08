@@ -1,0 +1,13 @@
+<map id="IIC_Delay" name="IIC_Delay">
+<area shape="rect" id="node1" title="时序中的延时 在此处短暂延时" alt="" coords="329,129,407,155"/>
+<area shape="rect" id="node2" href="$bsp___i_i_c_8c.html#a1bdad8ef1b06a40b5912d93c12e07c9a" title="接收IIC一个字节信号" alt="" coords="183,5,278,31"/>
+<area shape="rect" id="node5" href="$bsp___i_i_c_8c.html#a0bfa6b98198b92dc18853f7e157ecfb0" title="发送IIC应答信号" alt="" coords="182,55,279,80"/>
+<area shape="rect" id="node6" href="$bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="180,104,281,129"/>
+<area shape="rect" id="node9" href="$bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="195,153,267,179"/>
+<area shape="rect" id="node10" href="$bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="195,203,266,228"/>
+<area shape="rect" id="node11" href="$bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="183,252,278,277"/>
+<area shape="rect" id="node3" href="$bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,80,106,105"/>
+<area shape="rect" id="node4" href="$bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,129,131,155"/>
+<area shape="rect" id="node7" href="$bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,179,106,204"/>
+<area shape="rect" id="node8" href="$bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,228,132,253"/>
+</map>

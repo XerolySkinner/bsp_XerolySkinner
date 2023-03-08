@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_7035a6132d6b6f93711d18a4b93a1cfa" xml:lang="zh">
+<title>D:/工作库/GitHub 目录参考</title>
+<indexterm><primary>D:/工作库/GitHub 目录参考</primary></indexterm>
+GitHub 的目录依赖关系图<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_7035a6132d6b6f93711d18a4b93a1cfa_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>目录    </title>
+        <itemizedlist>
+            <listitem><para>目录 <link linkend="_dir_3e3587d875eb736f06e1216fbb4afd06">bsp_XerolySkinner</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

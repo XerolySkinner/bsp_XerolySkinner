@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.5" xml:lang="zh">
+  <compound refid="bsp___i_i_c_8c" kind="file"><name>bsp_IIC.c</name>
+    <member refid="bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f" kind="function"><name>IIC_Start</name></member>
+    <member refid="bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72" kind="function"><name>IIC_Stop</name></member>
+    <member refid="bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0" kind="function"><name>IIC_SendAck</name></member>
+    <member refid="bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd" kind="function"><name>IIC_WaitAck</name></member>
+    <member refid="bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af" kind="function"><name>IIC_SendByte</name></member>
+    <member refid="bsp___i_i_c_8c_1a1bdad8ef1b06a40b5912d93c12e07c9a" kind="function"><name>IIC_RecByte</name></member>
+    <member refid="bsp___i_i_c_8c_1a92f9de6f27a4539bc0a91d349ffbc006" kind="function"><name>IIC_WriteOneByte</name></member>
+    <member refid="bsp___i_i_c_8c_1a0bd93b2a87bada6c99784dacbfc2ff98" kind="function"><name>IIC_ReadOneByte</name></member>
+    <member refid="bsp___i_i_c_8c_1a44898a92f58dd1b99757425e52e1ce78" kind="function"><name>IIC_Write</name></member>
+    <member refid="bsp___i_i_c_8c_1a3f7052e21bba515ca87c85c50efeec4f" kind="function"><name>IIC_Read</name></member>
+    <member refid="bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35" kind="function"><name>IIC_Delay</name></member>
+    <member refid="bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8" kind="function"><name>IIC_SCK</name></member>
+    <member refid="bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa" kind="function"><name>IIC_SDA</name></member>
+  </compound>
+  <compound refid="bsp___i_i_c_8h" kind="file"><name>bsp_IIC.h</name>
+    <member refid="bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55b" kind="enum"><name>@0</name></member>
+    <member refid="bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534" kind="enumvalue"><name>IIC_RESET</name></member>
+    <member refid="bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66" kind="enumvalue"><name>IIC_SET</name></member>
+    <member refid="bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94" kind="enumvalue"><name>IIC_READ</name></member>
+    <member refid="bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48" kind="variable"><name>IIC_SCK_PIN</name></member>
+    <member refid="bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93" kind="variable"><name>IIC_SDA_PIN</name></member>
+    <member refid="bsp___i_i_c_8h_1a92f9de6f27a4539bc0a91d349ffbc006" kind="function"><name>IIC_WriteOneByte</name></member>
+    <member refid="bsp___i_i_c_8h_1a0bd93b2a87bada6c99784dacbfc2ff98" kind="function"><name>IIC_ReadOneByte</name></member>
+    <member refid="bsp___i_i_c_8h_1a44898a92f58dd1b99757425e52e1ce78" kind="function"><name>IIC_Write</name></member>
+    <member refid="bsp___i_i_c_8h_1a3f7052e21bba515ca87c85c50efeec4f" kind="function"><name>IIC_Read</name></member>
+    <member refid="bsp___i_i_c_8h_1ac7de8cb7cad6d402709b385e39aa764f" kind="function"><name>IIC_Start</name></member>
+    <member refid="bsp___i_i_c_8h_1a785ea8492cab4612ee5d3752a34f8a72" kind="function"><name>IIC_Stop</name></member>
+    <member refid="bsp___i_i_c_8h_1a0bfa6b98198b92dc18853f7e157ecfb0" kind="function"><name>IIC_SendAck</name></member>
+    <member refid="bsp___i_i_c_8h_1a0a0cf8c63abeefa1da7bf4fff457d0cd" kind="function"><name>IIC_WaitAck</name></member>
+    <member refid="bsp___i_i_c_8h_1a53b89d8e9d661d28c1af1a6b3c5373af" kind="function"><name>IIC_SendByte</name></member>
+    <member refid="bsp___i_i_c_8h_1a1bdad8ef1b06a40b5912d93c12e07c9a" kind="function"><name>IIC_RecByte</name></member>
+    <member refid="bsp___i_i_c_8h_1a85e1e4cf02f2952c7a261a5db29838d8" kind="function"><name>IIC_SCK</name></member>
+    <member refid="bsp___i_i_c_8h_1a00c0046e123145451619c3f57ba4fffa" kind="function"><name>IIC_SDA</name></member>
+    <member refid="bsp___i_i_c_8h_1a5110c30e693502c5356a1c09014dcb35" kind="function"><name>IIC_Delay</name></member>
+  </compound>
+  <compound refid="bsp___s_p_i_8c" kind="file"><name>bsp_SPI.c</name>
+    <member refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" kind="function"><name>SPI_Byte</name></member>
+    <member refid="bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b" kind="function"><name>SPI_WriteOneByte</name></member>
+    <member refid="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" kind="function"><name>SPI_ReadOneByte</name></member>
+  </compound>
+  <compound refid="bsp___s_p_i_8h" kind="file"><name>bsp_SPI.h</name>
+    <member refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kind="variable"><name>SPI_SCK_PIN</name></member>
+    <member refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kind="variable"><name>SPI_SDA_PIN</name></member>
+    <member refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kind="variable"><name>SPI_RST_PIN</name></member>
+    <member refid="bsp___s_p_i_8h_1a5edf23a0da935aa5a61c29efbbf7fb7b" kind="function"><name>SPI_WriteOneByte</name></member>
+    <member refid="bsp___s_p_i_8h_1a49b2197235df99399937e589ff42bc8f" kind="function"><name>SPI_ReadOneByte</name></member>
+  </compound>
+  <compound refid="bsp___u_a_r_t_8c" kind="file"><name>bsp_UART.c</name>
+    <member refid="bsp___u_a_r_t_8c_1aa43139b22841bc5547b45a8f210482c0" kind="function"><name>putchar</name></member>
+    <member refid="bsp___u_a_r_t_8c_1af88d208a46f3126dac7fb906c1469c52" kind="function"><name>UartInit_9600</name></member>
+  </compound>
+  <compound refid="bsp___u_a_r_t_8h" kind="file"><name>bsp_UART.h</name>
+    <member refid="bsp___u_a_r_t_8h_1aa43139b22841bc5547b45a8f210482c0" kind="function"><name>putchar</name></member>
+    <member refid="bsp___u_a_r_t_8h_1af88d208a46f3126dac7fb906c1469c52" kind="function"><name>UartInit_9600</name></member>
+  </compound>
+  <compound refid="todo" kind="page"><name>todo</name>
+  </compound>
+  <compound refid="dir_f65eaaef425b27c75b44b4338a6ab06b" kind="dir"><name>D:/gitt/bsp_XerolySkinner/bsp_device</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

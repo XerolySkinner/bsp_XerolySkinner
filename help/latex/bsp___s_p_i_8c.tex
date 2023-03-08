@@ -1,0 +1,131 @@
+\hypertarget{bsp___s_p_i_8c}{}\doxysection{D\+:/gitt/bsp\+\_\+\+Xeroly\+Skinner/bsp\+\_\+device/bsp\+\_\+\+SPI.c 文件参考}
+\label{bsp___s_p_i_8c}\index{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_SPI.c@{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_SPI.c}}
+
+
+SPI的库  
+
+
+{\ttfamily \#include \char`\"{}bsp\+\_\+\+SPI.\+h\char`\"{}}\newline
+bsp\+\_\+\+SPI.\+c 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{bsp___s_p_i_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2}{SPI\+\_\+\+Byte}} (unsigned char temp)
+\begin{DoxyCompactList}\small\item\em 使用总线发送一个字节数据 \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b}{SPI\+\_\+\+Write\+One\+Byte}} (unsigned char address, unsigned char dat)
+\begin{DoxyCompactList}\small\item\em 使用总线发送一个字节数据 \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{bsp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f}{SPI\+\_\+\+Read\+One\+Byte}} (unsigned char address)
+\begin{DoxyCompactList}\small\item\em 使用总线获取一个字节数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+SPI的库 
+
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8c_source}{bsp\+\_\+\+SPI.\+c}} 中定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{bsp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2}\label{bsp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2}} 
+\index{bsp\_SPI.c@{bsp\_SPI.c}!SPI\_Byte@{SPI\_Byte}}
+\index{SPI\_Byte@{SPI\_Byte}!bsp\_SPI.c@{bsp\_SPI.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_Byte()}{SPI\_Byte()}}
+{\footnotesize\ttfamily void SPI\+\_\+\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{temp }\end{DoxyParamCaption})}
+
+
+
+使用总线发送一个字节数据 
+
+
+\begin{DoxyParams}{参数}
+{\em temp} & 发送的数据 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+\begin{DoxyNote}{注解}
+本函数为其他函数的子函数,不要直接使用本函数 
+\end{DoxyNote}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8c_source}{bsp\+\_\+\+SPI.\+c}} 第 \mbox{\hyperlink{bsp___s_p_i_8c_source_l00043}{43}} 行定义.
+
+这是这个函数的调用关系图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{bsp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f}\label{bsp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f}} 
+\index{bsp\_SPI.c@{bsp\_SPI.c}!SPI\_ReadOneByte@{SPI\_ReadOneByte}}
+\index{SPI\_ReadOneByte@{SPI\_ReadOneByte}!bsp\_SPI.c@{bsp\_SPI.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_ReadOneByte()}{SPI\_ReadOneByte()}}
+{\footnotesize\ttfamily unsigned char SPI\+\_\+\+Read\+One\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
+
+
+
+使用总线获取一个字节数据 
+
+
+\begin{DoxyParams}{参数}
+{\em addr} & 需要接收的寄存器地址 \\
+\hline
+{\em dat} & 接受的数据 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8c_source}{bsp\+\_\+\+SPI.\+c}} 第 \mbox{\hyperlink{bsp___s_p_i_8c_source_l00071}{71}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{bsp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b}\label{bsp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b}} 
+\index{bsp\_SPI.c@{bsp\_SPI.c}!SPI\_WriteOneByte@{SPI\_WriteOneByte}}
+\index{SPI\_WriteOneByte@{SPI\_WriteOneByte}!bsp\_SPI.c@{bsp\_SPI.c}}
+\doxysubsubsection{\texorpdfstring{SPI\_WriteOneByte()}{SPI\_WriteOneByte()}}
+{\footnotesize\ttfamily void SPI\+\_\+\+Write\+One\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{address,  }\item[{unsigned char}]{dat }\end{DoxyParamCaption})}
+
+
+
+使用总线发送一个字节数据 
+
+
+\begin{DoxyParams}{参数}
+{\em addr} & 需要改写的寄存器地址 \\
+\hline
+{\em dat} & 改写的数据 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8c_source}{bsp\+\_\+\+SPI.\+c}} 第 \mbox{\hyperlink{bsp___s_p_i_8c_source_l00057}{57}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{bsp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph}
+\end{center}
+\end{figure}

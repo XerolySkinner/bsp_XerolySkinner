@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="zh">
+  <compounddef id="bsp___s_p_i_8c" kind="file" language="C++">
+    <compoundname>bsp_SPI.c</compoundname>
+    <includes refid="bsp___s_p_i_8h" local="yes">bsp_SPI.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c</label>
+        <link refid="bsp___s_p_i_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>bsp_SPI.h</label>
+        <link refid="bsp___s_p_i_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>intrins.h</label>
+      </node>
+      <node id="3">
+        <label>reg52.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI_Byte</definition>
+        <argsstring>(unsigned char temp)</argsstring>
+        <name>SPI_Byte</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+<para>使用总线发送一个字节数据 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>发送的数据 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>无返回值 </para>
+</simplesect>
+<simplesect kind="note"><para>本函数为其他函数的子函数,不要直接使用本函数 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" line="43" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="43" bodyend="49"/>
+        <references refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" compoundref="bsp___s_p_i_8h" startline="46">SPI_SCK_PIN</references>
+        <references refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" compoundref="bsp___s_p_i_8h" startline="50">SPI_SDA_PIN</references>
+        <referencedby refid="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" compoundref="bsp___s_p_i_8c" startline="71" endline="87">SPI_ReadOneByte</referencedby>
+        <referencedby refid="bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b" compoundref="bsp___s_p_i_8c" startline="57" endline="63">SPI_WriteOneByte</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI_WriteOneByte</definition>
+        <argsstring>(unsigned char address, unsigned char dat)</argsstring>
+        <name>SPI_WriteOneByte</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>address</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>dat</declname>
+        </param>
+        <briefdescription>
+<para>使用总线发送一个字节数据 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>需要改写的寄存器地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>改写的数据 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>无返回值 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" line="57" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="57" bodyend="63"/>
+        <references refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" compoundref="bsp___s_p_i_8c" startline="43" endline="49">SPI_Byte</references>
+        <references refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" compoundref="bsp___s_p_i_8h" startline="54">SPI_RST_PIN</references>
+        <references refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" compoundref="bsp___s_p_i_8h" startline="46">SPI_SCK_PIN</references>
+      </memberdef>
+      <memberdef kind="function" id="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char SPI_ReadOneByte</definition>
+        <argsstring>(unsigned char address)</argsstring>
+        <name>SPI_ReadOneByte</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>address</declname>
+        </param>
+        <briefdescription>
+<para>使用总线获取一个字节数据 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>addr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>需要接收的寄存器地址 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>接受的数据 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>无返回值 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" line="71" column="15" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="71" bodyend="87"/>
+        <references refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" compoundref="bsp___s_p_i_8c" startline="43" endline="49">SPI_Byte</references>
+        <references refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" compoundref="bsp___s_p_i_8h" startline="54">SPI_RST_PIN</references>
+        <references refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" compoundref="bsp___s_p_i_8h" startline="46">SPI_SCK_PIN</references>
+        <references refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" compoundref="bsp___s_p_i_8h" startline="50">SPI_SDA_PIN</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>SPI的库 </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*----------------------------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>#<sp/><sp/>Copyright<sp/>(c)<sp/>2022<sp/>Yuankang<sp/>Liang(XerolySkinner)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>#<sp/><sp/>本软件按原样提供,无任何明示或暗示</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>#<sp/><sp/>在任何情况下,作者都不承担任何损害赔偿责任</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>#<sp/><sp/>使用的许可声明:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>#<sp/><sp/>1.<sp/><sp/>不得歪曲本软件的来源,你不能声称你编写了原始软件.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>#<sp/><sp/>2.<sp/><sp/>免费授予以任何目的,前提是版权声明出现在所有副本中.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>并且版权声明和许可声明同时出现.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>#<sp/><sp/>3.<sp/><sp/>你有使用,复制,修改,分发,和销售本软件的许可.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>#<sp/><sp/>4.<sp/><sp/>如果你在产品中使用,产品文档中的声明是赞赏的但不是必须的.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>#<sp/><sp/>5.<sp/><sp/>本通知不得从任何来源删除或更改.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>#<sp/><sp/>Yuankang<sp/>Liang(XerolySkinner)</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>E-mail:zabbcccbbaz@163.com</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>QQ:2715099320</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>Mobile<sp/>Phone:13005636215</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>#<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="bsp___s_p_i_8h" kindref="compound">bsp_SPI.h</ref>&quot;</highlight></codeline>
+<codeline lineno="35"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>函数</highlight></codeline>
+<codeline lineno="43" refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" kindref="member">SPI_Byte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;i&lt;8;i++){</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kindref="member">SPI_SDA_PIN</ref><sp/>=<sp/>temp&amp;0x01;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp&gt;&gt;=1;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>=1;}}</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="57" refid="bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b" kindref="member">SPI_WriteOneByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>address,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>dat){</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>=0;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>=0;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>=1;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" kindref="member">SPI_Byte</ref>(address);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" kindref="member">SPI_Byte</ref>(dat);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>=0;}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="71" refid="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" refkind="member"><highlight class="comment"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" kindref="member">SPI_ReadOneByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>address){</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>i,temp=0x00;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>=0;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>=0;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>=1;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" kindref="member">SPI_Byte</ref>(address);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(i=0;i&lt;8;i++){</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>=0;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp&gt;&gt;=1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kindref="member">SPI_SDA_PIN</ref>)temp|=0x80;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>=1;}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>=0;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>=0;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>=1;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kindref="member">SPI_SDA_PIN</ref>=0;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kindref="member">SPI_SDA_PIN</ref>=1;<sp/><sp/>_nop_();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp;}</highlight></codeline>
+    </programlisting>
+    <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c"/>
+  </compounddef>
+</doxygen>

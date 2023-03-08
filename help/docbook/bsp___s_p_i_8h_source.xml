@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp___s_p_i_8h_source" xml:lang="zh">
+<title>bsp_SPI.h</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h</primary></indexterm>
+浏览该文件的文档.<programlisting linenumbering="unnumbered"><anchor xml:id="_bsp___s_p_i_8h_source_1l00001"/>00001 <emphasis role="comment">/*----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00002"/>00002 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00003"/>00003 <emphasis role="comment">&#32;#&#32;&#32;Copyright&#32;(c)&#32;2022&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00004"/>00004 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00005"/>00005 <emphasis role="comment">&#32;#&#32;&#32;本软件按原样提供,无任何明示或暗示</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00006"/>00006 <emphasis role="comment">&#32;#&#32;&#32;在任何情况下,作者都不承担任何损害赔偿责任</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00007"/>00007 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00008"/>00008 <emphasis role="comment">&#32;#&#32;&#32;使用的许可声明:</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00009"/>00009 <emphasis role="comment">&#32;#&#32;&#32;1.&#32;&#32;不得歪曲本软件的来源,你不能声称你编写了原始软件.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00010"/>00010 <emphasis role="comment">&#32;#&#32;&#32;2.&#32;&#32;免费授予以任何目的,前提是版权声明出现在所有副本中.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00011"/>00011 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;并且版权声明和许可声明同时出现.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00012"/>00012 <emphasis role="comment">&#32;#&#32;&#32;3.&#32;&#32;你有使用,复制,修改,分发,和销售本软件的许可.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00013"/>00013 <emphasis role="comment">&#32;#&#32;&#32;4.&#32;&#32;如果你在产品中使用,产品文档中的声明是赞赏的但不是必须的.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00014"/>00014 <emphasis role="comment">&#32;#&#32;&#32;5.&#32;&#32;本通知不得从任何来源删除或更改.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00015"/>00015 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00016"/>00016 <emphasis role="comment">&#32;#&#32;&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00017"/>00017 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;E-mail:zabbcccbbaz@163.com</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00018"/>00018 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;QQ:2715099320</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00019"/>00019 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;Mobile&#32;Phone:13005636215</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00020"/>00020 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00021"/>00021 <emphasis role="comment">&#32;#&#32;&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00022"/>00022 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00023"/>00023 
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00033"/>00033 <emphasis role="preprocessor">#ifndef&#32;_BSP_SPI_H</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00034"/>00034 <emphasis role="preprocessor">#define&#32;_BSP_SPI_H</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00036"/>00036 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00037"/>00037 <emphasis role="comment">//&#32;&#32;头文件</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00038"/>00038 <emphasis role="preprocessor">#include&#32;&lt;reg52.h&gt;</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00039"/>00039 <emphasis role="preprocessor">#include&#32;&lt;intrins.h&gt;</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00041"/>00041 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00042"/>00042 <emphasis role="comment">//&#32;&#32;管脚定义</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00046"/><link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">00046</link> <emphasis role="comment"></emphasis>sbit&#32;<link linkend="_bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc">SPI_SCK_PIN</link>&#32;=&#32;P3^6;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00050"/><link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">00050</link> sbit&#32;<link linkend="_bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01">SPI_SDA_PIN</link>&#32;=&#32;P3^4;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00054"/><link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">00054</link> sbit&#32;<link linkend="_bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8">SPI_RST_PIN</link>&#32;=&#32;P3^5;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00056"/>00056 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00057"/>00057 <emphasis role="comment">//&#32;&#32;延时</emphasis>
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00058"/>00058 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___s_p_i_8h_1a5edf23a0da935aa5a61c29efbbf7fb7b">SPI_WriteOneByte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;address,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;dat);
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00059"/>00059 <emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___s_p_i_8h_1a49b2197235df99399937e589ff42bc8f">SPI_ReadOneByte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;address);
+<anchor xml:id="_bsp___s_p_i_8h_source_1l00061"/>00061 <emphasis role="preprocessor">#endif</emphasis>
+</programlisting></section>

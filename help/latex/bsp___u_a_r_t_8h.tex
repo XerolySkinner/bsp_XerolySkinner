@@ -1,0 +1,88 @@
+\hypertarget{bsp___u_a_r_t_8h}{}\doxysection{D\+:/gitt/bsp\+\_\+\+Xeroly\+Skinner/bsp\+\_\+device/bsp\+\_\+\+UART.h 文件参考}
+\label{bsp___u_a_r_t_8h}\index{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_UART.h@{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_UART.h}}
+
+
+UART的51库  
+
+
+{\ttfamily \#include $<$reg52.\+h$>$}\newline
+{\ttfamily \#include $<$intrins.\+h$>$}\newline
+bsp\+\_\+\+UART.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{bsp___u_a_r_t_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{bsp___u_a_r_t_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{bsp___u_a_r_t_8h_aa43139b22841bc5547b45a8f210482c0}{putchar}} (char temp)
+\begin{DoxyCompactList}\small\item\em TODO \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{bsp___u_a_r_t_8h_af88d208a46f3126dac7fb906c1469c52}{Uart\+Init\+\_\+9600}} (void)
+\begin{DoxyCompactList}\small\item\em 使用这个来初始化51单片机的串口,波特率9600bps \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+UART的51库 
+
+
+
+在文件 \mbox{\hyperlink{bsp___u_a_r_t_8h_source}{bsp\+\_\+\+UART.\+h}} 中定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{bsp___u_a_r_t_8h_aa43139b22841bc5547b45a8f210482c0}\label{bsp___u_a_r_t_8h_aa43139b22841bc5547b45a8f210482c0}} 
+\index{bsp\_UART.h@{bsp\_UART.h}!putchar@{putchar}}
+\index{putchar@{putchar}!bsp\_UART.h@{bsp\_UART.h}}
+\doxysubsubsection{\texorpdfstring{putchar()}{putchar()}}
+{\footnotesize\ttfamily char putchar (\begin{DoxyParamCaption}\item[{char}]{temp }\end{DoxyParamCaption})}
+
+
+
+TODO 
+
+TODO
+
+
+\begin{DoxyParams}{参数}
+{\em temp} & 要发送的一个字节 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___u_a_r_t_8c_source}{bsp\+\_\+\+UART.\+c}} 第 \mbox{\hyperlink{bsp___u_a_r_t_8c_source_l00043}{43}} 行定义.
+
+\mbox{\Hypertarget{bsp___u_a_r_t_8h_af88d208a46f3126dac7fb906c1469c52}\label{bsp___u_a_r_t_8h_af88d208a46f3126dac7fb906c1469c52}} 
+\index{bsp\_UART.h@{bsp\_UART.h}!UartInit\_9600@{UartInit\_9600}}
+\index{UartInit\_9600@{UartInit\_9600}!bsp\_UART.h@{bsp\_UART.h}}
+\doxysubsubsection{\texorpdfstring{UartInit\_9600()}{UartInit\_9600()}}
+{\footnotesize\ttfamily void Uart\+Init\+\_\+9600 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+使用这个来初始化51单片机的串口,波特率9600bps 
+
+\begin{DoxyReturn}{返回}
+无 
+\end{DoxyReturn}
+\begin{DoxyNote}{注解}
+本串口设置将占用定时器1 
+\end{DoxyNote}
+
+
+在文件 \mbox{\hyperlink{bsp___u_a_r_t_8c_source}{bsp\+\_\+\+UART.\+c}} 第 \mbox{\hyperlink{bsp___u_a_r_t_8c_source_l00056}{56}} 行定义.
+

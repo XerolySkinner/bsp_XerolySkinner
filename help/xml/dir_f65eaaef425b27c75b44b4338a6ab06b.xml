@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="zh">
+  <compounddef id="dir_f65eaaef425b27c75b44b4338a6ab06b" kind="dir">
+    <compoundname>D:/gitt/bsp_XerolySkinner/bsp_device</compoundname>
+    <innerfile refid="bsp___i_i_c_8c">bsp_IIC.c</innerfile>
+    <innerfile refid="bsp___i_i_c_8h">bsp_IIC.h</innerfile>
+    <innerfile refid="bsp___s_p_i_8c">bsp_SPI.c</innerfile>
+    <innerfile refid="bsp___s_p_i_8h">bsp_SPI.h</innerfile>
+    <innerfile refid="bsp___u_a_r_t_8c">bsp_UART.c</innerfile>
+    <innerfile refid="bsp___u_a_r_t_8h">bsp_UART.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/gitt/bsp_XerolySkinner/bsp_device/"/>
+  </compounddef>
+</doxygen>

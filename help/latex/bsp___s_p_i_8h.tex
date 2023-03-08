@@ -1,0 +1,166 @@
+\hypertarget{bsp___s_p_i_8h}{}\doxysection{D\+:/gitt/bsp\+\_\+\+Xeroly\+Skinner/bsp\+\_\+device/bsp\+\_\+\+SPI.h 文件参考}
+\label{bsp___s_p_i_8h}\index{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_SPI.h@{D:/gitt/bsp\_XerolySkinner/bsp\_device/bsp\_SPI.h}}
+
+
+SPI的库  
+
+
+{\ttfamily \#include $<$reg52.\+h$>$}\newline
+{\ttfamily \#include $<$intrins.\+h$>$}\newline
+bsp\+\_\+\+SPI.\+h 的引用(Include)关系图\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{bsp___s_p_i_8h__incl}
+\end{center}
+\end{figure}
+此图展示该文件直接或间接的被哪些文件引用了\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=206pt]{bsp___s_p_i_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{函数}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{bsp___s_p_i_8h_a5edf23a0da935aa5a61c29efbbf7fb7b}{SPI\+\_\+\+Write\+One\+Byte}} (unsigned char address, unsigned char dat)
+\begin{DoxyCompactList}\small\item\em 使用总线发送一个字节数据 \end{DoxyCompactList}\item 
+unsigned char \mbox{\hyperlink{bsp___s_p_i_8h_a49b2197235df99399937e589ff42bc8f}{SPI\+\_\+\+Read\+One\+Byte}} (unsigned char address)
+\begin{DoxyCompactList}\small\item\em 使用总线获取一个字节数据 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{变量}
+\begin{DoxyCompactItemize}
+\item 
+sbit \mbox{\hyperlink{bsp___s_p_i_8h_a91c356232346106c6cfeed7a7d65f1dc}{SPI\+\_\+\+SCK\+\_\+\+PIN}} = P3$^\wedge$6
+\begin{DoxyCompactList}\small\item\em 定义\+SCK的管脚 \end{DoxyCompactList}\item 
+sbit \mbox{\hyperlink{bsp___s_p_i_8h_a0401685285fe33497757ebd181eadf01}{SPI\+\_\+\+SDA\+\_\+\+PIN}} = P3$^\wedge$4
+\begin{DoxyCompactList}\small\item\em 定义\+SDA的管脚 \end{DoxyCompactList}\item 
+sbit \mbox{\hyperlink{bsp___s_p_i_8h_a7524be08a301f683eacfaa6c23182ec8}{SPI\+\_\+\+RST\+\_\+\+PIN}} = P3$^\wedge$5
+\begin{DoxyCompactList}\small\item\em 定义\+RST的管脚 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{详细描述}
+SPI的库 
+
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8h_source}{bsp\+\_\+\+SPI.\+h}} 中定义.
+
+
+
+\doxysubsection{函数说明}
+\mbox{\Hypertarget{bsp___s_p_i_8h_a49b2197235df99399937e589ff42bc8f}\label{bsp___s_p_i_8h_a49b2197235df99399937e589ff42bc8f}} 
+\index{bsp\_SPI.h@{bsp\_SPI.h}!SPI\_ReadOneByte@{SPI\_ReadOneByte}}
+\index{SPI\_ReadOneByte@{SPI\_ReadOneByte}!bsp\_SPI.h@{bsp\_SPI.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_ReadOneByte()}{SPI\_ReadOneByte()}}
+{\footnotesize\ttfamily unsigned char SPI\+\_\+\+Read\+One\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{address }\end{DoxyParamCaption})}
+
+
+
+使用总线获取一个字节数据 
+
+
+\begin{DoxyParams}{参数}
+{\em addr} & 需要接收的寄存器地址 \\
+\hline
+{\em dat} & 接受的数据 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8c_source}{bsp\+\_\+\+SPI.\+c}} 第 \mbox{\hyperlink{bsp___s_p_i_8c_source_l00071}{71}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{bsp___s_p_i_8h_a49b2197235df99399937e589ff42bc8f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bsp___s_p_i_8h_a5edf23a0da935aa5a61c29efbbf7fb7b}\label{bsp___s_p_i_8h_a5edf23a0da935aa5a61c29efbbf7fb7b}} 
+\index{bsp\_SPI.h@{bsp\_SPI.h}!SPI\_WriteOneByte@{SPI\_WriteOneByte}}
+\index{SPI\_WriteOneByte@{SPI\_WriteOneByte}!bsp\_SPI.h@{bsp\_SPI.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_WriteOneByte()}{SPI\_WriteOneByte()}}
+{\footnotesize\ttfamily void SPI\+\_\+\+Write\+One\+Byte (\begin{DoxyParamCaption}\item[{unsigned char}]{address,  }\item[{unsigned char}]{dat }\end{DoxyParamCaption})}
+
+
+
+使用总线发送一个字节数据 
+
+
+\begin{DoxyParams}{参数}
+{\em addr} & 需要改写的寄存器地址 \\
+\hline
+{\em dat} & 改写的数据 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{返回}
+无返回值 
+\end{DoxyReturn}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8c_source}{bsp\+\_\+\+SPI.\+c}} 第 \mbox{\hyperlink{bsp___s_p_i_8c_source_l00057}{57}} 行定义.
+
+函数调用图\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{bsp___s_p_i_8h_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{变量说明}
+\mbox{\Hypertarget{bsp___s_p_i_8h_a7524be08a301f683eacfaa6c23182ec8}\label{bsp___s_p_i_8h_a7524be08a301f683eacfaa6c23182ec8}} 
+\index{bsp\_SPI.h@{bsp\_SPI.h}!SPI\_RST\_PIN@{SPI\_RST\_PIN}}
+\index{SPI\_RST\_PIN@{SPI\_RST\_PIN}!bsp\_SPI.h@{bsp\_SPI.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_RST\_PIN}{SPI\_RST\_PIN}}
+{\footnotesize\ttfamily sbit SPI\+\_\+\+RST\+\_\+\+PIN = P3$^\wedge$5}
+
+
+
+定义\+RST的管脚 
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000005}{待办事项}}]定义\+RST的管脚 \end{DoxyRefDesc}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8h_source}{bsp\+\_\+\+SPI.\+h}} 第 \mbox{\hyperlink{bsp___s_p_i_8h_source_l00054}{54}} 行定义.
+
+\mbox{\Hypertarget{bsp___s_p_i_8h_a91c356232346106c6cfeed7a7d65f1dc}\label{bsp___s_p_i_8h_a91c356232346106c6cfeed7a7d65f1dc}} 
+\index{bsp\_SPI.h@{bsp\_SPI.h}!SPI\_SCK\_PIN@{SPI\_SCK\_PIN}}
+\index{SPI\_SCK\_PIN@{SPI\_SCK\_PIN}!bsp\_SPI.h@{bsp\_SPI.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_SCK\_PIN}{SPI\_SCK\_PIN}}
+{\footnotesize\ttfamily sbit SPI\+\_\+\+SCK\+\_\+\+PIN = P3$^\wedge$6}
+
+
+
+定义\+SCK的管脚 
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000003}{待办事项}}]定义\+SCK的管脚 \end{DoxyRefDesc}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8h_source}{bsp\+\_\+\+SPI.\+h}} 第 \mbox{\hyperlink{bsp___s_p_i_8h_source_l00046}{46}} 行定义.
+
+\mbox{\Hypertarget{bsp___s_p_i_8h_a0401685285fe33497757ebd181eadf01}\label{bsp___s_p_i_8h_a0401685285fe33497757ebd181eadf01}} 
+\index{bsp\_SPI.h@{bsp\_SPI.h}!SPI\_SDA\_PIN@{SPI\_SDA\_PIN}}
+\index{SPI\_SDA\_PIN@{SPI\_SDA\_PIN}!bsp\_SPI.h@{bsp\_SPI.h}}
+\doxysubsubsection{\texorpdfstring{SPI\_SDA\_PIN}{SPI\_SDA\_PIN}}
+{\footnotesize\ttfamily sbit SPI\+\_\+\+SDA\+\_\+\+PIN = P3$^\wedge$4}
+
+
+
+定义\+SDA的管脚 
+
+\begin{DoxyRefDesc}{待办事项}
+\item[\mbox{\hyperlink{todo__todo000004}{待办事项}}]定义\+SDA的管脚 \end{DoxyRefDesc}
+
+
+在文件 \mbox{\hyperlink{bsp___s_p_i_8h_source}{bsp\+\_\+\+SPI.\+h}} 第 \mbox{\hyperlink{bsp___s_p_i_8h_source_l00050}{50}} 行定义.
+

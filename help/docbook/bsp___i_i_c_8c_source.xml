@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp___i_i_c_8c_source" xml:lang="zh">
+<title>bsp_IIC.c</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_IIC.c</primary></indexterm>
+浏览该文件的文档.<programlisting linenumbering="unnumbered"><anchor xml:id="_bsp___i_i_c_8c_source_1l00001"/>00001 <emphasis role="comment">/*----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00002"/>00002 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00003"/>00003 <emphasis role="comment">&#32;#&#32;&#32;Copyright&#32;(c)&#32;2022&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00004"/>00004 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00005"/>00005 <emphasis role="comment">&#32;#&#32;&#32;本软件按原样提供,无任何明示或暗示</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00006"/>00006 <emphasis role="comment">&#32;#&#32;&#32;在任何情况下,作者都不承担任何损害赔偿责任</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00007"/>00007 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00008"/>00008 <emphasis role="comment">&#32;#&#32;&#32;使用的许可声明:</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00009"/>00009 <emphasis role="comment">&#32;#&#32;&#32;1.&#32;&#32;不得歪曲本软件的来源,你不能声称你编写了原始软件.</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00010"/>00010 <emphasis role="comment">&#32;#&#32;&#32;2.&#32;&#32;免费授予以任何目的,前提是版权声明出现在所有副本中.</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00011"/>00011 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;并且版权声明和许可声明同时出现.</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00012"/>00012 <emphasis role="comment">&#32;#&#32;&#32;3.&#32;&#32;你有使用,复制,修改,分发,和销售本软件的许可.</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00013"/>00013 <emphasis role="comment">&#32;#&#32;&#32;4.&#32;&#32;如果你在产品中使用,产品文档中的声明是赞赏的但不是必须的.</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00014"/>00014 <emphasis role="comment">&#32;#&#32;&#32;5.&#32;&#32;本通知不得从任何来源删除或更改.</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00015"/>00015 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00016"/>00016 <emphasis role="comment">&#32;#&#32;&#32;Yuankang&#32;Liang(XerolySkinner)</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00017"/>00017 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;E-mail:zabbcccbbaz@163.com</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00018"/>00018 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;QQ:2715099320</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00019"/>00019 <emphasis role="comment">&#32;#&#32;&#32;&#32;&#32;&#32;&#32;Mobile&#32;Phone:13005636215</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00020"/>00020 <emphasis role="comment">&#32;#</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00021"/>00021 <emphasis role="comment">&#32;#&#32;&#32;All&#32;rights&#32;reserved.</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00022"/>00022 <emphasis role="comment">&#32;*/</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00023"/>00023 &#32;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00037"/>00037 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00038"/>00038 <emphasis role="comment">//&#32;&#32;头文件</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00039"/>00039 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_bsp___i_i_c_8h">bsp_IIC.h</link>&quot;</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00041"/>00041 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00042"/>00042 <emphasis role="comment">//&#32;&#32;底层程序</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00043"/>00043 <emphasis role="comment">//&#32;&#32;</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00047"/><link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">00047</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link>(<emphasis role="keywordtype">void</emphasis>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00055"/>00055 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00059"/><link linkend="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72">00059</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72">IIC_Stop</link>(<emphasis role="keywordtype">void</emphasis>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00065"/>00065 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00066"/>00066 <emphasis role="comment">//发送应答或非应答信号</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00071"/><link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">00071</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;ackbit)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(ackbit);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00077"/>00077 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00080"/>00080 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00085"/><link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">00085</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>(<emphasis role="keywordtype">void</emphasis>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;ackbit;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00089"/>00089 &#32;&#32;&#32;&#32;ackbit&#32;=&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94">IIC_READ</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00090"/>00090 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;ackbit;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00093"/>00093 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00098"/><link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">00098</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;byt)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;i;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;8;&#32;i++)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>((byt&#32;&amp;&#32;0x80)&#32;!=&#32;0);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;byt&#32;&lt;&lt;=&#32;1;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00109"/>00109 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00114"/><link linkend="_bsp___i_i_c_8c_1a1bdad8ef1b06a40b5912d93c12e07c9a">00114</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a1bdad8ef1b06a40b5912d93c12e07c9a">IIC_RecByte</link>(<emphasis role="keywordtype">void</emphasis>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;i=0,&#32;da=0;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(i&#32;=&#32;0;&#32;i&#32;&lt;&#32;8;&#32;i++)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;da&#32;&lt;&lt;=&#32;1;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94">IIC_READ</link>))da&#32;|=&#32;1;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>();}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;da;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00125"/>00125 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00126"/>00126 <emphasis role="comment">//&#32;&#32;封装程序</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00127"/>00127 <emphasis role="comment">//&#32;&#32;</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00136"/><link linkend="_bsp___i_i_c_8c_1a92f9de6f27a4539bc0a91d349ffbc006">00136</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a92f9de6f27a4539bc0a91d349ffbc006">IIC_WriteOneByte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;addr,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;dat)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00138"/>00138 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(<emphasis role="keywordtype">id</emphasis>&#32;&lt;&lt;&#32;1);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00139"/>00139 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00140"/>00140 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(addr);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00142"/>00142 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(dat);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00143"/>00143 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00144"/>00144 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72">IIC_Stop</link>();}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00145"/>00145 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00153"/><link linkend="_bsp___i_i_c_8c_1a0bd93b2a87bada6c99784dacbfc2ff98">00153</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a0bd93b2a87bada6c99784dacbfc2ff98">IIC_ReadOneByte</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;addr)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00154"/>00154 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;temp&#32;=&#32;0;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00155"/>00155 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00156"/>00156 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(<emphasis role="keywordtype">id</emphasis>&#32;&lt;&lt;&#32;1);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00157"/>00157 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00158"/>00158 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(addr);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00159"/>00159 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link>(0);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00160"/>00160 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00161"/>00161 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>((<emphasis role="keywordtype">id</emphasis>&#32;&lt;&lt;&#32;1)&#32;|&#32;0x01);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00162"/>00162 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link>(0);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00163"/>00163 &#32;&#32;&#32;&#32;temp&#32;=&#32;<link linkend="_bsp___i_i_c_8c_1a1bdad8ef1b06a40b5912d93c12e07c9a">IIC_RecByte</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00164"/>00164 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link>(1);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00165"/>00165 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72">IIC_Stop</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00166"/>00166 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;temp;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00167"/>00167 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00177"/><link linkend="_bsp___i_i_c_8c_1a44898a92f58dd1b99757425e52e1ce78">00177</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a44898a92f58dd1b99757425e52e1ce78">IIC_Write</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;addr,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;dat,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;len){
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00178"/>00178 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i=0;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00179"/>00179 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00180"/>00180 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(<emphasis role="keywordtype">id</emphasis>&lt;&lt;1);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00181"/>00181 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00182"/>00182 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(addr);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00183"/>00183 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00184"/>00184 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(;i&lt;len;i++){
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(dat[i]);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00187"/>00187 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72">IIC_Stop</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00188"/>00188 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00189"/>00189 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00199"/><link linkend="_bsp___i_i_c_8c_1a3f7052e21bba515ca87c85c50efeec4f">00199</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a3f7052e21bba515ca87c85c50efeec4f">IIC_Read</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<emphasis role="keywordtype">id</emphasis>,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;addr,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;dat,<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;len){
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00200"/>00200 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;i=0;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00201"/>00201 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00202"/>00202 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(<emphasis role="keywordtype">id</emphasis>&lt;&lt;1);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00203"/>00203 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00204"/>00204 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>(addr);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00205"/>00205 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link>(0);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00206"/>00206 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00207"/>00207 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</link>((<emphasis role="keywordtype">id</emphasis>&lt;&lt;1)|0x01);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00208"/>00208 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link>(0);
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00209"/>00209 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(;i&lt;len;i++){
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dat[i]=<link linkend="_bsp___i_i_c_8c_1a1bdad8ef1b06a40b5912d93c12e07c9a">IIC_RecByte</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</link>(i==(len-1));}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00212"/>00212 &#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8c_1a785ea8492cab4612ee5d3752a34f8a72">IIC_Stop</link>();
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00213"/>00213 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00217"/>00217 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00218"/>00218 <emphasis role="comment">//&#32;&#32;适配程序</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00219"/>00219 <emphasis role="comment">//&#32;&#32;</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00224"/><link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">00224</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a5110c30e693502c5356a1c09014dcb35">IIC_Delay</link>(<emphasis role="keywordtype">void</emphasis>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00225"/>00225 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;i&#32;=&#32;0;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00226"/>00226 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(++i);}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00227"/>00227 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00234"/><link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">00234</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;var)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00235"/>00235 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(var&#32;==&#32;<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00236"/>00236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link>=0;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00237"/>00237 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00238"/>00238 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(var&#32;==&#32;<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00239"/>00239 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link>=1;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00241"/>00241 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link>;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00243"/>00243 &#32;&#32;&#32;&#32;}}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00244"/>00244 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00250"/><link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">00250</link> <emphasis role="comment"></emphasis><emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_bsp___i_i_c_8c_1a00c0046e123145451619c3f57ba4fffa">IIC_SDA</link>(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;var){
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00251"/>00251 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(var&#32;==&#32;<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</link>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link>=0;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00254"/>00254 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(var&#32;==&#32;<link linkend="_bsp___i_i_c_8h_1a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</link>)&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link>=1;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00256"/>00256 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;2;}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00257"/>00257 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00258"/>00258 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link>;
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00259"/>00259 &#32;&#32;&#32;&#32;}}
+<anchor xml:id="_bsp___i_i_c_8c_source_1l00261"/>00261 
+</programlisting></section>

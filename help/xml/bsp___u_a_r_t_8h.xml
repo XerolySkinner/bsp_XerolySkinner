@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="zh">
+  <compounddef id="bsp___u_a_r_t_8h" kind="file" language="C++">
+    <compoundname>bsp_UART.h</compoundname>
+    <includes local="no">reg52.h</includes>
+    <includes local="no">intrins.h</includes>
+    <includedby refid="bsp___u_a_r_t_8c" local="yes">D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h</label>
+        <link refid="bsp___u_a_r_t_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>intrins.h</label>
+      </node>
+      <node id="2">
+        <label>reg52.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c</label>
+        <link refid="bsp___u_a_r_t_8c"/>
+      </node>
+      <node id="1">
+        <label>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h</label>
+        <link refid="bsp___u_a_r_t_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="bsp___u_a_r_t_8h_1aa43139b22841bc5547b45a8f210482c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char</type>
+        <definition>char putchar</definition>
+        <argsstring>(char temp)</argsstring>
+        <name>putchar</name>
+        <param>
+          <type>char</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+<para>TODO </para>
+        </briefdescription>
+        <detaileddescription>
+<para>TODO</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>要发送的一个字节 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>无 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h" line="44" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c" bodystart="43" bodyend="47" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="bsp___u_a_r_t_8h_1af88d208a46f3126dac7fb906c1469c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void UartInit_9600</definition>
+        <argsstring>(void)</argsstring>
+        <name>UartInit_9600</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>使用这个来初始化51单片机的串口,波特率9600bps </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>无 </para>
+</simplesect>
+<simplesect kind="note"><para>本串口设置将占用定时器1 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h" line="45" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c" bodystart="56" bodyend="64" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h" declline="45" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>UART的51库 </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*----------------------------------------------------------------------------------------------------</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>#<sp/><sp/>Copyright<sp/>(c)<sp/>2022<sp/>Yuankang<sp/>Liang(XerolySkinner)</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>#<sp/><sp/>本软件按原样提供,无任何明示或暗示</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>#<sp/><sp/>在任何情况下,作者都不承担任何损害赔偿责任</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>#<sp/><sp/>使用的许可声明:</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>#<sp/><sp/>1.<sp/><sp/>不得歪曲本软件的来源,你不能声称你编写了原始软件.</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>#<sp/><sp/>2.<sp/><sp/>免费授予以任何目的,前提是版权声明出现在所有副本中.</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>并且版权声明和许可声明同时出现.</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>#<sp/><sp/>3.<sp/><sp/>你有使用,复制,修改,分发,和销售本软件的许可.</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>#<sp/><sp/>4.<sp/><sp/>如果你在产品中使用,产品文档中的声明是赞赏的但不是必须的.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>#<sp/><sp/>5.<sp/><sp/>本通知不得从任何来源删除或更改.</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>#<sp/><sp/>Yuankang<sp/>Liang(XerolySkinner)</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>E-mail:zabbcccbbaz@163.com</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>QQ:2715099320</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>#<sp/><sp/><sp/><sp/><sp/><sp/>Mobile<sp/>Phone:13005636215</highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/>#</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/>#<sp/><sp/>All<sp/>rights<sp/>reserved.</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>_bsp_UART_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_bsp_UART_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;reg52.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;intrins.h&gt;</highlight></codeline>
+<codeline lineno="39"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>定义</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="bsp___u_a_r_t_8h_1aa43139b22841bc5547b45a8f210482c0" kindref="member">putchar</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bsp___u_a_r_t_8h_1af88d208a46f3126dac7fb906c1469c52" kindref="member">UartInit_9600</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="47"><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h"/>
+  </compounddef>
+</doxygen>

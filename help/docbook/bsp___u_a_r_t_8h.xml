@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_bsp___u_a_r_t_8h" xml:lang="zh">
+<title>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h 文件参考</title>
+<indexterm><primary>D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.h</primary></indexterm>
+<para>
+
+<para>UART的51库 </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;reg52.h&gt;<?linebreak?>#include &lt;intrins.h&gt;<?linebreak?></programlisting>bsp_UART.h 的引用(Include)关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___u_a_r_t_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+此图展示该文件直接或间接的被哪些文件引用了:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___u_a_r_t_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>函数    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_bsp___u_a_r_t_8h_1aa43139b22841bc5547b45a8f210482c0">putchar</link> (char temp)</para>
+
+<para>TODO </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___u_a_r_t_8h_1af88d208a46f3126dac7fb906c1469c52">UartInit_9600</link> (void)</para>
+
+<para>使用这个来初始化51单片机的串口,波特率9600bps </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>详细描述</title>
+
+<para>UART的51库 </para>
+<para>
+在文件 <link linkend="_bsp___u_a_r_t_8h_source">bsp_UART.h</link> 中定义.</para>
+</section>
+<section>
+<title>函数说明</title>
+<anchor xml:id="_bsp___u_a_r_t_8h_1aa43139b22841bc5547b45a8f210482c0"/><section>
+    <title>putchar()</title>
+<indexterm><primary>putchar</primary><secondary>bsp_UART.h</secondary></indexterm>
+<indexterm><primary>bsp_UART.h</primary><secondary>putchar</secondary></indexterm>
+<para><computeroutput>char putchar (char temp)</computeroutput></para><para>
+
+<para>TODO </para>
+</para>
+
+<para>TODO</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>temp</entry><entry>
+<para>要发送的一个字节 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>无 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___u_a_r_t_8c_source">bsp_UART.c</link> 第 <link linkend="_bsp___u_a_r_t_8c_source_1l00043">43</link> 行定义.</para>
+</section>
+<anchor xml:id="_bsp___u_a_r_t_8h_1af88d208a46f3126dac7fb906c1469c52"/><section>
+    <title>UartInit_9600()</title>
+<indexterm><primary>UartInit_9600</primary><secondary>bsp_UART.h</secondary></indexterm>
+<indexterm><primary>bsp_UART.h</primary><secondary>UartInit_9600</secondary></indexterm>
+<para><computeroutput>void UartInit_9600 (void )</computeroutput></para><para>
+
+<para>使用这个来初始化51单片机的串口,波特率9600bps </para>
+</para>
+
+<para><formalpara><title>返回</title>
+
+<para>无 </para>
+</formalpara>
+<note><title>注解</title>
+
+<para>本串口设置将占用定时器1 </para>
+</note>
+</para>
+<para>
+在文件 <link linkend="_bsp___u_a_r_t_8c_source">bsp_UART.c</link> 第 <link linkend="_bsp___u_a_r_t_8c_source_1l00056">56</link> 行定义.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bsp_XerolySkinner: D:/gitt/bsp_XerolySkinner/bsp_device/bsp_IIC.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bsp_XerolySkinner<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">51便捷开发库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f65eaaef425b27c75b44b4338a6ab06b.html">bsp_device</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">枚举</a> &#124;
+<a href="#func-members">函数</a> &#124;
+<a href="#var-members">变量</a>  </div>
+  <div class="headertitle"><div class="title">bsp_IIC.h 文件参考</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>本类实现软件IIC功能 依此类派生出其他软件IIC功能  
+<a href="#details">更多...</a></p>
+<div class="textblock"><code>#include &quot;reg52.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+bsp_IIC.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h__incl.png" border="0" usemap="#a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___i_i_c_8h" alt=""/></div>
+<map name="a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___i_i_c_8h" id="a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___i_i_c_8h">
+<area shape="rect" title="本类实现软件IIC功能 依此类派生出其他软件IIC功能" alt="" coords="5,5,173,45"/>
+<area shape="rect" title=" " alt="" coords="57,93,122,119"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+此图展示该文件直接或间接的被哪些文件引用了:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h__dep__incl.png" border="0" usemap="#a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___i_i_c_8hdep" alt=""/></div>
+<map name="a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___i_i_c_8hdep" id="a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___i_i_c_8hdep">
+<area shape="rect" title="本类实现软件IIC功能 依此类派生出其他软件IIC功能" alt="" coords="5,5,173,45"/>
+<area shape="rect" href="bsp___i_i_c_8c.html" title="本类实现软件IIC功能 依此类派生出其他软件IIC功能" alt="" coords="5,93,173,133"/>
+</map>
+</div>
+</div>
+<p><a href="bsp___i_i_c_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+枚举</h2></td></tr>
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="bsp___i_i_c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534">IIC_RESET</a>
+, <a class="el" href="bsp___i_i_c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66">IIC_SET</a>
+, <a class="el" href="bsp___i_i_c_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94">IIC_READ</a>
+ }</td></tr>
+<tr class="memdesc:a06fc87d81c62e9abb8790b6e5713c55b"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制管脚的三种状态(置位,复位,读取)  <a href="bsp___i_i_c_8h.html#a06fc87d81c62e9abb8790b6e5713c55b">更多...</a><br /></td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a92f9de6f27a4539bc0a91d349ffbc006"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a92f9de6f27a4539bc0a91d349ffbc006">IIC_WriteOneByte</a> (unsigned char id, unsigned char addr, unsigned char dat)</td></tr>
+<tr class="memdesc:a92f9de6f27a4539bc0a91d349ffbc006"><td class="mdescLeft">&#160;</td><td class="mdescRight">IIC的基础实现方法  <a href="bsp___i_i_c_8h.html#a92f9de6f27a4539bc0a91d349ffbc006">更多...</a><br /></td></tr>
+<tr class="separator:a92f9de6f27a4539bc0a91d349ffbc006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bd93b2a87bada6c99784dacbfc2ff98"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a0bd93b2a87bada6c99784dacbfc2ff98">IIC_ReadOneByte</a> (unsigned char id, unsigned char addr)</td></tr>
+<tr class="memdesc:a0bd93b2a87bada6c99784dacbfc2ff98"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线接收一个字节数据  <a href="bsp___i_i_c_8h.html#a0bd93b2a87bada6c99784dacbfc2ff98">更多...</a><br /></td></tr>
+<tr class="separator:a0bd93b2a87bada6c99784dacbfc2ff98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44898a92f58dd1b99757425e52e1ce78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a44898a92f58dd1b99757425e52e1ce78">IIC_Write</a> (unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len)</td></tr>
+<tr class="memdesc:a44898a92f58dd1b99757425e52e1ce78"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线发送定长数据  <a href="bsp___i_i_c_8h.html#a44898a92f58dd1b99757425e52e1ce78">更多...</a><br /></td></tr>
+<tr class="separator:a44898a92f58dd1b99757425e52e1ce78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f7052e21bba515ca87c85c50efeec4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a3f7052e21bba515ca87c85c50efeec4f">IIC_Read</a> (unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len)</td></tr>
+<tr class="memdesc:a3f7052e21bba515ca87c85c50efeec4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线接收定长数据  <a href="bsp___i_i_c_8h.html#a3f7052e21bba515ca87c85c50efeec4f">更多...</a><br /></td></tr>
+<tr class="separator:a3f7052e21bba515ca87c85c50efeec4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7de8cb7cad6d402709b385e39aa764f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#ac7de8cb7cad6d402709b385e39aa764f">IIC_Start</a> (void)</td></tr>
+<tr class="memdesc:ac7de8cb7cad6d402709b385e39aa764f"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送IIC开始信号  <a href="bsp___i_i_c_8h.html#ac7de8cb7cad6d402709b385e39aa764f">更多...</a><br /></td></tr>
+<tr class="separator:ac7de8cb7cad6d402709b385e39aa764f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a785ea8492cab4612ee5d3752a34f8a72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a785ea8492cab4612ee5d3752a34f8a72">IIC_Stop</a> (void)</td></tr>
+<tr class="memdesc:a785ea8492cab4612ee5d3752a34f8a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送IIC停止信号  <a href="bsp___i_i_c_8h.html#a785ea8492cab4612ee5d3752a34f8a72">更多...</a><br /></td></tr>
+<tr class="separator:a785ea8492cab4612ee5d3752a34f8a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0bfa6b98198b92dc18853f7e157ecfb0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a0bfa6b98198b92dc18853f7e157ecfb0">IIC_SendAck</a> (unsigned char ackbit)</td></tr>
+<tr class="memdesc:a0bfa6b98198b92dc18853f7e157ecfb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送IIC应答信号  <a href="bsp___i_i_c_8h.html#a0bfa6b98198b92dc18853f7e157ecfb0">更多...</a><br /></td></tr>
+<tr class="separator:a0bfa6b98198b92dc18853f7e157ecfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a0cf8c63abeefa1da7bf4fff457d0cd"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a0a0cf8c63abeefa1da7bf4fff457d0cd">IIC_WaitAck</a> (void)</td></tr>
+<tr class="memdesc:a0a0cf8c63abeefa1da7bf4fff457d0cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">等待应答信号  <a href="bsp___i_i_c_8h.html#a0a0cf8c63abeefa1da7bf4fff457d0cd">更多...</a><br /></td></tr>
+<tr class="separator:a0a0cf8c63abeefa1da7bf4fff457d0cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53b89d8e9d661d28c1af1a6b3c5373af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a53b89d8e9d661d28c1af1a6b3c5373af">IIC_SendByte</a> (unsigned char byt)</td></tr>
+<tr class="memdesc:a53b89d8e9d661d28c1af1a6b3c5373af"><td class="mdescLeft">&#160;</td><td class="mdescRight">发送IIC一个字节信号  <a href="bsp___i_i_c_8h.html#a53b89d8e9d661d28c1af1a6b3c5373af">更多...</a><br /></td></tr>
+<tr class="separator:a53b89d8e9d661d28c1af1a6b3c5373af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bdad8ef1b06a40b5912d93c12e07c9a"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a1bdad8ef1b06a40b5912d93c12e07c9a">IIC_RecByte</a> (void)</td></tr>
+<tr class="memdesc:a1bdad8ef1b06a40b5912d93c12e07c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">接收IIC一个字节信号  <a href="bsp___i_i_c_8h.html#a1bdad8ef1b06a40b5912d93c12e07c9a">更多...</a><br /></td></tr>
+<tr class="separator:a1bdad8ef1b06a40b5912d93c12e07c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e1e4cf02f2952c7a261a5db29838d8"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a85e1e4cf02f2952c7a261a5db29838d8">IIC_SCK</a> (unsigned char var)</td></tr>
+<tr class="memdesc:a85e1e4cf02f2952c7a261a5db29838d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制SCK管脚口  <a href="bsp___i_i_c_8h.html#a85e1e4cf02f2952c7a261a5db29838d8">更多...</a><br /></td></tr>
+<tr class="separator:a85e1e4cf02f2952c7a261a5db29838d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c0046e123145451619c3f57ba4fffa"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a00c0046e123145451619c3f57ba4fffa">IIC_SDA</a> (unsigned char var)</td></tr>
+<tr class="memdesc:a00c0046e123145451619c3f57ba4fffa"><td class="mdescLeft">&#160;</td><td class="mdescRight">控制SDA管脚口  <a href="bsp___i_i_c_8h.html#a00c0046e123145451619c3f57ba4fffa">更多...</a><br /></td></tr>
+<tr class="separator:a00c0046e123145451619c3f57ba4fffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5110c30e693502c5356a1c09014dcb35"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a5110c30e693502c5356a1c09014dcb35">IIC_Delay</a> (void)</td></tr>
+<tr class="memdesc:a5110c30e693502c5356a1c09014dcb35"><td class="mdescLeft">&#160;</td><td class="mdescRight">时序中的延时 在此处短暂延时  <a href="bsp___i_i_c_8h.html#a5110c30e693502c5356a1c09014dcb35">更多...</a><br /></td></tr>
+<tr class="separator:a5110c30e693502c5356a1c09014dcb35"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+变量</h2></td></tr>
+<tr class="memitem:ae2bcb12a13e049a44d119feae8efbb48"><td class="memItemLeft" align="right" valign="top">sbit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</a> =P2^1</td></tr>
+<tr class="memdesc:ae2bcb12a13e049a44d119feae8efbb48"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义SCK的管脚  <a href="bsp___i_i_c_8h.html#ae2bcb12a13e049a44d119feae8efbb48">更多...</a><br /></td></tr>
+<tr class="separator:ae2bcb12a13e049a44d119feae8efbb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06774bf87260af902c87431515b81b93"><td class="memItemLeft" align="right" valign="top">sbit&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___i_i_c_8h.html#a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</a> =P2^0</td></tr>
+<tr class="memdesc:a06774bf87260af902c87431515b81b93"><td class="mdescLeft">&#160;</td><td class="mdescRight">定义SDA的管脚  <a href="bsp___i_i_c_8h.html#a06774bf87260af902c87431515b81b93">更多...</a><br /></td></tr>
+<tr class="separator:a06774bf87260af902c87431515b81b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p >本类实现软件IIC功能 依此类派生出其他软件IIC功能 </p>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8h_source.html">bsp_IIC.h</a> 中定义.</p>
+</div><h2 class="groupheader">枚举类型说明</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b" name="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>控制管脚的三种状态(置位,复位,读取) </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534" name="a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534"></a>IIC_RESET&#160;</td><td class="fielddoc"><p >管脚复位状态 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66" name="a06fc87d81c62e9abb8790b6e5713c55ba9e128b73c7beb33be6b4e953a7fddc66"></a>IIC_SET&#160;</td><td class="fielddoc"><p >管脚置位状态 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94" name="a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94"></a>IIC_READ&#160;</td><td class="fielddoc"><p >读取管脚状态 </p>
+</td></tr>
+</table>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8h_source.html">bsp_IIC.h</a> 第 <a class="el" href="bsp___i_i_c_8h_source.html#l00054">54</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a5110c30e693502c5356a1c09014dcb35" name="a5110c30e693502c5356a1c09014dcb35"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5110c30e693502c5356a1c09014dcb35">&#9670;&#160;</a></span>IIC_Delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_Delay </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>时序中的延时 在此处短暂延时 </p>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00224">224</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a5110c30e693502c5356a1c09014dcb35_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a5110c30e693502c5356a1c09014dcb35_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a5110c30e693502c5356a1c09014dcb35_icgraph" id="absp___i_i_c_8h_a5110c30e693502c5356a1c09014dcb35_icgraph">
+<area shape="rect" title="时序中的延时 在此处短暂延时" alt="" coords="329,129,407,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a1bdad8ef1b06a40b5912d93c12e07c9a" title="接收IIC一个字节信号" alt="" coords="183,5,278,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bfa6b98198b92dc18853f7e157ecfb0" title="发送IIC应答信号" alt="" coords="182,55,279,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="180,104,281,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="195,153,267,179"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="195,203,266,228"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="183,252,278,277"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,80,106,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,129,131,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,179,106,204"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,228,132,253"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a3f7052e21bba515ca87c85c50efeec4f" name="a3f7052e21bba515ca87c85c50efeec4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f7052e21bba515ca87c85c50efeec4f">&#9670;&#160;</a></span>IIC_Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_Read </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>dat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用总线接收定长数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>接收的器件地址,如0x68(MPU6050) </td></tr>
+    <tr><td class="paramname">addr</td><td>需要接收的寄存器地址起始 </td></tr>
+    <tr><td class="paramname">dat</td><td>改写的数据指针 </td></tr>
+    <tr><td class="paramname">len</td><td>数据数目 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无返回值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00199">199</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a3f7052e21bba515ca87c85c50efeec4f_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a3f7052e21bba515ca87c85c50efeec4f_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a3f7052e21bba515ca87c85c50efeec4f_cgraph" id="absp___i_i_c_8h_a3f7052e21bba515ca87c85c50efeec4f_cgraph">
+<area shape="rect" title="使用总线接收定长数据" alt="" coords="5,129,80,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a1bdad8ef1b06a40b5912d93c12e07c9a" title="接收IIC一个字节信号" alt="" coords="131,5,226,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bfa6b98198b92dc18853f7e157ecfb0" title="发送IIC应答信号" alt="" coords="130,55,227,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="128,104,229,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="143,153,215,179"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="143,203,214,228"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="131,252,226,277"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="277,80,355,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="281,129,351,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="281,179,351,204"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0bd93b2a87bada6c99784dacbfc2ff98" name="a0bd93b2a87bada6c99784dacbfc2ff98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bd93b2a87bada6c99784dacbfc2ff98">&#9670;&#160;</a></span>IIC_ReadOneByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IIC_ReadOneByte </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>addr</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用总线接收一个字节数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>接收的器件地址,如0x68(MPU6050) </td></tr>
+    <tr><td class="paramname">addr</td><td>需要获取数据的寄存器地址 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>返回该寄存器内的数据 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00153">153</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a0bd93b2a87bada6c99784dacbfc2ff98_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a0bd93b2a87bada6c99784dacbfc2ff98_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a0bd93b2a87bada6c99784dacbfc2ff98_cgraph" id="absp___i_i_c_8h_a0bd93b2a87bada6c99784dacbfc2ff98_cgraph">
+<area shape="rect" title="使用总线接收一个字节数据" alt="" coords="5,129,131,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a1bdad8ef1b06a40b5912d93c12e07c9a" title="接收IIC一个字节信号" alt="" coords="182,5,277,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bfa6b98198b92dc18853f7e157ecfb0" title="发送IIC应答信号" alt="" coords="181,55,278,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="179,104,280,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="193,153,265,179"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="194,203,265,228"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="182,252,277,277"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="328,80,405,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="331,129,402,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="331,179,402,204"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a1bdad8ef1b06a40b5912d93c12e07c9a" name="a1bdad8ef1b06a40b5912d93c12e07c9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bdad8ef1b06a40b5912d93c12e07c9a">&#9670;&#160;</a></span>IIC_RecByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IIC_RecByte </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>接收IIC一个字节信号 </p>
+<dl class="section return"><dt>返回</dt><dd>接收到的一个字节信号 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00114">114</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_cgraph" id="absp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_cgraph">
+<area shape="rect" title="接收IIC一个字节信号" alt="" coords="5,55,100,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="148,5,225,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="151,55,222,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="151,104,222,129"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_icgraph" id="absp___i_i_c_8h_a1bdad8ef1b06a40b5912d93c12e07c9a_icgraph">
+<area shape="rect" title="接收IIC一个字节信号" alt="" coords="179,31,273,56"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,105,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="5,55,131,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a85e1e4cf02f2952c7a261a5db29838d8" name="a85e1e4cf02f2952c7a261a5db29838d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e1e4cf02f2952c7a261a5db29838d8">&#9670;&#160;</a></span>IIC_SCK()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IIC_SCK </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>var</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>控制SCK管脚口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>当var为IIC_READ时返回管脚状态</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>当var为IIC_READ时返回管脚状态 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00234">234</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a85e1e4cf02f2952c7a261a5db29838d8_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a85e1e4cf02f2952c7a261a5db29838d8_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a85e1e4cf02f2952c7a261a5db29838d8_icgraph" id="absp___i_i_c_8h_a85e1e4cf02f2952c7a261a5db29838d8_icgraph">
+<area shape="rect" title="控制SCK管脚口" alt="" coords="329,129,400,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a1bdad8ef1b06a40b5912d93c12e07c9a" title="接收IIC一个字节信号" alt="" coords="183,5,278,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bfa6b98198b92dc18853f7e157ecfb0" title="发送IIC应答信号" alt="" coords="182,55,279,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="180,104,281,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="195,153,267,179"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="195,203,266,228"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="183,252,278,277"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,80,106,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,129,131,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,179,106,204"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,228,132,253"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a00c0046e123145451619c3f57ba4fffa" name="a00c0046e123145451619c3f57ba4fffa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00c0046e123145451619c3f57ba4fffa">&#9670;&#160;</a></span>IIC_SDA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IIC_SDA </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>var</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>控制SDA管脚口 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>当var为IIC_READ时返回管脚状态</dd></dl>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">var</td><td>此处有三个状态,IIC_SET置位管脚,IIC_RESET复位管脚 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>当var为IIC_READ时返回管脚状态 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00250">250</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a00c0046e123145451619c3f57ba4fffa_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a00c0046e123145451619c3f57ba4fffa_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a00c0046e123145451619c3f57ba4fffa_icgraph" id="absp___i_i_c_8h_a00c0046e123145451619c3f57ba4fffa_icgraph">
+<area shape="rect" title="控制SDA管脚口" alt="" coords="329,129,400,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a1bdad8ef1b06a40b5912d93c12e07c9a" title="接收IIC一个字节信号" alt="" coords="183,5,278,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bfa6b98198b92dc18853f7e157ecfb0" title="发送IIC应答信号" alt="" coords="182,55,279,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="180,104,281,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="195,153,267,179"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="195,203,266,228"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="183,252,278,277"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,80,106,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,129,131,155"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,179,106,204"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,228,132,253"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0bfa6b98198b92dc18853f7e157ecfb0" name="a0bfa6b98198b92dc18853f7e157ecfb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bfa6b98198b92dc18853f7e157ecfb0">&#9670;&#160;</a></span>IIC_SendAck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_SendAck </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>ackbit</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送IIC应答信号 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ackbit</td><td>0为应答,1位非应答 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00071">71</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_cgraph" id="absp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_cgraph">
+<area shape="rect" title="发送IIC应答信号" alt="" coords="5,55,103,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="151,5,228,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="154,55,225,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="154,104,225,129"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_icgraph" id="absp___i_i_c_8h_a0bfa6b98198b92dc18853f7e157ecfb0_icgraph">
+<area shape="rect" title="发送IIC应答信号" alt="" coords="179,31,276,56"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,105,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="5,55,131,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a53b89d8e9d661d28c1af1a6b3c5373af" name="a53b89d8e9d661d28c1af1a6b3c5373af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53b89d8e9d661d28c1af1a6b3c5373af">&#9670;&#160;</a></span>IIC_SendByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_SendByte </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>byt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送IIC一个字节信号 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byt</td><td>发送的字节 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00098">98</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_cgraph" id="absp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_cgraph">
+<area shape="rect" title="发送IIC一个字节信号" alt="" coords="5,55,107,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="155,5,232,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="158,55,229,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="158,104,229,129"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_icgraph" id="absp___i_i_c_8h_a53b89d8e9d661d28c1af1a6b3c5373af_icgraph">
+<area shape="rect" title="发送IIC一个字节信号" alt="" coords="180,80,281,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,106,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,55,131,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,104,106,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,153,132,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ac7de8cb7cad6d402709b385e39aa764f" name="ac7de8cb7cad6d402709b385e39aa764f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7de8cb7cad6d402709b385e39aa764f">&#9670;&#160;</a></span>IIC_Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_Start </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送IIC开始信号 </p>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00047">47</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_cgraph.png" border="0" usemap="#absp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_cgraph" id="absp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_cgraph">
+<area shape="rect" title="发送IIC开始信号" alt="" coords="5,55,77,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="125,5,203,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="129,55,199,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="129,104,199,129"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_icgraph.png" border="0" usemap="#absp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_icgraph" id="absp___i_i_c_8h_ac7de8cb7cad6d402709b385e39aa764f_icgraph">
+<area shape="rect" title="发送IIC开始信号" alt="" coords="180,80,252,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,106,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,55,131,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,104,106,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,153,132,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a785ea8492cab4612ee5d3752a34f8a72" name="a785ea8492cab4612ee5d3752a34f8a72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a785ea8492cab4612ee5d3752a34f8a72">&#9670;&#160;</a></span>IIC_Stop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_Stop </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>发送IIC停止信号 </p>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00059">59</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_cgraph" id="absp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_cgraph">
+<area shape="rect" title="发送IIC停止信号" alt="" coords="5,55,76,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="124,5,201,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="127,55,198,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="127,104,198,129"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_icgraph" id="absp___i_i_c_8h_a785ea8492cab4612ee5d3752a34f8a72_icgraph">
+<area shape="rect" title="发送IIC停止信号" alt="" coords="180,80,251,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,106,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,55,131,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,104,106,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,153,132,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0a0cf8c63abeefa1da7bf4fff457d0cd" name="a0a0cf8c63abeefa1da7bf4fff457d0cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a0cf8c63abeefa1da7bf4fff457d0cd">&#9670;&#160;</a></span>IIC_WaitAck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char IIC_WaitAck </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>等待应答信号 </p>
+<dl class="section return"><dt>返回</dt><dd>返回是否有回应 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00085">85</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_cgraph" id="absp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_cgraph">
+<area shape="rect" title="等待应答信号" alt="" coords="5,55,100,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="148,5,225,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="151,55,222,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="151,104,222,129"/>
+</map>
+</div>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_icgraph.png" border="0" usemap="#absp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_icgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_icgraph" id="absp___i_i_c_8h_a0a0cf8c63abeefa1da7bf4fff457d0cd_icgraph">
+<area shape="rect" title="等待应答信号" alt="" coords="180,80,275,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f" title="使用总线接收定长数据" alt="" coords="31,5,106,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98" title="使用总线接收一个字节数据" alt="" coords="6,55,131,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a44898a92f58dd1b99757425e52e1ce78" title="使用总线发送定长数据" alt="" coords="31,104,106,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a92f9de6f27a4539bc0a91d349ffbc006" title="使用总线发送一个字节数据" alt="" coords="5,153,132,179"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a44898a92f58dd1b99757425e52e1ce78" name="a44898a92f58dd1b99757425e52e1ce78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44898a92f58dd1b99757425e52e1ce78">&#9670;&#160;</a></span>IIC_Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_Write </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char *&#160;</td>
+          <td class="paramname"><em>dat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用总线发送定长数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>发送的器件地址,如0x68(MPU6050) </td></tr>
+    <tr><td class="paramname">addr</td><td>需要改写的寄存器地址起始 </td></tr>
+    <tr><td class="paramname">dat</td><td>改写的数据指针 </td></tr>
+    <tr><td class="paramname">len</td><td>数据数目 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无返回值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00177">177</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a44898a92f58dd1b99757425e52e1ce78_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a44898a92f58dd1b99757425e52e1ce78_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a44898a92f58dd1b99757425e52e1ce78_cgraph" id="absp___i_i_c_8h_a44898a92f58dd1b99757425e52e1ce78_cgraph">
+<area shape="rect" title="使用总线发送定长数据" alt="" coords="5,80,80,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="128,104,229,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="143,153,215,179"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="143,5,214,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="131,55,226,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="277,31,355,56"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="281,80,351,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="281,129,351,155"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a92f9de6f27a4539bc0a91d349ffbc006" name="a92f9de6f27a4539bc0a91d349ffbc006"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f9de6f27a4539bc0a91d349ffbc006">&#9670;&#160;</a></span>IIC_WriteOneByte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IIC_WriteOneByte </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>dat</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>IIC的基础实现方法 </p>
+<p >IIC的基础实现方法</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>发送的器件地址,如0x68(MPU6050) </td></tr>
+    <tr><td class="paramname">addr</td><td>需要改写的寄存器地址 </td></tr>
+    <tr><td class="paramname">dat</td><td>改写的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>无返回值 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8c_source.html">bsp_IIC.c</a> 第 <a class="el" href="bsp___i_i_c_8c_source.html#l00136">136</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___i_i_c_8h_a92f9de6f27a4539bc0a91d349ffbc006_cgraph.png" border="0" usemap="#absp___i_i_c_8h_a92f9de6f27a4539bc0a91d349ffbc006_cgraph" alt=""/></div>
+<map name="absp___i_i_c_8h_a92f9de6f27a4539bc0a91d349ffbc006_cgraph" id="absp___i_i_c_8h_a92f9de6f27a4539bc0a91d349ffbc006_cgraph">
+<area shape="rect" title="IIC的基础实现方法" alt="" coords="5,80,132,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a53b89d8e9d661d28c1af1a6b3c5373af" title="发送IIC一个字节信号" alt="" coords="180,104,281,129"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#ac7de8cb7cad6d402709b385e39aa764f" title="发送IIC开始信号" alt="" coords="195,153,267,179"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a785ea8492cab4612ee5d3752a34f8a72" title="发送IIC停止信号" alt="" coords="195,5,266,31"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a0a0cf8c63abeefa1da7bf4fff457d0cd" title="等待应答信号" alt="" coords="183,55,278,80"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35" title="时序中的延时 在此处短暂延时" alt="" coords="329,31,407,56"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a85e1e4cf02f2952c7a261a5db29838d8" title="控制SCK管脚口" alt="" coords="333,80,403,105"/>
+<area shape="rect" href="bsp___i_i_c_8c.html#a00c0046e123145451619c3f57ba4fffa" title="控制SDA管脚口" alt="" coords="333,129,403,155"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">变量说明</h2>
+<a id="ae2bcb12a13e049a44d119feae8efbb48" name="ae2bcb12a13e049a44d119feae8efbb48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2bcb12a13e049a44d119feae8efbb48">&#9670;&#160;</a></span>IIC_SCK_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sbit IIC_SCK_PIN =P2^1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义SCK的管脚 </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000001">待办事项:</a></b></dt><dd>定义SCK的管脚 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8h_source.html">bsp_IIC.h</a> 第 <a class="el" href="bsp___i_i_c_8h_source.html#l00043">43</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a06774bf87260af902c87431515b81b93" name="a06774bf87260af902c87431515b81b93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06774bf87260af902c87431515b81b93">&#9670;&#160;</a></span>IIC_SDA_PIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sbit IIC_SDA_PIN =P2^0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>定义SDA的管脚 </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">待办事项:</a></b></dt><dd>定义SDA的管脚 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___i_i_c_8h_source.html">bsp_IIC.h</a> 第 <a class="el" href="bsp___i_i_c_8h_source.html#l00047">47</a> 行定义.</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

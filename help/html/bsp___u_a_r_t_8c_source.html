@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>bsp_XerolySkinner: D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">bsp_XerolySkinner<span id="projectnumber">&#160;1.0.0</span>
+   </div>
+   <div id="projectbrief">51便捷开发库</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">载入中...</div>
+<div class="SRStatus" id="Searching">搜索中...</div>
+<div class="SRStatus" id="NoMatches">未找到</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_f65eaaef425b27c75b44b4338a6ab06b.html">bsp_device</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">bsp_UART.c</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="bsp___u_a_r_t_8c.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*----------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="comment"> #</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="comment"> #  Copyright (c) 2022 Yuankang Liang(XerolySkinner)</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment"> #</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment"> #  本软件按原样提供,无任何明示或暗示</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment"> #  在任何情况下,作者都不承担任何损害赔偿责任</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment"> #</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment"> #  使用的许可声明:</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment"> #  1.  不得歪曲本软件的来源,你不能声称你编写了原始软件.</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="comment"> #  2.  免费授予以任何目的,前提是版权声明出现在所有副本中.</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment"> #      并且版权声明和许可声明同时出现.</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment"> #  3.  你有使用,复制,修改,分发,和销售本软件的许可.</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment"> #  4.  如果你在产品中使用,产品文档中的声明是赞赏的但不是必须的.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment"> #  5.  本通知不得从任何来源删除或更改.</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment"> #</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="comment"> #  Yuankang Liang(XerolySkinner)</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="comment"> #      E-mail:zabbcccbbaz@163.com</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment"> #      QQ:2715099320</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment"> #      Mobile Phone:13005636215</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment"> #</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="comment"> #  All rights reserved.</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="comment"> */</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">#include &quot;<a class="code" href="bsp___u_a_r_t_8h.html">bsp_UART.h</a>&quot;</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="comment">//----------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="comment">//  函数</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="bsp___u_a_r_t_8c.html#aa43139b22841bc5547b45a8f210482c0">   43</a></span><span class="comment"></span><span class="keywordtype">char</span> <a class="code hl_function" href="bsp___u_a_r_t_8c.html#aa43139b22841bc5547b45a8f210482c0">putchar</a>(<span class="keywordtype">char</span> temp){</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    SBUF = temp;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">while</span>(!TI);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    TI = 0;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="keywordflow">return</span> temp;}</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="comment">//----------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="comment">//  初始化</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="bsp___u_a_r_t_8c.html#af88d208a46f3126dac7fb906c1469c52">   56</a></span><span class="comment"></span><span class="keywordtype">void</span> <a class="code hl_function" href="bsp___u_a_r_t_8c.html#af88d208a46f3126dac7fb906c1469c52">UartInit_9600</a>(<span class="keywordtype">void</span>){       <span class="comment">//9600bps@11.0592MHz</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    PCON |= 0x80;               <span class="comment">//使能波特率倍速位SMOD</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    SCON = 0x50;                <span class="comment">//8位数据,可变波特率</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    TMOD &amp;= 0x0F;               <span class="comment">//设置定时器模式</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    TMOD |= 0x20;               <span class="comment">//设置定时器模式</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    TL1 = 0xFA;                 <span class="comment">//设置定时初始值</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    TH1 = 0xFA;                 <span class="comment">//设置定时重载值</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    ET1 = 0;                    <span class="comment">//禁止定时器中断</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    TR1 = 1;}                   <span class="comment">//定时器1开始计时</span></div>
+<div class="ttc" id="absp___u_a_r_t_8c_html_aa43139b22841bc5547b45a8f210482c0"><div class="ttname"><a href="bsp___u_a_r_t_8c.html#aa43139b22841bc5547b45a8f210482c0">putchar</a></div><div class="ttdeci">char putchar(char temp)</div><div class="ttdoc">printf重定向,不要直接使用本函数</div><div class="ttdef"><b>Definition:</b> <a href="bsp___u_a_r_t_8c_source.html#l00043">bsp_UART.c:43</a></div></div>
+<div class="ttc" id="absp___u_a_r_t_8c_html_af88d208a46f3126dac7fb906c1469c52"><div class="ttname"><a href="bsp___u_a_r_t_8c.html#af88d208a46f3126dac7fb906c1469c52">UartInit_9600</a></div><div class="ttdeci">void UartInit_9600(void)</div><div class="ttdoc">使用这个来初始化51单片机的串口,波特率9600bps</div><div class="ttdef"><b>Definition:</b> <a href="bsp___u_a_r_t_8c_source.html#l00056">bsp_UART.c:56</a></div></div>
+<div class="ttc" id="absp___u_a_r_t_8h_html"><div class="ttname"><a href="bsp___u_a_r_t_8h.html">bsp_UART.h</a></div><div class="ttdoc">UART的51库</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

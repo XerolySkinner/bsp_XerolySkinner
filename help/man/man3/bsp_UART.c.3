@@ -1,0 +1,72 @@
+.TH "D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c" 3 "2023年 三月 9日 星期四" "Version 1.0.0" "bsp_XerolySkinner" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+D:/gitt/bsp_XerolySkinner/bsp_device/bsp_UART.c \- UART的51库  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'bsp_UART\&.h'\fP
+.br
+
+.SS "函数"
+
+.in +1c
+.ti -1c
+.RI "char \fBputchar\fP (char temp)"
+.br
+.RI "printf重定向,不要直接使用本函数 "
+.ti -1c
+.RI "void \fBUartInit_9600\fP (void)"
+.br
+.RI "使用这个来初始化51单片机的串口,波特率9600bps "
+.in -1c
+.SH "详细描述"
+.PP 
+UART的51库 
+
+
+.PP
+在文件 \fBbsp_UART\&.c\fP 中定义\&.
+.SH "函数说明"
+.PP 
+.SS "char putchar (char temp)"
+
+.PP
+printf重定向,不要直接使用本函数 TODO
+.PP
+\fB参数\fP
+.RS 4
+\fItemp\fP 要发送的一个字节 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+无 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_UART\&.c\fP 第 \fB43\fP 行定义\&.
+.SS "void UartInit_9600 (void)"
+
+.PP
+使用这个来初始化51单片机的串口,波特率9600bps 
+.PP
+\fB返回\fP
+.RS 4
+无 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+本串口设置将占用定时器1 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_UART\&.c\fP 第 \fB56\fP 行定义\&.
+.SH "作者"
+.PP 
+由 Doyxgen 通过分析 bsp_XerolySkinner 的 源代码自动生成\&.

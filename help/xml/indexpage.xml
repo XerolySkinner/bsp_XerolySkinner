@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="zh">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>主要信息</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Yuankang Liang(XerolySkinner) @email <ulink url="mailto:zabbcccbbaz@163.com">zabbcccbbaz@163.com</ulink> </para>
+</simplesect>
+<simplesect kind="version"><para>V1.0.0 </para>
+</simplesect>
+<simplesect kind="date"><para>2022-11-07 00:56 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_IIC.c"/>
+  </compounddef>
+</doxygen>

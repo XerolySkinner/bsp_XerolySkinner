@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.5" xml:lang="zh">
+  <compounddef id="dir_3e3587d875eb736f06e1216fbb4afd06" kind="dir">
+    <compoundname>D:/工作库/GitHub/bsp_XerolySkinner</compoundname>
+    <innerdir refid="dir_084c777f868e71c31c920ed3404c70a4">D:/工作库/GitHub/bsp_XerolySkinner/bsp_device</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/工作库/GitHub/bsp_XerolySkinner/"/>
+  </compounddef>
+</doxygen>
