@@ -71,7 +71,7 @@
         <definition>sbit IIC_SCK_PIN</definition>
         <argsstring></argsstring>
         <name>IIC_SCK_PIN</name>
-        <initializer>=P2^1</initializer>
+        <initializer>=P1^1</initializer>
         <briefdescription>
 <para>定义SCK的管脚 </para>
         </briefdescription>
@@ -89,7 +89,7 @@
         <definition>sbit IIC_SDA_PIN</definition>
         <argsstring></argsstring>
         <name>IIC_SDA_PIN</name>
-        <initializer>=P2^0</initializer>
+        <initializer>=P1^0</initializer>
         <briefdescription>
 <para>定义SDA的管脚 </para>
         </briefdescription>
@@ -694,8 +694,8 @@
 <codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;reg52.h&quot;</highlight></codeline>
 <codeline lineno="38"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>电气定义</highlight></codeline>
-<codeline lineno="43" refid="bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48" refkind="member"><highlight class="comment"></highlight><highlight class="normal">sbit<sp/><sp/><sp/><sp/><ref refid="bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48" kindref="member">IIC_SCK_PIN</ref>=P2^1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="47" refid="bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93" refkind="member"><highlight class="normal">sbit<sp/><sp/><sp/><sp/><ref refid="bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93" kindref="member">IIC_SDA_PIN</ref>=P2^0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43" refid="bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48" refkind="member"><highlight class="comment"></highlight><highlight class="normal">sbit<sp/><sp/><sp/><sp/><ref refid="bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48" kindref="member">IIC_SCK_PIN</ref>=P1^1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93" refkind="member"><highlight class="normal">sbit<sp/><sp/><sp/><sp/><ref refid="bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93" kindref="member">IIC_SDA_PIN</ref>=P1^0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="49"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>枚举头</highlight></codeline>
 <codeline lineno="54"><highlight class="comment"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>

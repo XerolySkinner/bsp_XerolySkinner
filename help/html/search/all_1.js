@@ -1,8 +1,8 @@
 var searchData=
 [
   ['iic_5fdelay_0',['IIC_Delay',['../bsp___i_i_c_8c.html#a5110c30e693502c5356a1c09014dcb35',1,'IIC_Delay(void):&#160;bsp_IIC.c'],['../bsp___i_i_c_8h.html#a5110c30e693502c5356a1c09014dcb35',1,'IIC_Delay(void):&#160;bsp_IIC.c']]],
-  ['iic_5fread_1',['IIC_READ',['../bsp___i_i_c_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94',1,'bsp_IIC.h']]],
-  ['iic_5fread_2',['IIC_Read',['../bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f',1,'IIC_Read(unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len):&#160;bsp_IIC.c'],['../bsp___i_i_c_8h.html#a3f7052e21bba515ca87c85c50efeec4f',1,'IIC_Read(unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len):&#160;bsp_IIC.c']]],
+  ['iic_5fread_1',['IIC_Read',['../bsp___i_i_c_8c.html#a3f7052e21bba515ca87c85c50efeec4f',1,'IIC_Read(unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len):&#160;bsp_IIC.c'],['../bsp___i_i_c_8h.html#a3f7052e21bba515ca87c85c50efeec4f',1,'IIC_Read(unsigned char id, unsigned char addr, unsigned char *dat, unsigned int len):&#160;bsp_IIC.c']]],
+  ['iic_5fread_2',['IIC_READ',['../bsp___i_i_c_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae4ead84d2c3bbc3f2403d9a5157a3f94',1,'bsp_IIC.h']]],
   ['iic_5freadonebyte_3',['IIC_ReadOneByte',['../bsp___i_i_c_8c.html#a0bd93b2a87bada6c99784dacbfc2ff98',1,'IIC_ReadOneByte(unsigned char id, unsigned char addr):&#160;bsp_IIC.c'],['../bsp___i_i_c_8h.html#a0bd93b2a87bada6c99784dacbfc2ff98',1,'IIC_ReadOneByte(unsigned char id, unsigned char addr):&#160;bsp_IIC.c']]],
   ['iic_5frecbyte_4',['IIC_RecByte',['../bsp___i_i_c_8c.html#a1bdad8ef1b06a40b5912d93c12e07c9a',1,'IIC_RecByte(void):&#160;bsp_IIC.c'],['../bsp___i_i_c_8h.html#a1bdad8ef1b06a40b5912d93c12e07c9a',1,'IIC_RecByte(void):&#160;bsp_IIC.c']]],
   ['iic_5freset_5',['IIC_RESET',['../bsp___i_i_c_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba048bbf954430bbc34fa11280165ed534',1,'bsp_IIC.h']]],

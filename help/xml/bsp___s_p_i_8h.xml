@@ -33,13 +33,89 @@
         </childnode>
       </node>
     </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="bsp___s_p_i_8h_1ad8e335b1f808bd7408d2aef2377adcb1" prot="public" static="no">
+        <name>SPI_CPOL</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>SPISCK空闲极性 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="43" column="10" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bsp___s_p_i_8h_1a49e8927a636f45641d6231ac63b9e598" prot="public" static="no">
+        <name>SPI_CPHA</name>
+        <initializer>0</initializer>
+        <briefdescription>
+<para>SPI读取边沿 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="44" column="10" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bsp___s_p_i_8h_1ade4259fa3cbb71732a4e73c18dcb9b0d" prot="public" static="no">
+        <name>SPI_CS</name>
+        <initializer>1</initializer>
+        <briefdescription>
+<para>SPI片选空闲极性 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="45" column="10" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bsp___s_p_i_8h_1a654426626c981c2bb1e5f0f2976ff96c" prot="public" static="no">
+        <name>SPI4_ON</name>
+        <param></param>
+        <initializer><ref refid="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" kindref="member">SPI4_CS_PIN</ref>=!<ref refid="bsp___s_p_i_8h_1ade4259fa3cbb71732a4e73c18dcb9b0d" kindref="member">SPI_CS</ref></initializer>
+        <briefdescription>
+<para>SPI4开始通信 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="87" column="9" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bsp___s_p_i_8h_1a1297c3bb7d59b0ead251e2ad6c5e9eb3" prot="public" static="no">
+        <name>SPI4_OFF</name>
+        <param></param>
+        <initializer><ref refid="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" kindref="member">SPI4_CS_PIN</ref>=<ref refid="bsp___s_p_i_8h_1ade4259fa3cbb71732a4e73c18dcb9b0d" kindref="member">SPI_CS</ref></initializer>
+        <briefdescription>
+<para>SPI4结束通信 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="88" column="9" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="bsp___s_p_i_8h_1a184311bc8cf6e692faeeb53ace6a9b73" prot="public" static="no">
+        <name>SPI4_Delay</name>
+        <param></param>
+        <initializer>do{_nop_();}while(0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="93" column="9" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="bsp___s_p_i_8h_1abaea28949cf8101fa69c8d08cca1deea" prot="public" static="no" mutable="no">
         <type>sbit</type>
-        <definition>sbit SPI_SCK_PIN</definition>
+        <definition>sbit SPI3_SCK_PIN</definition>
         <argsstring></argsstring>
-        <name>SPI_SCK_PIN</name>
-        <initializer>= P3^6</initializer>
+        <name>SPI3_SCK_PIN</name>
+        <initializer>= P3^5</initializer>
         <briefdescription>
 <para>定义SCK的管脚 </para>
         </briefdescription>
@@ -49,17 +125,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="46" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="46" bodyend="-1"/>
-        <referencedby refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" compoundref="bsp___s_p_i_8c" startline="43" endline="49">SPI_Byte</referencedby>
-        <referencedby refid="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" compoundref="bsp___s_p_i_8c" startline="71" endline="87">SPI_ReadOneByte</referencedby>
-        <referencedby refid="bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b" compoundref="bsp___s_p_i_8c" startline="57" endline="63">SPI_WriteOneByte</referencedby>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="52" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="bsp___s_p_i_8c_1a2ecf45e8538defe45a5a16850a81a653" compoundref="bsp___s_p_i_8c" startline="45" endline="51">SPI3_Byte</referencedby>
+        <referencedby refid="bsp___s_p_i_8c_1aa6e79014518addc4ffc1c1ab0d09895d" compoundref="bsp___s_p_i_8c" startline="73" endline="89">SPI3_ReadOneByte</referencedby>
+        <referencedby refid="bsp___s_p_i_8c_1a46a267144686406dac124400aa4807d8" compoundref="bsp___s_p_i_8c" startline="59" endline="65">SPI3_WriteOneByte</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="bsp___s_p_i_8h_1ac76a4601b5600b527bc0e18ce520ffdf" prot="public" static="no" mutable="no">
         <type>sbit</type>
-        <definition>sbit SPI_SDA_PIN</definition>
+        <definition>sbit SPI3_SDA_PIN</definition>
         <argsstring></argsstring>
-        <name>SPI_SDA_PIN</name>
-        <initializer>= P3^4</initializer>
+        <name>SPI3_SDA_PIN</name>
+        <initializer>= P3^6</initializer>
         <briefdescription>
 <para>定义SDA的管脚 </para>
         </briefdescription>
@@ -69,16 +145,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="50" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="50" bodyend="-1"/>
-        <referencedby refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" compoundref="bsp___s_p_i_8c" startline="43" endline="49">SPI_Byte</referencedby>
-        <referencedby refid="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" compoundref="bsp___s_p_i_8c" startline="71" endline="87">SPI_ReadOneByte</referencedby>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="56" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="bsp___s_p_i_8c_1a2ecf45e8538defe45a5a16850a81a653" compoundref="bsp___s_p_i_8c" startline="45" endline="51">SPI3_Byte</referencedby>
+        <referencedby refid="bsp___s_p_i_8c_1aa6e79014518addc4ffc1c1ab0d09895d" compoundref="bsp___s_p_i_8c" startline="73" endline="89">SPI3_ReadOneByte</referencedby>
       </memberdef>
-      <memberdef kind="variable" id="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="bsp___s_p_i_8h_1addf4368e6b0d3da85a501fb3f85a6552" prot="public" static="no" mutable="no">
         <type>sbit</type>
-        <definition>sbit SPI_RST_PIN</definition>
+        <definition>sbit SPI3_RST_PIN</definition>
         <argsstring></argsstring>
-        <name>SPI_RST_PIN</name>
-        <initializer>= P3^5</initializer>
+        <name>SPI3_RST_PIN</name>
+        <initializer>= P3^4</initializer>
         <briefdescription>
 <para>定义RST的管脚 </para>
         </briefdescription>
@@ -88,17 +164,91 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="54" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="54" bodyend="-1"/>
-        <referencedby refid="bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f" compoundref="bsp___s_p_i_8c" startline="71" endline="87">SPI_ReadOneByte</referencedby>
-        <referencedby refid="bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b" compoundref="bsp___s_p_i_8c" startline="57" endline="63">SPI_WriteOneByte</referencedby>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="60" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="60" bodyend="-1"/>
+        <referencedby refid="bsp___s_p_i_8c_1aa6e79014518addc4ffc1c1ab0d09895d" compoundref="bsp___s_p_i_8c" startline="73" endline="89">SPI3_ReadOneByte</referencedby>
+        <referencedby refid="bsp___s_p_i_8c_1a46a267144686406dac124400aa4807d8" compoundref="bsp___s_p_i_8c" startline="59" endline="65">SPI3_WriteOneByte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="bsp___s_p_i_8h_1a886e6e40e669d67b70c943ee5d4a36b1" prot="public" static="no" mutable="no">
+        <type>sbit</type>
+        <definition>sbit SPI4_SCK_PIN</definition>
+        <argsstring></argsstring>
+        <name>SPI4_SCK_PIN</name>
+        <initializer>= P2^0</initializer>
+        <briefdescription>
+<para>定义SCK的管脚 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000006"><xreftitle>待办事项</xreftitle><xrefdescription><para>定义SCK的管脚 </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="66" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="66" bodyend="-1"/>
+        <referencedby refid="bsp___s_p_i_8c_1a94d3d300d004187a9b86bfcd8b55aaf4" compoundref="bsp___s_p_i_8c" startline="107" endline="138">SPI4_Byte</referencedby>
+        <referencedby refid="bsp___s_p_i_8c_1abf70d4b78a6bd60a27cbd480386c7a31" compoundref="bsp___s_p_i_8c" startline="98" endline="100">SPI4_Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="bsp___s_p_i_8h_1a82a3152fbc1ecd0ae1e411ada4bd233b" prot="public" static="no" mutable="no">
+        <type>sbit</type>
+        <definition>sbit SPI4_MOSI_PIN</definition>
+        <argsstring></argsstring>
+        <name>SPI4_MOSI_PIN</name>
+        <initializer>= P2^1</initializer>
+        <briefdescription>
+<para>定义MOSI的管脚 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000007"><xreftitle>待办事项</xreftitle><xrefdescription><para>定义MOSI的管脚 </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="70" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="70" bodyend="-1"/>
+        <referencedby refid="bsp___s_p_i_8c_1a94d3d300d004187a9b86bfcd8b55aaf4" compoundref="bsp___s_p_i_8c" startline="107" endline="138">SPI4_Byte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="bsp___s_p_i_8h_1ae601d0fdc759fb443e9a85a837ad33cf" prot="public" static="no" mutable="no">
+        <type>sbit</type>
+        <definition>sbit SPI4_MISO_PIN</definition>
+        <argsstring></argsstring>
+        <name>SPI4_MISO_PIN</name>
+        <initializer>= P2^2</initializer>
+        <briefdescription>
+<para>定义MISO的管脚 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000008"><xreftitle>待办事项</xreftitle><xrefdescription><para>定义MISO的管脚 </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="74" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="74" bodyend="-1"/>
+        <referencedby refid="bsp___s_p_i_8c_1a94d3d300d004187a9b86bfcd8b55aaf4" compoundref="bsp___s_p_i_8c" startline="107" endline="138">SPI4_Byte</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" prot="public" static="no" mutable="no">
+        <type>sbit</type>
+        <definition>sbit SPI4_CS_PIN</definition>
+        <argsstring></argsstring>
+        <name>SPI4_CS_PIN</name>
+        <initializer>= P2^3</initializer>
+        <briefdescription>
+<para>定义CS的管脚 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><xrefsect id="todo_1_todo000009"><xreftitle>待办事项</xreftitle><xrefdescription><para>定义CS的管脚 </para>
+</xrefdescription></xrefsect></para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="78" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" bodystart="78" bodyend="-1"/>
+        <referencedby refid="bsp___s_p_i_8c_1aa65055bd7d8a87b839b4d0c3072c8298" compoundref="bsp___s_p_i_8c" startline="150" endline="166">SPI4_Data_WR</referencedby>
+        <referencedby refid="bsp___s_p_i_8c_1abf70d4b78a6bd60a27cbd480386c7a31" compoundref="bsp___s_p_i_8c" startline="98" endline="100">SPI4_Init</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="bsp___s_p_i_8h_1a5edf23a0da935aa5a61c29efbbf7fb7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="bsp___s_p_i_8h_1a46a267144686406dac124400aa4807d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void SPI_WriteOneByte</definition>
+        <definition>void SPI3_WriteOneByte</definition>
         <argsstring>(unsigned char address, unsigned char dat)</argsstring>
-        <name>SPI_WriteOneByte</name>
+        <name>SPI3_WriteOneByte</name>
         <param>
           <type>unsigned char</type>
           <declname>address</declname>
@@ -134,16 +284,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="58" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="57" bodyend="63" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" declline="58" declcolumn="6"/>
-        <references refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" compoundref="bsp___s_p_i_8c" startline="43" endline="49">SPI_Byte</references>
-        <references refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" compoundref="bsp___s_p_i_8h" startline="54">SPI_RST_PIN</references>
-        <references refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" compoundref="bsp___s_p_i_8h" startline="46">SPI_SCK_PIN</references>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="82" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="59" bodyend="65" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" declline="82" declcolumn="6"/>
+        <references refid="bsp___s_p_i_8c_1a2ecf45e8538defe45a5a16850a81a653" compoundref="bsp___s_p_i_8c" startline="45" endline="51">SPI3_Byte</references>
+        <references refid="bsp___s_p_i_8h_1addf4368e6b0d3da85a501fb3f85a6552" compoundref="bsp___s_p_i_8h" startline="60">SPI3_RST_PIN</references>
+        <references refid="bsp___s_p_i_8h_1abaea28949cf8101fa69c8d08cca1deea" compoundref="bsp___s_p_i_8h" startline="52">SPI3_SCK_PIN</references>
       </memberdef>
-      <memberdef kind="function" id="bsp___s_p_i_8h_1a49b2197235df99399937e589ff42bc8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="bsp___s_p_i_8h_1aa6e79014518addc4ffc1c1ab0d09895d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned char</type>
-        <definition>unsigned char SPI_ReadOneByte</definition>
+        <definition>unsigned char SPI3_ReadOneByte</definition>
         <argsstring>(unsigned char address)</argsstring>
-        <name>SPI_ReadOneByte</name>
+        <name>SPI3_ReadOneByte</name>
         <param>
           <type>unsigned char</type>
           <declname>address</declname>
@@ -175,11 +325,113 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="59" column="15" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="71" bodyend="87" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" declline="59" declcolumn="15"/>
-        <references refid="bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2" compoundref="bsp___s_p_i_8c" startline="43" endline="49">SPI_Byte</references>
-        <references refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" compoundref="bsp___s_p_i_8h" startline="54">SPI_RST_PIN</references>
-        <references refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" compoundref="bsp___s_p_i_8h" startline="46">SPI_SCK_PIN</references>
-        <references refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" compoundref="bsp___s_p_i_8h" startline="50">SPI_SDA_PIN</references>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="83" column="15" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="73" bodyend="89" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" declline="83" declcolumn="15"/>
+        <references refid="bsp___s_p_i_8c_1a2ecf45e8538defe45a5a16850a81a653" compoundref="bsp___s_p_i_8c" startline="45" endline="51">SPI3_Byte</references>
+        <references refid="bsp___s_p_i_8h_1addf4368e6b0d3da85a501fb3f85a6552" compoundref="bsp___s_p_i_8h" startline="60">SPI3_RST_PIN</references>
+        <references refid="bsp___s_p_i_8h_1abaea28949cf8101fa69c8d08cca1deea" compoundref="bsp___s_p_i_8h" startline="52">SPI3_SCK_PIN</references>
+        <references refid="bsp___s_p_i_8h_1ac76a4601b5600b527bc0e18ce520ffdf" compoundref="bsp___s_p_i_8h" startline="56">SPI3_SDA_PIN</references>
+      </memberdef>
+      <memberdef kind="function" id="bsp___s_p_i_8h_1abf70d4b78a6bd60a27cbd480386c7a31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI4_Init</definition>
+        <argsstring>(void)</argsstring>
+        <name>SPI4_Init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>初始化4线SPI </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>无返回值 </para>
+</simplesect>
+<simplesect kind="note"><para>使用以下函数前,请先至少使用一次该函数初始化 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="89" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="98" bodyend="100" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" declline="89" declcolumn="6"/>
+        <references refid="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" compoundref="bsp___s_p_i_8h" startline="78">SPI4_CS_PIN</references>
+        <references refid="bsp___s_p_i_8h_1a886e6e40e669d67b70c943ee5d4a36b1" compoundref="bsp___s_p_i_8h" startline="66">SPI4_SCK_PIN</references>
+        <references refid="bsp___s_p_i_8h_1ad8e335b1f808bd7408d2aef2377adcb1" compoundref="bsp___s_p_i_8h" startline="43">SPI_CPOL</references>
+        <references refid="bsp___s_p_i_8h_1ade4259fa3cbb71732a4e73c18dcb9b0d" compoundref="bsp___s_p_i_8h" startline="45">SPI_CS</references>
+      </memberdef>
+      <memberdef kind="function" id="bsp___s_p_i_8h_1a94d3d300d004187a9b86bfcd8b55aaf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char SPI4_Byte</definition>
+        <argsstring>(unsigned char temp)</argsstring>
+        <name>SPI4_Byte</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+<para>使用总线交换一个字节数据 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>发送的数据 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>交换回的数据 </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="90" column="15" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="107" bodyend="138" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" declline="90" declcolumn="15"/>
+        <references refid="bsp___s_p_i_8h_1a184311bc8cf6e692faeeb53ace6a9b73" compoundref="bsp___s_p_i_8h" startline="93">SPI4_Delay</references>
+        <references refid="bsp___s_p_i_8h_1ae601d0fdc759fb443e9a85a837ad33cf" compoundref="bsp___s_p_i_8h" startline="74">SPI4_MISO_PIN</references>
+        <references refid="bsp___s_p_i_8h_1a82a3152fbc1ecd0ae1e411ada4bd233b" compoundref="bsp___s_p_i_8h" startline="70">SPI4_MOSI_PIN</references>
+        <references refid="bsp___s_p_i_8h_1a886e6e40e669d67b70c943ee5d4a36b1" compoundref="bsp___s_p_i_8h" startline="66">SPI4_SCK_PIN</references>
+        <references refid="bsp___s_p_i_8h_1ad8e335b1f808bd7408d2aef2377adcb1" compoundref="bsp___s_p_i_8h" startline="43">SPI_CPOL</references>
+        <referencedby refid="bsp___s_p_i_8c_1aa65055bd7d8a87b839b4d0c3072c8298" compoundref="bsp___s_p_i_8c" startline="150" endline="166">SPI4_Data_WR</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="bsp___s_p_i_8h_1aa65055bd7d8a87b839b4d0c3072c8298" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SPI4_Data_WR</definition>
+        <argsstring>(const char *format,...)</argsstring>
+        <name>SPI4_Data_WR</name>
+        <param>
+          <type>const char *</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>...</type>
+        </param>
+        <briefdescription>
+<para>使用总线交换一串数据 </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>format</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>交换的格式 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>交换回的数据 </para>
+</simplesect>
+<simplesect kind="attention"><para>以下为使用示例 <programlisting><codeline><highlight class="normal">//<sp/>写入0xAB<sp/>0xFF<sp/>0xFF后,读取一个字节到dat中</highlight></codeline>
+<codeline><highlight class="normal">SPI4_Data_WR(&quot;WWWR&quot;,0xAB,0xFF,0XFF,&amp;dat);</highlight></codeline>
+</programlisting> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" line="91" column="6" bodyfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.c" bodystart="150" bodyend="166" declfile="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" declline="91" declcolumn="6"/>
+        <references refid="bsp___s_p_i_8c_1a94d3d300d004187a9b86bfcd8b55aaf4" compoundref="bsp___s_p_i_8c" startline="107" endline="138">SPI4_Byte</references>
+        <references refid="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" compoundref="bsp___s_p_i_8h" startline="78">SPI4_CS_PIN</references>
+        <references refid="bsp___s_p_i_8h_1ade4259fa3cbb71732a4e73c18dcb9b0d" compoundref="bsp___s_p_i_8h" startline="45">SPI_CS</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -218,15 +470,35 @@
 <codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;reg52.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;intrins.h&gt;</highlight></codeline>
 <codeline lineno="41"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>管脚定义</highlight></codeline>
-<codeline lineno="46" refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" refkind="member"><highlight class="comment"></highlight><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref><sp/>=<sp/>P3^6;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="50" refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" refkind="member"><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kindref="member">SPI_SDA_PIN</ref><sp/>=<sp/>P3^4;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="54" refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" refkind="member"><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref><sp/>=<sp/>P3^5;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="56"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>延时</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8h_1a5edf23a0da935aa5a61c29efbbf7fb7b" kindref="member">SPI_WriteOneByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>address,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>dat);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8h_1a49b2197235df99399937e589ff42bc8f" kindref="member">SPI_ReadOneByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>address);</highlight></codeline>
-<codeline lineno="61"><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>模式设置</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="bsp___s_p_i_8h_1ad8e335b1f808bd7408d2aef2377adcb1" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SPI_CPOL<sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="bsp___s_p_i_8h_1a49e8927a636f45641d6231ac63b9e598" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SPI_CPHA<sp/><sp/><sp/><sp/>0<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/><sp/><sp/><sp/><sp/>SPI_CS<sp/><sp/><sp/><sp/><sp/><sp/>1<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>管脚定义3线制</highlight></codeline>
+<codeline lineno="52" refid="bsp___s_p_i_8h_1abaea28949cf8101fa69c8d08cca1deea" refkind="member"><highlight class="comment"></highlight><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1abaea28949cf8101fa69c8d08cca1deea" kindref="member">SPI3_SCK_PIN</ref><sp/>=<sp/>P3^5;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="bsp___s_p_i_8h_1ac76a4601b5600b527bc0e18ce520ffdf" refkind="member"><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1ac76a4601b5600b527bc0e18ce520ffdf" kindref="member">SPI3_SDA_PIN</ref><sp/>=<sp/>P3^6;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60" refid="bsp___s_p_i_8h_1addf4368e6b0d3da85a501fb3f85a6552" refkind="member"><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1addf4368e6b0d3da85a501fb3f85a6552" kindref="member">SPI3_RST_PIN</ref><sp/>=<sp/>P3^4;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>管脚定义4线制</highlight></codeline>
+<codeline lineno="66" refid="bsp___s_p_i_8h_1a886e6e40e669d67b70c943ee5d4a36b1" refkind="member"><highlight class="comment"></highlight><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1a886e6e40e669d67b70c943ee5d4a36b1" kindref="member">SPI4_SCK_PIN</ref><sp/>=<sp/>P2^0;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="bsp___s_p_i_8h_1a82a3152fbc1ecd0ae1e411ada4bd233b" refkind="member"><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1a82a3152fbc1ecd0ae1e411ada4bd233b" kindref="member">SPI4_MOSI_PIN</ref><sp/>=<sp/>P2^1;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="bsp___s_p_i_8h_1ae601d0fdc759fb443e9a85a837ad33cf" refkind="member"><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1ae601d0fdc759fb443e9a85a837ad33cf" kindref="member">SPI4_MISO_PIN</ref><sp/>=<sp/>P2^2;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" refkind="member"><highlight class="normal">sbit<sp/><ref refid="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" kindref="member">SPI4_CS_PIN</ref><sp/>=<sp/>P2^3<sp/>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>函数</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8h_1a46a267144686406dac124400aa4807d8" kindref="member">SPI3_WriteOneByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>address,</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>dat);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8h_1aa6e79014518addc4ffc1c1ab0d09895d" kindref="member">SPI3_ReadOneByte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>address);</highlight></codeline>
+<codeline lineno="85"><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>函数</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="bsp___s_p_i_8h_1a654426626c981c2bb1e5f0f2976ff96c" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPI4_ON()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI4_CS_PIN=!SPI_CS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88" refid="bsp___s_p_i_8h_1a1297c3bb7d59b0ead251e2ad6c5e9eb3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPI4_OFF()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SPI4_CS_PIN=SPI_CS<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8h_1abf70d4b78a6bd60a27cbd480386c7a31" kindref="member">SPI4_Init</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8h_1a94d3d300d004187a9b86bfcd8b55aaf4" kindref="member">SPI4_Byte</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>temp);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="bsp___s_p_i_8h_1aa65055bd7d8a87b839b4d0c3072c8298" kindref="member">SPI4_Data_WR</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>format,...);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//----------------------------------------------------------------------------------------------------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93" refid="bsp___s_p_i_8h_1a184311bc8cf6e692faeeb53ace6a9b73" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SPI4_Delay()<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>do{_nop_();}while(0)</highlight></codeline>
+<codeline lineno="95"><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h"/>
   </compounddef>

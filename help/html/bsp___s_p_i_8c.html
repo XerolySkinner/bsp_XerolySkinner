@@ -83,15 +83,18 @@ $(function() {
 <p>SPI的库  
 <a href="#details">更多...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="bsp___s_p_i_8h_source.html">bsp_SPI.h</a>&quot;</code><br />
+<code>#include &quot;intrins.h&quot;</code><br />
+<code>#include &lt;stdarg.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 bsp_SPI.c 的引用(Include)关系图:</div>
 <div class="dyncontent">
 <div class="center"><img src="bsp___s_p_i_8c__incl.png" border="0" usemap="#a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___s_p_i_8c" alt=""/></div>
 <map name="a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___s_p_i_8c" id="a_d_1_2gitt_2bsp___xeroly_skinner_2bsp__device_2bsp___s_p_i_8c">
-<area shape="rect" title="SPI的库" alt="" coords="5,5,173,45"/>
-<area shape="rect" href="bsp___s_p_i_8h.html" title="SPI的库" alt="" coords="48,93,131,119"/>
-<area shape="rect" title=" " alt="" coords="11,167,77,192"/>
-<area shape="rect" title=" " alt="" coords="101,167,169,192"/>
+<area shape="rect" title="SPI的库" alt="" coords="45,5,213,45"/>
+<area shape="rect" href="bsp___s_p_i_8h.html" title="SPI的库" alt="" coords="9,93,91,119"/>
+<area shape="rect" title=" " alt="" coords="95,167,163,192"/>
+<area shape="rect" title=" " alt="" coords="166,93,235,119"/>
+<area shape="rect" title=" " alt="" coords="5,167,71,192"/>
 </map>
 </div>
 </div>
@@ -99,29 +102,38 @@ bsp_SPI.c 的引用(Include)关系图:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 函数</h2></td></tr>
-<tr class="memitem:a2327985cb5739b271b8c23ea3d0bafc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#a2327985cb5739b271b8c23ea3d0bafc2">SPI_Byte</a> (unsigned char temp)</td></tr>
-<tr class="memdesc:a2327985cb5739b271b8c23ea3d0bafc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线发送一个字节数据  <a href="bsp___s_p_i_8c.html#a2327985cb5739b271b8c23ea3d0bafc2">更多...</a><br /></td></tr>
-<tr class="separator:a2327985cb5739b271b8c23ea3d0bafc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5edf23a0da935aa5a61c29efbbf7fb7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#a5edf23a0da935aa5a61c29efbbf7fb7b">SPI_WriteOneByte</a> (unsigned char address, unsigned char dat)</td></tr>
-<tr class="memdesc:a5edf23a0da935aa5a61c29efbbf7fb7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线发送一个字节数据  <a href="bsp___s_p_i_8c.html#a5edf23a0da935aa5a61c29efbbf7fb7b">更多...</a><br /></td></tr>
-<tr class="separator:a5edf23a0da935aa5a61c29efbbf7fb7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49b2197235df99399937e589ff42bc8f"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#a49b2197235df99399937e589ff42bc8f">SPI_ReadOneByte</a> (unsigned char address)</td></tr>
-<tr class="memdesc:a49b2197235df99399937e589ff42bc8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线获取一个字节数据  <a href="bsp___s_p_i_8c.html#a49b2197235df99399937e589ff42bc8f">更多...</a><br /></td></tr>
-<tr class="separator:a49b2197235df99399937e589ff42bc8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ecf45e8538defe45a5a16850a81a653"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#a2ecf45e8538defe45a5a16850a81a653">SPI3_Byte</a> (unsigned char temp)</td></tr>
+<tr class="memdesc:a2ecf45e8538defe45a5a16850a81a653"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线发送一个字节数据  <a href="bsp___s_p_i_8c.html#a2ecf45e8538defe45a5a16850a81a653">更多...</a><br /></td></tr>
+<tr class="separator:a2ecf45e8538defe45a5a16850a81a653"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46a267144686406dac124400aa4807d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#a46a267144686406dac124400aa4807d8">SPI3_WriteOneByte</a> (unsigned char address, unsigned char dat)</td></tr>
+<tr class="memdesc:a46a267144686406dac124400aa4807d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线发送一个字节数据  <a href="bsp___s_p_i_8c.html#a46a267144686406dac124400aa4807d8">更多...</a><br /></td></tr>
+<tr class="separator:a46a267144686406dac124400aa4807d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6e79014518addc4ffc1c1ab0d09895d"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#aa6e79014518addc4ffc1c1ab0d09895d">SPI3_ReadOneByte</a> (unsigned char address)</td></tr>
+<tr class="memdesc:aa6e79014518addc4ffc1c1ab0d09895d"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线获取一个字节数据  <a href="bsp___s_p_i_8c.html#aa6e79014518addc4ffc1c1ab0d09895d">更多...</a><br /></td></tr>
+<tr class="separator:aa6e79014518addc4ffc1c1ab0d09895d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf70d4b78a6bd60a27cbd480386c7a31"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#abf70d4b78a6bd60a27cbd480386c7a31">SPI4_Init</a> (void)</td></tr>
+<tr class="memdesc:abf70d4b78a6bd60a27cbd480386c7a31"><td class="mdescLeft">&#160;</td><td class="mdescRight">初始化4线SPI  <a href="bsp___s_p_i_8c.html#abf70d4b78a6bd60a27cbd480386c7a31">更多...</a><br /></td></tr>
+<tr class="separator:abf70d4b78a6bd60a27cbd480386c7a31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94d3d300d004187a9b86bfcd8b55aaf4"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#a94d3d300d004187a9b86bfcd8b55aaf4">SPI4_Byte</a> (unsigned char temp)</td></tr>
+<tr class="memdesc:a94d3d300d004187a9b86bfcd8b55aaf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线交换一个字节数据  <a href="bsp___s_p_i_8c.html#a94d3d300d004187a9b86bfcd8b55aaf4">更多...</a><br /></td></tr>
+<tr class="separator:a94d3d300d004187a9b86bfcd8b55aaf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa65055bd7d8a87b839b4d0c3072c8298"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="bsp___s_p_i_8c.html#aa65055bd7d8a87b839b4d0c3072c8298">SPI4_Data_WR</a> (const char *format,...)</td></tr>
+<tr class="memdesc:aa65055bd7d8a87b839b4d0c3072c8298"><td class="mdescLeft">&#160;</td><td class="mdescRight">使用总线交换一串数据  <a href="bsp___s_p_i_8c.html#aa65055bd7d8a87b839b4d0c3072c8298">更多...</a><br /></td></tr>
+<tr class="separator:aa65055bd7d8a87b839b4d0c3072c8298"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
 <div class="textblock"><p >SPI的库 </p>
 
 <p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 中定义.</p>
 </div><h2 class="groupheader">函数说明</h2>
-<a id="a2327985cb5739b271b8c23ea3d0bafc2" name="a2327985cb5739b271b8c23ea3d0bafc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2327985cb5739b271b8c23ea3d0bafc2">&#9670;&#160;</a></span>SPI_Byte()</h2>
+<a id="a2ecf45e8538defe45a5a16850a81a653" name="a2ecf45e8538defe45a5a16850a81a653"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ecf45e8538defe45a5a16850a81a653">&#9670;&#160;</a></span>SPI3_Byte()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SPI_Byte </td>
+          <td class="memname">void SPI3_Byte </td>
           <td>(</td>
           <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>temp</em></td><td>)</td>
@@ -140,28 +152,28 @@ bsp_SPI.c 的引用(Include)关系图:</div>
 <dl class="section return"><dt>返回</dt><dd>无返回值 </dd></dl>
 <dl class="section note"><dt>注解</dt><dd>本函数为其他函数的子函数,不要直接使用本函数 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00043">43</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00045">45</a> 行定义.</p>
 <div class="dynheader">
 这是这个函数的调用关系图:</div>
 <div class="dyncontent">
-<div class="center"><img src="bsp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2_icgraph.png" border="0" usemap="#absp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2_icgraph" alt=""/></div>
-<map name="absp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2_icgraph" id="absp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2_icgraph">
-<area shape="rect" title="使用总线发送一个字节数据" alt="" coords="185,31,263,56"/>
-<area shape="rect" href="bsp___s_p_i_8c.html#a49b2197235df99399937e589ff42bc8f" title="使用总线获取一个字节数据" alt="" coords="6,5,137,31"/>
-<area shape="rect" href="bsp___s_p_i_8c.html#a5edf23a0da935aa5a61c29efbbf7fb7b" title="使用总线发送一个字节数据" alt="" coords="5,55,137,80"/>
+<div class="center"><img src="bsp___s_p_i_8c_a2ecf45e8538defe45a5a16850a81a653_icgraph.png" border="0" usemap="#absp___s_p_i_8c_a2ecf45e8538defe45a5a16850a81a653_icgraph" alt=""/></div>
+<map name="absp___s_p_i_8c_a2ecf45e8538defe45a5a16850a81a653_icgraph" id="absp___s_p_i_8c_a2ecf45e8538defe45a5a16850a81a653_icgraph">
+<area shape="rect" title="使用总线发送一个字节数据" alt="" coords="192,31,276,56"/>
+<area shape="rect" href="bsp___s_p_i_8c.html#aa6e79014518addc4ffc1c1ab0d09895d" title="使用总线获取一个字节数据" alt="" coords="5,5,144,31"/>
+<area shape="rect" href="bsp___s_p_i_8c.html#a46a267144686406dac124400aa4807d8" title="使用总线发送一个字节数据" alt="" coords="5,55,144,80"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a49b2197235df99399937e589ff42bc8f" name="a49b2197235df99399937e589ff42bc8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49b2197235df99399937e589ff42bc8f">&#9670;&#160;</a></span>SPI_ReadOneByte()</h2>
+<a id="aa6e79014518addc4ffc1c1ab0d09895d" name="aa6e79014518addc4ffc1c1ab0d09895d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e79014518addc4ffc1c1ab0d09895d">&#9670;&#160;</a></span>SPI3_ReadOneByte()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">unsigned char SPI_ReadOneByte </td>
+          <td class="memname">unsigned char SPI3_ReadOneByte </td>
           <td>(</td>
           <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>address</em></td><td>)</td>
@@ -180,27 +192,27 @@ bsp_SPI.c 的引用(Include)关系图:</div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>无返回值 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00071">71</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00073">73</a> 行定义.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="bsp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f_cgraph.png" border="0" usemap="#absp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f_cgraph" alt=""/></div>
-<map name="absp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f_cgraph" id="absp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f_cgraph">
-<area shape="rect" title="使用总线获取一个字节数据" alt="" coords="5,5,136,31"/>
-<area shape="rect" href="bsp___s_p_i_8c.html#a2327985cb5739b271b8c23ea3d0bafc2" title="使用总线发送一个字节数据" alt="" coords="184,5,261,31"/>
+<div class="center"><img src="bsp___s_p_i_8c_aa6e79014518addc4ffc1c1ab0d09895d_cgraph.png" border="0" usemap="#absp___s_p_i_8c_aa6e79014518addc4ffc1c1ab0d09895d_cgraph" alt=""/></div>
+<map name="absp___s_p_i_8c_aa6e79014518addc4ffc1c1ab0d09895d_cgraph" id="absp___s_p_i_8c_aa6e79014518addc4ffc1c1ab0d09895d_cgraph">
+<area shape="rect" title="使用总线获取一个字节数据" alt="" coords="5,5,144,31"/>
+<area shape="rect" href="bsp___s_p_i_8c.html#a2ecf45e8538defe45a5a16850a81a653" title="使用总线发送一个字节数据" alt="" coords="192,5,276,31"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="a5edf23a0da935aa5a61c29efbbf7fb7b" name="a5edf23a0da935aa5a61c29efbbf7fb7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5edf23a0da935aa5a61c29efbbf7fb7b">&#9670;&#160;</a></span>SPI_WriteOneByte()</h2>
+<a id="a46a267144686406dac124400aa4807d8" name="a46a267144686406dac124400aa4807d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a267144686406dac124400aa4807d8">&#9670;&#160;</a></span>SPI3_WriteOneByte()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void SPI_WriteOneByte </td>
+          <td class="memname">void SPI3_WriteOneByte </td>
           <td>(</td>
           <td class="paramtype">unsigned char&#160;</td>
           <td class="paramname"><em>address</em>, </td>
@@ -229,16 +241,130 @@ bsp_SPI.c 的引用(Include)关系图:</div>
 </dl>
 <dl class="section return"><dt>返回</dt><dd>无返回值 </dd></dl>
 
-<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00057">57</a> 行定义.</p>
+<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00059">59</a> 行定义.</p>
 <div class="dynheader">
 函数调用图:</div>
 <div class="dyncontent">
-<div class="center"><img src="bsp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph.png" border="0" usemap="#absp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph" alt=""/></div>
-<map name="absp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph" id="absp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph">
-<area shape="rect" title="使用总线发送一个字节数据" alt="" coords="5,5,137,31"/>
-<area shape="rect" href="bsp___s_p_i_8c.html#a2327985cb5739b271b8c23ea3d0bafc2" title="使用总线发送一个字节数据" alt="" coords="185,5,263,31"/>
+<div class="center"><img src="bsp___s_p_i_8c_a46a267144686406dac124400aa4807d8_cgraph.png" border="0" usemap="#absp___s_p_i_8c_a46a267144686406dac124400aa4807d8_cgraph" alt=""/></div>
+<map name="absp___s_p_i_8c_a46a267144686406dac124400aa4807d8_cgraph" id="absp___s_p_i_8c_a46a267144686406dac124400aa4807d8_cgraph">
+<area shape="rect" title="使用总线发送一个字节数据" alt="" coords="5,5,144,31"/>
+<area shape="rect" href="bsp___s_p_i_8c.html#a2ecf45e8538defe45a5a16850a81a653" title="使用总线发送一个字节数据" alt="" coords="192,5,276,31"/>
 </map>
 </div>
+
+</div>
+</div>
+<a id="a94d3d300d004187a9b86bfcd8b55aaf4" name="a94d3d300d004187a9b86bfcd8b55aaf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94d3d300d004187a9b86bfcd8b55aaf4">&#9670;&#160;</a></span>SPI4_Byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned char SPI4_Byte </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>temp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用总线交换一个字节数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">temp</td><td>发送的数据 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>交换回的数据 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00107">107</a> 行定义.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___s_p_i_8c_a94d3d300d004187a9b86bfcd8b55aaf4_icgraph.png" border="0" usemap="#absp___s_p_i_8c_a94d3d300d004187a9b86bfcd8b55aaf4_icgraph" alt=""/></div>
+<map name="absp___s_p_i_8c_a94d3d300d004187a9b86bfcd8b55aaf4_icgraph" id="absp___s_p_i_8c_a94d3d300d004187a9b86bfcd8b55aaf4_icgraph">
+<area shape="rect" title="使用总线交换一个字节数据" alt="" coords="167,5,251,31"/>
+<area shape="rect" href="bsp___s_p_i_8c.html#aa65055bd7d8a87b839b4d0c3072c8298" title="使用总线交换一串数据" alt="" coords="5,5,119,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa65055bd7d8a87b839b4d0c3072c8298" name="aa65055bd7d8a87b839b4d0c3072c8298"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa65055bd7d8a87b839b4d0c3072c8298">&#9670;&#160;</a></span>SPI4_Data_WR()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPI4_Data_WR </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>format</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>使用总线交换一串数据 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">format</td><td>交换的格式 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>交换回的数据 </dd></dl>
+<dl class="section attention"><dt>注意</dt><dd>以下为使用示例 <div class="fragment"><div class="line"><span class="comment">// 写入0xAB 0xFF 0xFF后,读取一个字节到dat中</span></div>
+<div class="line"><a class="code hl_function" href="bsp___s_p_i_8c.html#aa65055bd7d8a87b839b4d0c3072c8298">SPI4_Data_WR</a>(<span class="stringliteral">&quot;WWWR&quot;</span>,0xAB,0xFF,0XFF,&amp;dat);</div>
+<div class="ttc" id="absp___s_p_i_8c_html_aa65055bd7d8a87b839b4d0c3072c8298"><div class="ttname"><a href="bsp___s_p_i_8c.html#aa65055bd7d8a87b839b4d0c3072c8298">SPI4_Data_WR</a></div><div class="ttdeci">void SPI4_Data_WR(const char *format,...)</div><div class="ttdoc">使用总线交换一串数据</div><div class="ttdef"><b>Definition:</b> <a href="bsp___s_p_i_8c_source.html#l00150">bsp_SPI.c:150</a></div></div>
+</div><!-- fragment --> </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00150">150</a> 行定义.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="bsp___s_p_i_8c_aa65055bd7d8a87b839b4d0c3072c8298_cgraph.png" border="0" usemap="#absp___s_p_i_8c_aa65055bd7d8a87b839b4d0c3072c8298_cgraph" alt=""/></div>
+<map name="absp___s_p_i_8c_aa65055bd7d8a87b839b4d0c3072c8298_cgraph" id="absp___s_p_i_8c_aa65055bd7d8a87b839b4d0c3072c8298_cgraph">
+<area shape="rect" title="使用总线交换一串数据" alt="" coords="5,5,119,31"/>
+<area shape="rect" href="bsp___s_p_i_8c.html#a94d3d300d004187a9b86bfcd8b55aaf4" title="使用总线交换一个字节数据" alt="" coords="167,5,251,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="abf70d4b78a6bd60a27cbd480386c7a31" name="abf70d4b78a6bd60a27cbd480386c7a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf70d4b78a6bd60a27cbd480386c7a31">&#9670;&#160;</a></span>SPI4_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SPI4_Init </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>初始化4线SPI </p>
+<dl class="section return"><dt>返回</dt><dd>无返回值 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>使用以下函数前,请先至少使用一次该函数初始化 </dd></dl>
+
+<p class="definition">在文件 <a class="el" href="bsp___s_p_i_8c_source.html">bsp_SPI.c</a> 第 <a class="el" href="bsp___s_p_i_8c_source.html#l00098">98</a> 行定义.</p>
 
 </div>
 </div>

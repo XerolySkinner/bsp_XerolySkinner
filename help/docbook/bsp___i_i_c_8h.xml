@@ -97,11 +97,11 @@
 <simplesect>
     <title>变量    </title>
         <itemizedlist>
-            <listitem><para>sbit <link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link> =P2^1</para>
+            <listitem><para>sbit <link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link> =P1^1</para>
 
 <para>定义SCK的管脚 </para>
 </listitem>
-            <listitem><para>sbit <link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link> =P2^0</para>
+            <listitem><para>sbit <link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link> =P1^0</para>
 
 <para>定义SDA的管脚 </para>
 </listitem>
@@ -779,7 +779,7 @@
     <title>IIC_SCK_PIN</title>
 <indexterm><primary>IIC_SCK_PIN</primary><secondary>bsp_IIC.h</secondary></indexterm>
 <indexterm><primary>bsp_IIC.h</primary><secondary>IIC_SCK_PIN</secondary></indexterm>
-<para><computeroutput>sbit IIC_SCK_PIN =P2^1</computeroutput></para><para>
+<para><computeroutput>sbit IIC_SCK_PIN =P1^1</computeroutput></para><para>
 
 <para>定义SCK的管脚 </para>
 </para>
@@ -794,7 +794,7 @@
     <title>IIC_SDA_PIN</title>
 <indexterm><primary>IIC_SDA_PIN</primary><secondary>bsp_IIC.h</secondary></indexterm>
 <indexterm><primary>bsp_IIC.h</primary><secondary>IIC_SDA_PIN</secondary></indexterm>
-<para><computeroutput>sbit IIC_SDA_PIN =P2^0</computeroutput></para><para>
+<para><computeroutput>sbit IIC_SDA_PIN =P1^0</computeroutput></para><para>
 
 <para>定义SDA的管脚 </para>
 </para>

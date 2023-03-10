@@ -13,14 +13,26 @@
 <varlistentry><term>成员 <ref refid="bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93" kindref="member">IIC_SDA_PIN</ref>  </term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000002"/>定义SDA的管脚  </para>
 </listitem>
-<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a7524be08a301f683eacfaa6c23182ec8" kindref="member">SPI_RST_PIN</ref>  </term></varlistentry>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1addf4368e6b0d3da85a501fb3f85a6552" kindref="member">SPI3_RST_PIN</ref>  </term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000005"/>定义RST的管脚  </para>
 </listitem>
-<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a91c356232346106c6cfeed7a7d65f1dc" kindref="member">SPI_SCK_PIN</ref>  </term></varlistentry>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1abaea28949cf8101fa69c8d08cca1deea" kindref="member">SPI3_SCK_PIN</ref>  </term></varlistentry>
 <listitem><para><anchor id="todo_1_todo000003"/>定义SCK的管脚  </para>
 </listitem>
-<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a0401685285fe33497757ebd181eadf01" kindref="member">SPI_SDA_PIN</ref>  </term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000004"/>定义SDA的管脚 </para>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1ac76a4601b5600b527bc0e18ce520ffdf" kindref="member">SPI3_SDA_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000004"/>定义SDA的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1ae79f6f8effdcbe58c1e65ab75d9943a2" kindref="member">SPI4_CS_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000009"/>定义CS的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1ae601d0fdc759fb443e9a85a837ad33cf" kindref="member">SPI4_MISO_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000008"/>定义MISO的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a82a3152fbc1ecd0ae1e411ada4bd233b" kindref="member">SPI4_MOSI_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000007"/>定义MOSI的管脚  </para>
+</listitem>
+<varlistentry><term>成员 <ref refid="bsp___s_p_i_8h_1a886e6e40e669d67b70c943ee5d4a36b1" kindref="member">SPI4_SCK_PIN</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000006"/>定义SCK的管脚 </para>
 </listitem>
 </variablelist>
 </para>

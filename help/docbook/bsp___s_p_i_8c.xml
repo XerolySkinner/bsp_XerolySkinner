@@ -7,7 +7,7 @@
 <para>SPI的库 </para>
  
 </para>
-<programlisting linenumbering="unnumbered">#include &quot;bsp_SPI.h&quot;<?linebreak?></programlisting>bsp_SPI.c 的引用(Include)关系图:<para>
+<programlisting linenumbering="unnumbered">#include &quot;bsp_SPI.h&quot;<?linebreak?>#include &quot;intrins.h&quot;<?linebreak?>#include &lt;stdarg.h&gt;<?linebreak?></programlisting>bsp_SPI.c 的引用(Include)关系图:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
@@ -19,17 +19,29 @@
 <simplesect>
     <title>函数    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2">SPI_Byte</link> (unsigned char temp)</para>
+            <listitem><para>void <link linkend="_bsp___s_p_i_8c_1a2ecf45e8538defe45a5a16850a81a653">SPI3_Byte</link> (unsigned char temp)</para>
 
 <para>使用总线发送一个字节数据 </para>
 </listitem>
-            <listitem><para>void <link linkend="_bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b">SPI_WriteOneByte</link> (unsigned char address, unsigned char dat)</para>
+            <listitem><para>void <link linkend="_bsp___s_p_i_8c_1a46a267144686406dac124400aa4807d8">SPI3_WriteOneByte</link> (unsigned char address, unsigned char dat)</para>
 
 <para>使用总线发送一个字节数据 </para>
 </listitem>
-            <listitem><para>unsigned char <link linkend="_bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f">SPI_ReadOneByte</link> (unsigned char address)</para>
+            <listitem><para>unsigned char <link linkend="_bsp___s_p_i_8c_1aa6e79014518addc4ffc1c1ab0d09895d">SPI3_ReadOneByte</link> (unsigned char address)</para>
 
 <para>使用总线获取一个字节数据 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___s_p_i_8c_1abf70d4b78a6bd60a27cbd480386c7a31">SPI4_Init</link> (void)</para>
+
+<para>初始化4线SPI </para>
+</listitem>
+            <listitem><para>unsigned char <link linkend="_bsp___s_p_i_8c_1a94d3d300d004187a9b86bfcd8b55aaf4">SPI4_Byte</link> (unsigned char temp)</para>
+
+<para>使用总线交换一个字节数据 </para>
+</listitem>
+            <listitem><para>void <link linkend="_bsp___s_p_i_8c_1aa65055bd7d8a87b839b4d0c3072c8298">SPI4_Data_WR</link> (const char *format,...)</para>
+
+<para>使用总线交换一串数据 </para>
 </listitem>
         </itemizedlist>
 </simplesect>
@@ -42,11 +54,11 @@
 </section>
 <section>
 <title>函数说明</title>
-<anchor xml:id="_bsp___s_p_i_8c_1a2327985cb5739b271b8c23ea3d0bafc2"/><section>
-    <title>SPI_Byte()</title>
-<indexterm><primary>SPI_Byte</primary><secondary>bsp_SPI.c</secondary></indexterm>
-<indexterm><primary>bsp_SPI.c</primary><secondary>SPI_Byte</secondary></indexterm>
-<para><computeroutput>void SPI_Byte (unsigned char temp)</computeroutput></para><para>
+<anchor xml:id="_bsp___s_p_i_8c_1a2ecf45e8538defe45a5a16850a81a653"/><section>
+    <title>SPI3_Byte()</title>
+<indexterm><primary>SPI3_Byte</primary><secondary>bsp_SPI.c</secondary></indexterm>
+<indexterm><primary>bsp_SPI.c</primary><secondary>SPI3_Byte</secondary></indexterm>
+<para><computeroutput>void SPI3_Byte (unsigned char temp)</computeroutput></para><para>
 
 <para>使用总线发送一个字节数据 </para>
 </para>
@@ -81,22 +93,22 @@
 </note>
 </para>
 <para>
-在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00043">43</link> 行定义.</para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00045">45</link> 行定义.</para>
 这是这个函数的调用关系图:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_a2327985cb5739b271b8c23ea3d0bafc2_icgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_a2ecf45e8538defe45a5a16850a81a653_icgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
 </para>
 </section>
-<anchor xml:id="_bsp___s_p_i_8c_1a49b2197235df99399937e589ff42bc8f"/><section>
-    <title>SPI_ReadOneByte()</title>
-<indexterm><primary>SPI_ReadOneByte</primary><secondary>bsp_SPI.c</secondary></indexterm>
-<indexterm><primary>bsp_SPI.c</primary><secondary>SPI_ReadOneByte</secondary></indexterm>
-<para><computeroutput>unsigned char SPI_ReadOneByte (unsigned char address)</computeroutput></para><para>
+<anchor xml:id="_bsp___s_p_i_8c_1aa6e79014518addc4ffc1c1ab0d09895d"/><section>
+    <title>SPI3_ReadOneByte()</title>
+<indexterm><primary>SPI3_ReadOneByte</primary><secondary>bsp_SPI.c</secondary></indexterm>
+<indexterm><primary>bsp_SPI.c</primary><secondary>SPI3_ReadOneByte</secondary></indexterm>
+<para><computeroutput>unsigned char SPI3_ReadOneByte (unsigned char address)</computeroutput></para><para>
 
 <para>使用总线获取一个字节数据 </para>
 </para>
@@ -132,22 +144,22 @@
 </formalpara>
 </para>
 <para>
-在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00071">71</link> 行定义.</para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00073">73</link> 行定义.</para>
 函数调用图:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_a49b2197235df99399937e589ff42bc8f_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_aa6e79014518addc4ffc1c1ab0d09895d_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
 </para>
 </section>
-<anchor xml:id="_bsp___s_p_i_8c_1a5edf23a0da935aa5a61c29efbbf7fb7b"/><section>
-    <title>SPI_WriteOneByte()</title>
-<indexterm><primary>SPI_WriteOneByte</primary><secondary>bsp_SPI.c</secondary></indexterm>
-<indexterm><primary>bsp_SPI.c</primary><secondary>SPI_WriteOneByte</secondary></indexterm>
-<para><computeroutput>void SPI_WriteOneByte (unsigned char address, unsigned char dat)</computeroutput></para><para>
+<anchor xml:id="_bsp___s_p_i_8c_1a46a267144686406dac124400aa4807d8"/><section>
+    <title>SPI3_WriteOneByte()</title>
+<indexterm><primary>SPI3_WriteOneByte</primary><secondary>bsp_SPI.c</secondary></indexterm>
+<indexterm><primary>bsp_SPI.c</primary><secondary>SPI3_WriteOneByte</secondary></indexterm>
+<para><computeroutput>void SPI3_WriteOneByte (unsigned char address, unsigned char dat)</computeroutput></para><para>
 
 <para>使用总线发送一个字节数据 </para>
 </para>
@@ -183,16 +195,135 @@
 </formalpara>
 </para>
 <para>
-在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00057">57</link> 行定义.</para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00059">59</link> 行定义.</para>
 函数调用图:<para>
     <informalfigure>
         <mediaobject>
             <imageobject>
-                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_a5edf23a0da935aa5a61c29efbbf7fb7b_cgraph.png"></imagedata>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_a46a267144686406dac124400aa4807d8_cgraph.png"></imagedata>
             </imageobject>
         </mediaobject>
     </informalfigure>
 </para>
+</section>
+<anchor xml:id="_bsp___s_p_i_8c_1a94d3d300d004187a9b86bfcd8b55aaf4"/><section>
+    <title>SPI4_Byte()</title>
+<indexterm><primary>SPI4_Byte</primary><secondary>bsp_SPI.c</secondary></indexterm>
+<indexterm><primary>bsp_SPI.c</primary><secondary>SPI4_Byte</secondary></indexterm>
+<para><computeroutput>unsigned char SPI4_Byte (unsigned char temp)</computeroutput></para><para>
+
+<para>使用总线交换一个字节数据 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>temp</entry><entry>
+<para>发送的数据 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>交换回的数据 </para>
+</formalpara>
+</para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00107">107</link> 行定义.</para>
+这是这个函数的调用关系图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_a94d3d300d004187a9b86bfcd8b55aaf4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___s_p_i_8c_1aa65055bd7d8a87b839b4d0c3072c8298"/><section>
+    <title>SPI4_Data_WR()</title>
+<indexterm><primary>SPI4_Data_WR</primary><secondary>bsp_SPI.c</secondary></indexterm>
+<indexterm><primary>bsp_SPI.c</primary><secondary>SPI4_Data_WR</secondary></indexterm>
+<para><computeroutput>void SPI4_Data_WR (const char * format,  ...)</computeroutput></para><para>
+
+<para>使用总线交换一串数据 </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+参数</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>format</entry><entry>
+<para>交换的格式 </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>返回</title>
+
+<para>交换回的数据 </para>
+</formalpara>
+<caution><title>注意</title>
+
+<para>以下为使用示例 <literallayout><computeroutput><emphasis role="comment">//&#32;写入0xAB&#32;0xFF&#32;0xFF后,读取一个字节到dat中</emphasis>
+<link linkend="_bsp___s_p_i_8c_1aa65055bd7d8a87b839b4d0c3072c8298">SPI4_Data_WR</link>(<emphasis role="stringliteral">&quot;WWWR&quot;</emphasis>,0xAB,0xFF,0XFF,&amp;dat);
+</computeroutput></literallayout> </para>
+</caution>
+</para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00150">150</link> 行定义.</para>
+函数调用图:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="bsp___s_p_i_8c_aa65055bd7d8a87b839b4d0c3072c8298_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_bsp___s_p_i_8c_1abf70d4b78a6bd60a27cbd480386c7a31"/><section>
+    <title>SPI4_Init()</title>
+<indexterm><primary>SPI4_Init</primary><secondary>bsp_SPI.c</secondary></indexterm>
+<indexterm><primary>bsp_SPI.c</primary><secondary>SPI4_Init</secondary></indexterm>
+<para><computeroutput>void SPI4_Init (void )</computeroutput></para><para>
+
+<para>初始化4线SPI </para>
+</para>
+
+<para><formalpara><title>返回</title>
+
+<para>无返回值 </para>
+</formalpara>
+<note><title>注解</title>
+
+<para>使用以下函数前,请先至少使用一次该函数初始化 </para>
+</note>
+</para>
+<para>
+在文件 <link linkend="_bsp___s_p_i_8c_source">bsp_SPI.c</link> 第 <link linkend="_bsp___s_p_i_8c_source_1l00098">98</link> 行定义.</para>
 </section>
 </section>
 </section>

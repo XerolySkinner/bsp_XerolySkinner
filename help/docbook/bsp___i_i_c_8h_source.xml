@@ -30,8 +30,8 @@
 <anchor xml:id="_bsp___i_i_c_8h_source_1l00036"/>00036 <emphasis role="preprocessor">#include&#32;&quot;reg52.h&quot;</emphasis>
 <anchor xml:id="_bsp___i_i_c_8h_source_1l00038"/>00038 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
 <anchor xml:id="_bsp___i_i_c_8h_source_1l00039"/>00039 <emphasis role="comment">//&#32;&#32;电气定义</emphasis>
-<anchor xml:id="_bsp___i_i_c_8h_source_1l00043"/><link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">00043</link> <emphasis role="comment"></emphasis>sbit&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link>=P2^1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
-<anchor xml:id="_bsp___i_i_c_8h_source_1l00047"/><link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">00047</link> sbit&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link>=P2^0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_bsp___i_i_c_8h_source_1l00043"/><link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">00043</link> <emphasis role="comment"></emphasis>sbit&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1ae2bcb12a13e049a44d119feae8efbb48">IIC_SCK_PIN</link>=P1^1;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_bsp___i_i_c_8h_source_1l00047"/><link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">00047</link> sbit&#32;&#32;&#32;&#32;<link linkend="_bsp___i_i_c_8h_1a06774bf87260af902c87431515b81b93">IIC_SDA_PIN</link>=P1^0;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
 <anchor xml:id="_bsp___i_i_c_8h_source_1l00049"/>00049 <emphasis role="comment">//----------------------------------------------------------------------------------------------------</emphasis>
 <anchor xml:id="_bsp___i_i_c_8h_source_1l00050"/>00050 <emphasis role="comment">//&#32;&#32;枚举头</emphasis>
 <anchor xml:id="_bsp___i_i_c_8h_source_1l00054"/>00054 <emphasis role="comment"></emphasis><emphasis role="keyword">enum</emphasis>&#32;{

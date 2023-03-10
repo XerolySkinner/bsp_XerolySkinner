@@ -5,7 +5,8 @@ var indexSectionsWithContent =
   2: "ipsu",
   3: "is",
   4: "i",
-  5: "主待"
+  5: "s",
+  6: "主待"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "functions",
   3: "variables",
   4: "enumvalues",
-  5: "pages"
+  5: "defines",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "函数",
   3: "变量",
   4: "枚举值",
-  5: "页"
+  5: "宏定义",
+  6: "页"
 };
 

@@ -31,6 +31,8 @@
   * @date		Wed Mar  8 22:22:53 2023
   */
 #include "bsp_SPI.h"
+#include "intrins.h"
+#include <stdarg.h>
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //----------------------------------------------------------------------------------------------------
 //	函数
@@ -40,13 +42,13 @@
  * @return			无返回值
  * @note			本函数为其他函数的子函数,不要直接使用本函数
  */ 
-void SPI_Byte(unsigned char temp){
+void SPI3_Byte(unsigned char temp){
 	unsigned char i;
 	for (i=0;i<8;i++){
-		SPI_SCK_PIN = 0;
-		SPI_SDA_PIN = temp&0x01;
+		SPI3_SCK_PIN = 0;
+		SPI3_SDA_PIN = temp&0x01;
 		temp>>=1;
-		SPI_SCK_PIN=1;}}
+		SPI3_SCK_PIN=1;}}
 //----------------------------------------------------------------------------------------------------
 /**
  * @brief			使用总线发送一个字节数据
@@ -54,13 +56,13 @@ void SPI_Byte(unsigned char temp){
  * @param	dat 	改写的数据
  * @return			无返回值
  */ 
-void SPI_WriteOneByte(unsigned char address,unsigned char dat){
- 	SPI_RST_PIN=0;	_nop_();
- 	SPI_SCK_PIN=0;	_nop_();
- 	SPI_RST_PIN=1; 	_nop_();
- 	SPI_Byte(address);
- 	SPI_Byte(dat);
- 	SPI_RST_PIN=0;}
+void SPI3_WriteOneByte(unsigned char address,unsigned char dat){
+ 	SPI3_RST_PIN=0;	_nop_();
+ 	SPI3_SCK_PIN=0;	_nop_();
+ 	SPI3_RST_PIN=1; 	_nop_();
+ 	SPI3_Byte(address);
+ 	SPI3_Byte(dat);
+ 	SPI3_RST_PIN=0;}
 //----------------------------------------------------------------------------------------------------
 /**
  * @brief			使用总线获取一个字节数据
@@ -68,21 +70,98 @@ void SPI_WriteOneByte(unsigned char address,unsigned char dat){
  * @param	dat 	接受的数据
  * @return			无返回值
  */ 
-unsigned char SPI_ReadOneByte(unsigned char address){
+unsigned char SPI3_ReadOneByte(unsigned char address){
  	unsigned char i,temp=0x00;
- 	SPI_RST_PIN=0;	_nop_();
- 	SPI_SCK_PIN=0;	_nop_();
- 	SPI_RST_PIN=1;	_nop_();
- 	SPI_Byte(address);
+ 	SPI3_RST_PIN=0;	_nop_();
+ 	SPI3_SCK_PIN=0;	_nop_();
+ 	SPI3_RST_PIN=1;	_nop_();
+ 	SPI3_Byte(address);
  	for (i=0;i<8;i++){
-		SPI_SCK_PIN=0;
+		SPI3_SCK_PIN=0;
 		temp>>=1;
- 		if(SPI_SDA_PIN)temp|=0x80;
-		SPI_SCK_PIN=1;}
- 	SPI_RST_PIN=0;	_nop_();
- 	SPI_SCK_PIN=0;	_nop_();
-	SPI_SCK_PIN=1;	_nop_();
-	SPI_SDA_PIN=0;	_nop_();
-	SPI_SDA_PIN=1;	_nop_();
+ 		if(SPI3_SDA_PIN)temp|=0x80;
+		SPI3_SCK_PIN=1;}
+ 	SPI3_RST_PIN=0;	_nop_();
+ 	SPI3_SCK_PIN=0;	_nop_();
+	SPI3_SCK_PIN=1;	_nop_();
+	SPI3_SDA_PIN=0;	_nop_();
+	SPI3_SDA_PIN=1;	_nop_();
 	return temp;}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+//----------------------------------------------------------------------------------------------------
+//	函数
+/**
+ * @brief			初始化4线SPI
+ * @return			无返回值
+ * @note			使用以下函数前,请先至少使用一次该函数初始化
+ */ 
+void SPI4_Init(void){
+	SPI4_CS_PIN=SPI_CS;
+	SPI4_SCK_PIN=SPI_CPOL;}
+//----------------------------------------------------------------------------------------------------
+/**
+ * @brief			使用总线交换一个字节数据
+ * @param	temp	发送的数据
+ * @return			交换回的数据
+ */ 
+unsigned char SPI4_Byte(unsigned char temp){
+	unsigned char k=0;
+	unsigned int i=0;
+	unsigned char res=0;
+//	CPHA=1
+#if SPI_CPHA														//	前沿输出后沿采样
+	SPI4_Delay();
+	for(i=0;i<8;i++){
+		SPI4_SCK_PIN=!SPI_CPOL;										//	先沿
+		SPI4_MOSI_PIN=(_crol_(temp,i)&0x80)!=0;						//	输出
+		SPI4_Delay();
+		SPI4_SCK_PIN=SPI_CPOL;										//	后沿
+		res|=(SPI4_MISO_PIN!=0);									//	采样
+		SPI4_Delay();
+		if(i!=7)res<<=1;
+		}
+//	CPHA=0
+#else																//	前沿采样后沿传输
+	SPI4_MOSI_PIN=(_crol_(temp,0)&0x80)!=0;							//	预输出
+	SPI4_Delay();
+	for(i=1;i<9;i++){
+		SPI4_SCK_PIN=!SPI_CPOL;										//	先沿
+		res|=(SPI4_MISO_PIN!=0);									//	采样
+		SPI4_Delay();
+		if(i!=8)res<<=1;
+		SPI4_SCK_PIN=SPI_CPOL;										//	后沿
+		SPI4_MOSI_PIN=(_crol_(temp,i)&0x80)!=0;						//	输出
+		SPI4_Delay();
+		}
+#endif
+	return res;
+	}
+//----------------------------------------------------------------------------------------------------
+/**
+ * @brief			使用总线交换一串数据
+ * @param	format	交换的格式
+ * @return			交换回的数据
+ * @attention		以下为使用示例
+ * @code
+ * // 写入0xAB 0xFF 0xFF后,读取一个字节到dat中
+ * SPI4_Data_WR("WWWR",0xAB,0xFF,0XFF,&dat);
+ * @endcode
+ */ 
+void SPI4_Data_WR(const char* format,...){
+	unsigned char temp=0;
+	unsigned char* member=0;
+	va_list args;														//	不定长变量
+	va_start(args, format);												//	初始化不定长变量
+	SPI4_CS_PIN=!SPI_CS;
+	while(*format=='W' || *format=='w' || *format=='R' || *format=='r'){
+		if(*format=='W' || *format=='w'){
+			temp=va_arg(args,unsigned char);							//	获取W参数
+			SPI4_Byte(temp);}											//	写入
+		else if(*format=='R' || *format=='r'){
+			member=va_arg(args,unsigned char*);							//	获取R参数
+			*member=SPI4_Byte(0xFF);}									//	读取
+		format++;}
+	va_end(args);														//	收尸
+	SPI4_CS_PIN=SPI_CS;
+	return;}
 //////////////////////////////////////////////////////////////////////////////////////////////////////

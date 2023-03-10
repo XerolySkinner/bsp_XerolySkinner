@@ -39,4 +39,5 @@ var menudata={children:[
 {text:"s",url:"globals_func.html#index_s"},
 {text:"u",url:"globals_func.html#index_u"}]},
 {text:"变量",url:"globals_vars.html"},
-{text:"枚举值",url:"globals_eval.html"}]}]}]}
+{text:"枚举值",url:"globals_eval.html"},
+{text:"宏定义",url:"globals_defs.html"}]}]}]}

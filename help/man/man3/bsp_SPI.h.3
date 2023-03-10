@@ -1,4 +1,4 @@
-.TH "D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" 3 "2023年 三月 9日 星期四" "Version 1.0.0" "bsp_XerolySkinner" \" -*- nroff -*-
+.TH "D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h" 3 "2023年 三月 10日 星期五" "Version 1.0.0" "bsp_XerolySkinner" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -12,33 +12,88 @@ D:/gitt/bsp_XerolySkinner/bsp_device/bsp_SPI.h \- SPI的库
 \fC#include <intrins\&.h>\fP
 .br
 
+.SS "宏定义"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSPI_CPOL\fP   0"
+.br
+.RI "SPISCK空闲极性 "
+.ti -1c
+.RI "#define \fBSPI_CPHA\fP   0"
+.br
+.RI "SPI读取边沿 "
+.ti -1c
+.RI "#define \fBSPI_CS\fP   1"
+.br
+.RI "SPI片选空闲极性 "
+.ti -1c
+.RI "#define \fBSPI4_ON\fP()   \fBSPI4_CS_PIN\fP=!\fBSPI_CS\fP"
+.br
+.RI "SPI4开始通信 "
+.ti -1c
+.RI "#define \fBSPI4_OFF\fP()   \fBSPI4_CS_PIN\fP=\fBSPI_CS\fP"
+.br
+.RI "SPI4结束通信 "
+.ti -1c
+.RI "#define \fBSPI4_Delay\fP()   do{_nop_();}while(0)"
+.br
+.in -1c
 .SS "函数"
 
 .in +1c
 .ti -1c
-.RI "void \fBSPI_WriteOneByte\fP (unsigned char address, unsigned char dat)"
+.RI "void \fBSPI3_WriteOneByte\fP (unsigned char address, unsigned char dat)"
 .br
 .RI "使用总线发送一个字节数据 "
 .ti -1c
-.RI "unsigned char \fBSPI_ReadOneByte\fP (unsigned char address)"
+.RI "unsigned char \fBSPI3_ReadOneByte\fP (unsigned char address)"
 .br
 .RI "使用总线获取一个字节数据 "
+.ti -1c
+.RI "void \fBSPI4_Init\fP (void)"
+.br
+.RI "初始化4线SPI "
+.ti -1c
+.RI "unsigned char \fBSPI4_Byte\fP (unsigned char temp)"
+.br
+.RI "使用总线交换一个字节数据 "
+.ti -1c
+.RI "void \fBSPI4_Data_WR\fP (const char *format,\&.\&.\&.)"
+.br
+.RI "使用总线交换一串数据 "
 .in -1c
 .SS "变量"
 
 .in +1c
 .ti -1c
-.RI "sbit \fBSPI_SCK_PIN\fP = P3^6"
+.RI "sbit \fBSPI3_SCK_PIN\fP = P3^5"
 .br
 .RI "定义SCK的管脚 "
 .ti -1c
-.RI "sbit \fBSPI_SDA_PIN\fP = P3^4"
+.RI "sbit \fBSPI3_SDA_PIN\fP = P3^6"
 .br
 .RI "定义SDA的管脚 "
 .ti -1c
-.RI "sbit \fBSPI_RST_PIN\fP = P3^5"
+.RI "sbit \fBSPI3_RST_PIN\fP = P3^4"
 .br
 .RI "定义RST的管脚 "
+.ti -1c
+.RI "sbit \fBSPI4_SCK_PIN\fP = P2^0"
+.br
+.RI "定义SCK的管脚 "
+.ti -1c
+.RI "sbit \fBSPI4_MOSI_PIN\fP = P2^1"
+.br
+.RI "定义MOSI的管脚 "
+.ti -1c
+.RI "sbit \fBSPI4_MISO_PIN\fP = P2^2"
+.br
+.RI "定义MISO的管脚 "
+.ti -1c
+.RI "sbit \fBSPI4_CS_PIN\fP = P2^3"
+.br
+.RI "定义CS的管脚 "
 .in -1c
 .SH "详细描述"
 .PP 
@@ -47,9 +102,45 @@ SPI的库
 
 .PP
 在文件 \fBbsp_SPI\&.h\fP 中定义\&.
+.SH "宏定义说明"
+.PP 
+.SS "#define SPI4_Delay()   do{_nop_();}while(0)"
+
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB93\fP 行定义\&.
+.SS "#define SPI4_OFF()   \fBSPI4_CS_PIN\fP=\fBSPI_CS\fP"
+
+.PP
+SPI4结束通信 
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB88\fP 行定义\&.
+.SS "#define SPI4_ON()   \fBSPI4_CS_PIN\fP=!\fBSPI_CS\fP"
+
+.PP
+SPI4开始通信 
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB87\fP 行定义\&.
+.SS "#define SPI_CPHA   0"
+
+.PP
+SPI读取边沿 
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB44\fP 行定义\&.
+.SS "#define SPI_CPOL   0"
+
+.PP
+SPISCK空闲极性 
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB43\fP 行定义\&.
+.SS "#define SPI_CS   1"
+
+.PP
+SPI片选空闲极性 
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB46\fP 行定义\&.
 .SH "函数说明"
 .PP 
-.SS "unsigned char SPI_ReadOneByte (unsigned char address)"
+.SS "unsigned char SPI3_ReadOneByte (unsigned char address)"
 
 .PP
 使用总线获取一个字节数据 
@@ -68,8 +159,8 @@ SPI的库
 .PP
 
 .PP
-在文件 \fBbsp_SPI\&.c\fP 第 \fB71\fP 行定义\&.
-.SS "void SPI_WriteOneByte (unsigned char address, unsigned char dat)"
+在文件 \fBbsp_SPI\&.c\fP 第 \fB73\fP 行定义\&.
+.SS "void SPI3_WriteOneByte (unsigned char address, unsigned char dat)"
 
 .PP
 使用总线发送一个字节数据 
@@ -88,10 +179,77 @@ SPI的库
 .PP
 
 .PP
-在文件 \fBbsp_SPI\&.c\fP 第 \fB57\fP 行定义\&.
+在文件 \fBbsp_SPI\&.c\fP 第 \fB59\fP 行定义\&.
+.SS "unsigned char SPI4_Byte (unsigned char temp)"
+
+.PP
+使用总线交换一个字节数据 
+.PP
+\fB参数\fP
+.RS 4
+\fItemp\fP 发送的数据 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+交换回的数据 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.c\fP 第 \fB107\fP 行定义\&.
+.SS "void SPI4_Data_WR (const char * format,  \&.\&.\&.)"
+
+.PP
+使用总线交换一串数据 
+.PP
+\fB参数\fP
+.RS 4
+\fIformat\fP 交换的格式 
+.RE
+.PP
+\fB返回\fP
+.RS 4
+交换回的数据 
+.RE
+.PP
+\fB注意\fP
+.RS 4
+以下为使用示例 
+.PP
+.nf
+// 写入0xAB 0xFF 0xFF后,读取一个字节到dat中
+SPI4_Data_WR("WWWR",0xAB,0xFF,0XFF,&dat);
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.c\fP 第 \fB150\fP 行定义\&.
+.SS "void SPI4_Init (void)"
+
+.PP
+初始化4线SPI 
+.PP
+\fB返回\fP
+.RS 4
+无返回值 
+.RE
+.PP
+\fB注解\fP
+.RS 4
+使用以下函数前,请先至少使用一次该函数初始化 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.c\fP 第 \fB98\fP 行定义\&.
 .SH "变量说明"
 .PP 
-.SS "sbit SPI_RST_PIN = P3^5"
+.SS "sbit SPI3_RST_PIN = P3^4"
 
 .PP
 定义RST的管脚 
@@ -103,8 +261,8 @@ SPI的库
 .PP
 
 .PP
-在文件 \fBbsp_SPI\&.h\fP 第 \fB54\fP 行定义\&.
-.SS "sbit SPI_SCK_PIN = P3^6"
+在文件 \fBbsp_SPI\&.h\fP 第 \fB60\fP 行定义\&.
+.SS "sbit SPI3_SCK_PIN = P3^5"
 
 .PP
 定义SCK的管脚 
@@ -116,8 +274,8 @@ SPI的库
 .PP
 
 .PP
-在文件 \fBbsp_SPI\&.h\fP 第 \fB46\fP 行定义\&.
-.SS "sbit SPI_SDA_PIN = P3^4"
+在文件 \fBbsp_SPI\&.h\fP 第 \fB52\fP 行定义\&.
+.SS "sbit SPI3_SDA_PIN = P3^6"
 
 .PP
 定义SDA的管脚 
@@ -129,7 +287,59 @@ SPI的库
 .PP
 
 .PP
-在文件 \fBbsp_SPI\&.h\fP 第 \fB50\fP 行定义\&.
+在文件 \fBbsp_SPI\&.h\fP 第 \fB56\fP 行定义\&.
+.SS "sbit SPI4_CS_PIN = P2^3"
+
+.PP
+定义CS的管脚 
+.PP
+\fB待办事项\fP
+.RS 4
+定义CS的管脚 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB78\fP 行定义\&.
+.SS "sbit SPI4_MISO_PIN = P2^2"
+
+.PP
+定义MISO的管脚 
+.PP
+\fB待办事项\fP
+.RS 4
+定义MISO的管脚 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB74\fP 行定义\&.
+.SS "sbit SPI4_MOSI_PIN = P2^1"
+
+.PP
+定义MOSI的管脚 
+.PP
+\fB待办事项\fP
+.RS 4
+定义MOSI的管脚 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB70\fP 行定义\&.
+.SS "sbit SPI4_SCK_PIN = P2^0"
+
+.PP
+定义SCK的管脚 
+.PP
+\fB待办事项\fP
+.RS 4
+定义SCK的管脚 
+.RE
+.PP
+
+.PP
+在文件 \fBbsp_SPI\&.h\fP 第 \fB66\fP 行定义\&.
 .SH "作者"
 .PP 
 由 Doyxgen 通过分析 bsp_XerolySkinner 的 源代码自动生成\&.
