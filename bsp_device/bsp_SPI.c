@@ -158,7 +158,7 @@ void SPI4_Data_WR(const char* format,...){
 			SPI4_Byte(temp);}											//	写入
 		else if(*format=='R' || *format=='r'){
 			member=va_arg(args,u8*);									//	获取R参数
-			*member=SPI4_Byte(0xFF);}									//	读取
+			*member=SPI4_Byte(SPI_READ_DATA);}							//	读取
 		format++;}
 	va_end(args);														//	收尸
 	SPI4_CS_PIN=SPI_CS;
