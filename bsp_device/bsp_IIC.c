@@ -221,9 +221,7 @@ void IIC_Read(unsigned char id,unsigned char addr,unsigned char* dat,unsigned in
  * @brief			时序中的延时
  *					在此处短暂延时
  */ 
-void IIC_Delay(void) {
-	unsigned char i = 0;
-	while (++i);}
+void IIC_Delay(void) {;}
 //----------------------------------------------------------------------------------------------------
 /**
  * @brief			控制SCK管脚口
